@@ -1,0 +1,64 @@
+.about-me-section {
+  padding: 4rem 2rem;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.about-me-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.about-me-text {
+  margin: 0 auto 6rem auto; /* Center and add space below */
+  font-size: 1.6rem;
+  line-height: 1.8;
+  max-width: 50%; /* Limit the width to 50% of the screen */
+  text-align: center; /* Center-align the text */
+}
+
+.about-me-text p {
+  margin-bottom: 2.5rem;
+}
+
+.about-me-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  font-size: 1.3rem;
+}
+
+.about-me-skills,
+.about-me-awards {
+  width: 30%; /* Adjusted width to ensure text wraps sooner */
+}
+
+.about-me-skills {
+  text-align: left;
+  margin-left: 5%;
+}
+
+.about-me-awards {
+  text-align: right;
+  margin-right: 8%;
+}
+
+.about-me-skills h3,
+.about-me-awards h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-me-skills ul,
+.about-me-awards ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.about-me-skills li,
+.about-me-awards li {
+  margin-bottom: 1rem;
+}

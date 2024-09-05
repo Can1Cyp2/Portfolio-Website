@@ -1,0 +1,79 @@
+.title-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+  padding: 1rem 2rem 4rem 2rem; /* Add extra padding at the bottom */
+  overflow: hidden;
+}
+
+.title-page video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0.7; /* Adjust opacity for video */
+}
+
+.title-page .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Darken background */
+  z-index: 2;
+}
+
+.title-text-container {
+  position: relative;
+  z-index: 3; /* Ensure text is above the overlay */
+  text-align: center;
+  padding: 1rem 2rem;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Slightly darken the area directly around the text */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.title-text {
+  font-size: 5rem;
+  color: #ffffff;
+  white-space: nowrap;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
+.caret {
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .title-text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .title-text {
+    font-size: 3rem;
+  }
+}

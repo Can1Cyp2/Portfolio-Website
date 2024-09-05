@@ -1,0 +1,97 @@
+/* Initial header positioning (placed below TitlePage) */
+.header {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 35px 0;
+  z-index: 1000;
+  position: absolute; /* Keep it out of the view initially */
+  top: 100dvh; /* Positioned just below the TitlePage, 100vh places it just after the title page */
+  transition: all 0.3s ease; /* Smooth transition when it becomes sticky */
+}
+
+/* Sticky header when scrolling past TitlePage */
+.header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(0);
+  margin-bottom: 100%;
+}
+
+/* Header content styling */
+.header-content {
+  max-width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Logo styling */
+.logo h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-links span {
+  color: white;
+  margin: 0 10px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-links a {
+    margin: 5px 10px;
+    font-size: 1.2rem;
+  }
+
+  .nav-links span {
+    display: none;
+  }
+}

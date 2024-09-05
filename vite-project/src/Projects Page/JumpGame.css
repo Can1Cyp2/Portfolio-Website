@@ -1,0 +1,123 @@
+.jumpgame-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end; /* Align content to the right */
+  padding-right: 5rem; /* Move content closer to the right */
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  background-color: #0e0e0e; /* Darker background */
+  color: #ffffff; /* White text */
+  position: relative; /* Enable positioning for child elements */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* The man image background */
+.jumpgame-man {
+  position: absolute;
+  top: 0%; /* Start the man from the top of the section */
+  left: 5%; /* Align to the left side */
+  width: 10vw; /* Adjust size */
+  height: auto;
+  z-index: 1; /* Ensure man is above the background */
+  transition: transform 0.3s ease; /* Smooth scrolling effect */
+}
+
+/* Trampoline tile */
+.jumpgame-tile {
+  position: absolute;
+  bottom: 5%; /* Place near the bottom of the screen */
+  left: 5%; /* Align horizontally on the left side */
+  width: 12vw; /* Adjust size relative to the screen */
+  height: auto;
+  z-index: 0; /* Ensure the trampoline is below the man */
+}
+
+/* Text and content aligned to the right */
+.jumpgame-content {
+  z-index: 2; /* Keep the text on top */
+  text-align: right; /* Align text to the right */
+}
+
+.jumpgame-content h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.jumpgame-content p {
+  font-size: 2rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  margin-left: 40rem; /* Ensure space on the left */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1200px) {
+  .jumpgame-container {
+    padding-right: 2rem;
+  }
+
+  .jumpgame-content h1 {
+    font-size: 4rem;
+  }
+
+  .jumpgame-content p {
+    font-size: 1.8rem;
+    margin-left: 20rem;
+  }
+
+  .jumpgame-tile,
+  .jumpgame-man {
+    left: 10%; /* Keep position on the left side */
+    width: 15vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumpgame-container {
+    padding-right: 1.5rem;
+    align-items: center;
+  }
+
+  .jumpgame-content h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .jumpgame-content p {
+    font-size: 1.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .jumpgame-tile,
+  .jumpgame-man {
+    bottom: 10%; /* Keep man and tile visible */
+    left: 10%; /* Adjust for smaller screens */
+    width: 18vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .jumpgame-container {
+    padding-right: 1rem;
+  }
+
+  .jumpgame-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .jumpgame-content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .jumpgame-tile,
+  .jumpgame-man {
+    bottom: 10%;
+    left: 10%; /* Align man and tile */
+    width: 20vw;
+  }
+}

@@ -1,0 +1,164 @@
+.minesweeper-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align text to the left */
+  padding-left: 5rem; /* Move content closer to the left */
+  height: 100vh; /* Take up the full viewport height */
+  width: 100%;
+  background-color: #1a1a1a; /* Keep the background dark */
+  color: #ffffff; /* White text */
+  position: relative; /* Enable positioning for child elements */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* The mine image background */
+.minesweeper-background {
+  position: absolute;
+  bottom: 30%; /* Align vertically with the tile */
+  right: 10%; /* Align horizontally with the tile */
+  width: 10vw; /* Scale the mine image */
+  height: auto;
+  z-index: 0; /* Ensure it is behind the tile */
+  transition: transform 0.3s ease; /* Smooth scrolling effect */
+}
+
+/* Silver tile */
+.minesweeper-tile {
+  position: absolute;
+  bottom: 30%; /* Align with the mine */
+  right: 10%; /* Same position as the mine */
+  width: 10vw; /* Adjust size relative to screen */
+  height: auto;
+  z-index: 1; /* Ensure the tile is above the mine background */
+}
+
+/* Title container to align the flag and title */
+.minesweeper-title-container {
+  position: relative; /* This makes the flag positioned relative to the title */
+  display: inline-block; /* Keep the title and flag in one block */
+  z-index: 2; /* Ensure the title is above the flag */
+}
+
+/* Minesweeper title */
+.minesweeper-title-container h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2; /* Keep the title above everything */
+}
+
+/* Red flag positioned relative to the "M" */
+.minesweeper-flag {
+  position: absolute;
+  top: -70px; /* Move the flag higher */
+  left: -10px; /* Move the flag to the right */
+  width: 90px; /* Adjust the size of the flag */
+  height: auto;
+  z-index: 1; /* Set z-index to be behind the title */
+}
+
+/* Minesweeper text and content */
+.minesweeper-content {
+  z-index: 2; /* Keep the text on top of everything */
+}
+
+.minesweeper-content p {
+  font-size: 2rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  margin-right: 40rem;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1200px) {
+  .minesweeper-container {
+    padding-left: 2rem;
+  }
+
+  .minesweeper-content h1 {
+    font-size: 4rem;
+  }
+
+  .minesweeper-content p {
+    font-size: 1.8rem;
+    margin-right: 20rem;
+  }
+
+  .minesweeper-tile,
+  .minesweeper-background {
+    bottom: 25%;
+    right: 10%; /* Maintain alignment */
+    width: 15vw;
+  }
+
+  .minesweeper-flag {
+    top: -60px; /* Adjust the flag's position for smaller screens */
+    left: -10px; /* Keep the horizontal position close to "M" */
+    width: 80px; /* Adjust the size for smaller screens */
+    z-index: 1; /* Ensure flag remains behind the title */
+  }
+}
+
+@media (max-width: 768px) {
+  .minesweeper-container {
+    padding-left: 1.5rem;
+    align-items: center;
+  }
+
+  .minesweeper-content h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .minesweeper-content p {
+    font-size: 1.5rem;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .minesweeper-tile,
+  .minesweeper-background {
+    bottom: 20%;
+    right: 10%; /* Keep alignment */
+    width: 18vw;
+  }
+
+  .minesweeper-flag {
+    top: -50px; /* Adjust position for smaller screens */
+    left: -5px; /* Adjust horizontal position */
+    width: 70px; /* Adjust size for smaller screens */
+    z-index: 1; /* Keep flag behind */
+  }
+}
+
+@media (max-width: 480px) {
+  .minesweeper-container {
+    padding-left: 1rem;
+  }
+
+  .minesweeper-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .minesweeper-content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .minesweeper-tile,
+  .minesweeper-background {
+    bottom: 20%;
+    right: 10%; /* Align mine and tile */
+    width: 20vw;
+  }
+
+  .minesweeper-flag {
+    top: -40px; /* Adjust position */
+    left: -5px; /* Adjust horizontal position */
+    width: 60px; /* Adjust size for smaller screens */
+    z-index: 1; /* Keep flag behind */
+  }
+}

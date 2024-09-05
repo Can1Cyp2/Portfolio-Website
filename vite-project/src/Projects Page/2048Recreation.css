@@ -1,0 +1,123 @@
+.recreation2048-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5rem;
+  height: 100vh;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* The 2048 grid background */
+.recreation2048-background {
+  position: absolute;
+  top: -50%;
+  right: 5%;
+  width: 15vw;
+  height: auto;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+/* 2048 tile */
+.recreation2048-tile {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 12vw;
+  height: auto;
+  z-index: 0;
+}
+
+/* Text and content aligned to the left */
+.recreation2048-content {
+  z-index: 2;
+  text-align: left;
+}
+
+.recreation2048-content h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.recreation2048-content p {
+  font-size: 2rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  margin-right: 40rem;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1200px) {
+  .recreation2048-container {
+    padding-left: 2rem;
+  }
+
+  .recreation2048-content h1 {
+    font-size: 4rem;
+  }
+
+  .recreation2048-content p {
+    font-size: 1.8rem;
+    margin-right: 20rem;
+  }
+
+  .recreation2048-tile,
+  .recreation2048-background {
+    right: 10%;
+    width: 15vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .recreation2048-container {
+    padding-left: 1.5rem;
+    align-items: center;
+  }
+
+  .recreation2048-content h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .recreation2048-content p {
+    font-size: 1.5rem;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .recreation2048-tile,
+  .recreation2048-background {
+    bottom: 10%;
+    right: 10%;
+    width: 18vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .recreation2048-container {
+    padding-left: 1rem;
+  }
+
+  .recreation2048-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .recreation2048-content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .recreation2048-tile,
+  .recreation2048-background {
+    bottom: 10%;
+    right: 10%;
+    width: 20vw;
+  }
+}

@@ -1,0 +1,63 @@
+/* General projects page styles */
+.projects-page {
+  min-height: 100vh; /* Full height of the viewport */
+  background-color: #1a1a1a; /* Dark background */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Projects header (contains the title and subtitle) */
+.projects-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between title and subtitle */
+  align-items: center;
+  height: 55vh; /* Ensure it takes up 55% of the viewport height */
+  width: 100%;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+}
+
+/* Title: My Projects */
+.projects-title {
+  font-size: 3.5rem; /* Larger font size for the title */
+  color: #ffffff; /* White text for contrast */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Subtitle: All Projects Listed Here... */
+.projects-subtitle {
+  font-size: 1.8rem; /* Larger font size for the subtitle */
+  color: #cccccc; /* Lighter gray for the subtitle */
+  margin-bottom: 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* GitHub link */
+.projects-link {
+  font-family: "Courier New", Courier, monospace; /* Old computer style font */
+  font-size: 1.8rem; /* Font size to match the subtitle */
+  color: #00bfff; /* Blue color for the link */
+  text-align: center;
+  display: block;
+  margin-top: 1rem; /* Space between subtitle and link */
+  margin-bottom: 2rem;
+  text-decoration: none; /* Remove underline */
+}
+
+.projects-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Subtitle: Please use the scroll bar... */
+.projects-subtitle:last-of-type {
+  font-size: 1.8rem; /* Font size for the subtitle */
+  color: #cccccc; /* Lighter gray for the subtitle */
+  margin-bottom: 0;
+  text-align: center;
+  margin-top: 4rem; /* Space between subtitle and previous text */
+}

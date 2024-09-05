@@ -1,0 +1,149 @@
+/* Projects Section Styles */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+  background-color: #2c2c2c; /* Darker background color */
+  color: #e0e0e0; /* Light gray text color */
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.projects-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 30px; /* Maintain the gap between items */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 4rem 2rem 2rem 2rem; /* Maintain padding on all sides */
+  width: 100%;
+}
+
+/* Optional scrollbar customization */
+.project-gallery::-webkit-scrollbar {
+  height: 8px; /* Adjust the height of the scrollbar */
+}
+
+.project-gallery::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar */
+  border-radius: 10px;
+}
+
+.project-gallery::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color when hovered */
+}
+
+/* Animation for project items */
+@keyframes growIn {
+  0% {
+    transform: scale(0.8); /* Start slightly smaller */
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    transform: scale(1); /* End at full size */
+    opacity: 1; /* End fully visible */
+  }
+}
+
+.project-item {
+  flex: 0 0 35%; /* Slightly narrower project items */
+  max-width: 40%; /* Ensure items are narrower */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  height: 600px; /* Set the height to ensure a balanced look */
+  opacity: 0; /* Start with the item invisible */
+  transform: scale(0.8); /* Start with the item smaller */
+  animation: growIn 0.5s ease-out forwards; /* Grow animation */
+}
+
+.project-item.in-view {
+  animation: growIn 0.5s ease-out forwards;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  width: 100%;
+  height: 60%; /* Adjust the image to fit within the new height */
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.project-title {
+  font-size: 2rem; /* Increase the font size of the title */
+  margin-bottom: 1rem; /* Increase the space below the title */
+  color: #333;
+  margin-top: 1rem; /* Add space above the title to move it down */
+}
+
+.project-description {
+  font-size: 1.25rem; /* Font size of the description */
+  color: #666;
+  margin-top: 1rem; /* Space between the title and description */
+  overflow: hidden; /* Hides the overflowing text */
+  display: -webkit-box; /* Required for -webkit-line-clamp */
+  -webkit-line-clamp: 4; /* Adjust the number of lines to show before truncating */
+  -webkit-box-orient: vertical; /* Required for -webkit-line-clamp */
+  line-clamp: 4; /* Standard property for line clamping */
+  box-orient: vertical; /* Standard property for box orientation */
+  text-overflow: ellipsis; /* Adds "..." at the end if the text overflows */
+  max-height: 6rem; /* Adjust this value based on the font size and line-height */
+}
+
+body {
+  background-color: #2c2c2c; /* Set the same background color as the section */
+}
+
+/* styles for the arrow buttons */
+.arrow-container {
+  position: fixed; /* Keep arrows fixed in plawce */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.arrow-container:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darken background on hover */
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff; /* White color for the arrow */
+  opacity: 0.8; /* Slight transparency */
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.projects-section {
+  position: relative; /* Ensure arrows are positioned relative to this section */
+}

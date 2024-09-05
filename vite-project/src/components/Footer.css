@@ -1,0 +1,23 @@
+.footer {
+  width: 100%;
+  background-color: #333;
+  color: #ffffff;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative; /* Change this to relative or remove the position property */
+  bottom: 0; /* Remove this line as it's no longer needed */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}

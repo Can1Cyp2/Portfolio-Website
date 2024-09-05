@@ -1,0 +1,15 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+  scroll-behavior: smooth; /* Ensures smooth scrolling in all contexts */
+}
