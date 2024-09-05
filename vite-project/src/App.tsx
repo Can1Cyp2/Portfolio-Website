@@ -13,8 +13,6 @@ const App: React.FC = () => {
   return (
     <Router>
       <div>
-        {/* The Header is placed here so that it appears on all pages */}
-        <Header />
         <Routes>
           <Route
             path="/"

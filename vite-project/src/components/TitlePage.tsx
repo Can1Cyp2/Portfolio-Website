@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./TitlePage.css";
+import Header from "./Header";
 
 interface TitlePageProps {
   id?: string;
@@ -53,19 +54,22 @@ const TitlePage: React.FC<TitlePageProps> = ({ id }) => {
   }, [index, isDeleting, isFinished, nameWithMistake, fullText]);
 
   return (
-    <div className="title-page" id={id}>
-      <video autoPlay loop muted>
-        <source src="/videos/TitleBackgroundVideo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div className="overlay"></div>
-      <div className="title-text-container">
-        <h1 className="title-text">
-          {text}
-          <span className="caret">|</span>
-        </h1>
+    <>
+      <div className="title-page" id={id}>
+        <video autoPlay loop muted>
+          <source src="/videos/TitleBackgroundVideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="overlay"></div>
+        <div className="title-text-container">
+          <h1 className="title-text">
+            {text}
+            <span className="caret">|</span>
+          </h1>
+        </div>
       </div>
-    </div>
+      <Header enableSticky={true}></Header>
+    </>
   );
 };
 

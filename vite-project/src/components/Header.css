@@ -5,18 +5,6 @@
   color: white;
   padding: 35px 0;
   z-index: 1000;
-  position: absolute; /* Keep it out of the view initially */
-  top: 100dvh; /* Positioned just below the TitlePage, 100vh places it just after the title page */
-  transition: all 0.3s ease; /* Smooth transition when it becomes sticky */
-}
-
-/* Sticky header when scrolling past TitlePage */
-.header.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translateY(0);
-  margin-bottom: 100%;
 }
 
 /* Header content styling */

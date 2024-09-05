@@ -1,26 +1,30 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
-const Header: React.FC = () => {
+type Props = { enableSticky?: boolean };
+
+export default function Header({ enableSticky = false }: Props) {
   const [isSticky, setIsSticky] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(0);
+
   const headerRef = useRef<HTMLDivElement | null>(null);
-  const location = useLocation();
+
+  useEffect(() => {
+    if (headerRef.current) {
+      setHeaderHeight(headerRef.current.clientHeight);
+    }
+  }, [headerRef.current]);
 
   useEffect(() => {
     const handleScroll = () => {
-      const titlePageHeight =
-        document.getElementById("title-page")?.clientHeight || 0;
+      const windowHeight = window.innerHeight;
+      const scrollY = window.scrollY;
 
-      if (window.scrollY > titlePageHeight) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsSticky(scrollY > windowHeight);
     };
 
-    // Apply the sticky effect only on the home page
-    if (location.pathname === "/") {
+    if (enableSticky) {
       window.addEventListener("scroll", handleScroll);
     }
 
@@ -29,9 +33,16 @@ const Header: React.FC = () => {
     };
   }, [location]);
 
+  const headerPosition = enableSticky && !isSticky ? "absolute" : "fixed";
+  const headerTop = enableSticky && !isSticky ? "100vh" : "0";
+
   return (
     <>
-      <header ref={headerRef} className={`header ${isSticky ? "sticky" : ""}`}>
+      <header
+        ref={headerRef}
+        className="header"
+        style={{ position: headerPosition, top: headerTop }}
+      >
         <div className="header-content">
           <div className="logo">
             <Link to="/">
@@ -47,11 +58,7 @@ const Header: React.FC = () => {
           </nav>
         </div>
       </header>
-      <div
-        style={{ height: isSticky ? headerRef.current?.clientHeight : 0 }}
-      ></div>
+      <div style={{ height: headerHeight + "px", opacity: 0 }}></div>
     </>
   );
-};
-
-export default Header;
+}

@@ -12,28 +12,16 @@
   overflow: hidden;
 }
 
-/* The 2048 grid background */
-.recreation2048-background {
+.recreation2048-video {
   position: absolute;
-  top: -50%;
+  top: 10%;
   right: 5%;
-  width: 15vw;
+  width: 20vw;
   height: auto;
   z-index: 1;
   transition: transform 0.3s ease;
 }
 
-/* 2048 tile */
-.recreation2048-tile {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  width: 12vw;
-  height: auto;
-  z-index: 0;
-}
-
-/* Text and content aligned to the left */
 .recreation2048-content {
   z-index: 2;
   text-align: left;
@@ -68,8 +56,7 @@
     margin-right: 20rem;
   }
 
-  .recreation2048-tile,
-  .recreation2048-background {
+  .recreation2048-video {
     right: 10%;
     width: 15vw;
   }
@@ -92,8 +79,7 @@
     text-align: center;
   }
 
-  .recreation2048-tile,
-  .recreation2048-background {
+  .recreation2048-video {
     bottom: 10%;
     right: 10%;
     width: 18vw;
@@ -114,8 +100,7 @@
     text-align: center;
   }
 
-  .recreation2048-tile,
-  .recreation2048-background {
+  .recreation2048-video {
     bottom: 10%;
     right: 10%;
     width: 20vw;
