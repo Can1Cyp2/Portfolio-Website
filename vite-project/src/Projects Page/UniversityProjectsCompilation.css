@@ -1,0 +1,121 @@
+.university-projects-container {
+  display: flex; /* Flexbox layout to align text and image horizontally */
+  justify-content: space-between; /* Ensure space between the image and text */
+  align-items: center; /* Vertically center-align the image and text */
+  padding: 0 5rem;
+  height: 100vh;
+  width: 100%;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.github-preview {
+  position: relative;
+  width: 30vw; /* Set image to take 30% of the viewport width */
+  height: auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8); /* Darker inset shadow inside the image */
+  border: 2px solid rgba(0, 0, 0, 0.7); /* Darker border stroke */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.github-screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.github-preview:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Grey opacity background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.github-preview:hover .overlay {
+  opacity: 1;
+}
+
+.click-icon {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.university-projects-content {
+  z-index: 2;
+  text-align: left;
+  width: 60%; /* Ensure text takes up the remaining space next to the image */
+}
+
+.university-projects-content h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.university-projects-content p {
+  font-size: 2rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .university-projects-container {
+    flex-direction: column; /* Stack the image and text vertically on smaller screens */
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .university-projects-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .github-preview {
+    width: 80%;
+    margin-bottom: 2rem; /* Add space between image and text */
+  }
+}
+
+@media (max-width: 768px) {
+  .university-projects-content h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .university-projects-content p {
+    font-size: 1.5rem;
+  }
+
+  .github-preview {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .university-projects-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .university-projects-content p {
+    font-size: 1.2rem;
+  }
+
+  .github-preview {
+    width: 60vw;
+  }
+}

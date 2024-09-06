@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+.sudoku-game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 5rem;
+  height: 100vh;
+  width: 100%;
+  background-color: #0e0e0e; /* Dark background */
+  color: #ffffff; /* White text */
+  position: relative;
+  overflow: hidden;
+}
+
+.sudoku-game-content {
+  z-index: 2;
+  text-align: right;
+}
+
+.sudoku-game-content h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.sudoku-game-content p {
+  font-size: 2rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  margin-left: 40rem;
+}
+
+/* Styling for numbers with random positions */
+.sudoku-numbers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%; /* Numbers will stay on the left half */
+  font-family: "Dancing Script", cursive;
+}
+
+.sudoku-number {
+  position: absolute; /* Position numbers absolutely within the container */
+  font-size: 6rem;
+  opacity: 0;
+  transition: opacity 3s ease, transform 1s ease; /* Slower fade-in effect */
+}
+
+/* Numbers appear in view */
+.sudoku-number.visible {
+  opacity: 1;
+}
+
+/* Blue and white numbers */
+.blue-number {
+  color: #00bfff;
+}
+
+.white-number {
+  color: #cccccc;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1200px) {
+  .sudoku-game-container {
+    padding-right: 2rem;
+  }
+
+  .sudoku-game-content h1 {
+    font-size: 4rem;
+  }
+
+  .sudoku-game-content p {
+    font-size: 1.8rem;
+    margin-left: 20rem;
+  }
+
+  .sudoku-number {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sudoku-game-container {
+    padding-right: 1.5rem;
+    align-items: center;
+  }
+
+  .sudoku-game-content h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .sudoku-game-content p {
+    font-size: 1.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .sudoku-number {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sudoku-game-container {
+    padding-right: 1rem;
+  }
+
+  .sudoku-game-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .sudoku-game-content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .sudoku-number {
+    font-size: 2.5rem;
+  }
+}

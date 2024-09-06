@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+.blob-counting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 5rem;
+  height: 100vh;
+  width: 100%;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.blob-counting-content {
+  z-index: 2;
+  text-align: right;
+}
+
+.blob-counting-content h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.blob-counting-content p {
+  font-size: 2rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  margin-left: 40rem;
+}
+
+/* Styling for moving blobs */
+.moving-blobs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%; /* Blobs will stay within the left half */
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: #00bfff;
+  border-radius: 50%;
+  opacity: 1; /* Always visible */
+  transition: transform 0.1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .blob-counting-container {
+    padding-right: 2rem;
+  }
+
+  .blob-counting-content h1 {
+    font-size: 4rem;
+  }
+
+  .blob-counting-content p {
+    font-size: 1.8rem;
+    margin-left: 20rem;
+  }
+
+  .blob {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blob-counting-container {
+    padding-right: 1.5rem;
+    align-items: center;
+  }
+
+  .blob-counting-content h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .blob-counting-content p {
+    font-size: 1.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .blob {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blob-counting-container {
+    padding-right: 1rem;
+  }
+
+  .blob-counting-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .blob-counting-content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .blob {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}

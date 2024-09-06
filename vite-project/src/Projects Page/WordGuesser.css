@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.wordguesser-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5rem;
+  height: 100vh;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.wordguesser-content {
+  z-index: 2;
+  text-align: left;
+}
+
+.wordguesser-content h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.wordguesser-content p {
+  font-size: 2rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  margin-right: 40rem;
+}
+
+/* Word display styling */
+.wordguesser-word {
+  display: flex;
+  position: absolute;
+  right: 5%; /* Align the word to the right */
+  margin-bottom: 1rem; /* Add spacing between rows */
+}
+
+.wordguesser-word:nth-child(2) {
+  top: 30%; /* First row HELLO */
+}
+
+.wordguesser-word:nth-child(3) {
+  top: 40%; /* Second row ABOVE */
+}
+
+.wordguesser-word:nth-child(4) {
+  top: 50%; /* Third row OUTER */
+}
+
+.wordguesser-word:nth-child(5) {
+  top: 60%; /* Fourth row FOXES */
+}
+
+.wordguesser-word:nth-child(6) {
+  top: 70%; /* Fifth row CODES */
+}
+
+.letter {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+}
+
+.grey {
+  background-color: #7d7d7d;
+}
+
+.yellow {
+  background-color: #c9b458;
+}
+
+.green {
+  background-color: #6aaa64;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1200px) {
+  .wordguesser-container {
+    padding-left: 2rem;
+  }
+
+  .wordguesser-content h1 {
+    font-size: 4rem;
+  }
+
+  .wordguesser-content p {
+    font-size: 1.8rem;
+    margin-right: 20rem;
+  }
+
+  .letter {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wordguesser-container {
+    padding-left: 1.5rem;
+    align-items: center;
+  }
+
+  .wordguesser-content h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .wordguesser-content p {
+    font-size: 1.5rem;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .wordguesser-word {
+    right: 10%;
+  }
+
+  .letter {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wordguesser-container {
+    padding-left: 1rem;
+  }
+
+  .wordguesser-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .wordguesser-content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .wordguesser-word {
+    right: 10%;
+  }
+
+  .letter {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+}

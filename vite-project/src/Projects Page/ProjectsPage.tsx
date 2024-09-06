@@ -1,7 +1,17 @@
 import React from "react";
+
+{
+  /* imports for pages sections: */
+}
 import MineSweeper from "./MineSweeper";
 import JumpGame from "./JumpGame";
-import Recreation2048 from "./Recreation2048"; // Import 2048 section
+import Recreation2048 from "./Recreation2048";
+import SudokuGame from "./SudokuGame";
+import FanPage from "./FanPage";
+import BlobCounting from "./BlobCounting";
+import WordGuesser from "./WordGuesser";
+import UniversityProjectsCompilation from "./UniversityProjectsCompilation";
+
 import "./ProjectsPage.css";
 import Header from "../components/Header";
 
@@ -35,6 +45,16 @@ const ProjectsPage: React.FC = () => {
         <JumpGame />
         {/* 2048 Recreation Section */}
         <Recreation2048 />
+        {/* Sudoku Game Section */}
+        <SudokuGame />
+        {/* Fan Page Section */}
+        <FanPage />
+        {/* Blob Counting Section */}
+        <BlobCounting />
+        {/* Word Guesser Section */}
+        <WordGuesser />
+        {/* University Projects Compilation Section */}
+        <UniversityProjectsCompilation />
       </div>
     </>
   );
