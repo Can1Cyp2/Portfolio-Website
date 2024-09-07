@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-{
-  /* imports for pages sections: */
-}
+// imports for page sections:
 import MineSweeper from "./MineSweeper";
 import JumpGame from "./JumpGame";
 import Recreation2048 from "./Recreation2048";
@@ -14,11 +12,28 @@ import UniversityProjectsCompilation from "./UniversityProjectsCompilation";
 
 import "./ProjectsPage.css";
 import Header from "../components/Header";
+import { useLocation } from "react-router-dom";
 
 const ProjectsPage: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+      if (element) {
+        // Scroll to the project smoothly
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // If there's no hash, scroll to the top
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   return (
     <>
-      <Header></Header>
+      <Header />
       <div className="projects-page">
         {/* Projects Header */}
         <div className="projects-header">
@@ -39,22 +54,45 @@ const ProjectsPage: React.FC = () => {
           </p>
         </div>
 
-        {/* Minesweeper Section */}
-        <MineSweeper />
-        {/* Jump Game Section */}
-        <JumpGame />
-        {/* 2048 Recreation Section */}
-        <Recreation2048 />
-        {/* Sudoku Game Section */}
-        <SudokuGame />
-        {/* Fan Page Section */}
-        <FanPage />
-        {/* Blob Counting Section */}
-        <BlobCounting />
-        {/* Word Guesser Section */}
-        <WordGuesser />
-        {/* University Projects Compilation Section */}
-        <UniversityProjectsCompilation />
+        {/* Minesweeper Section with id */}
+        <section id="minesweeper">
+          <MineSweeper />
+        </section>
+
+        {/* Jump Game Section with id */}
+        <section id="jump-game">
+          <JumpGame />
+        </section>
+
+        {/* 2048 Recreation Section with id */}
+        <section id="recreation-2048">
+          <Recreation2048 />
+        </section>
+
+        {/* Sudoku Game Section with id */}
+        <section id="sudoku-game">
+          <SudokuGame />
+        </section>
+
+        {/* Fan Page Section with id */}
+        <section id="fan-page">
+          <FanPage />
+        </section>
+
+        {/* Blob Counting Section with id */}
+        <section id="blob-counting">
+          <BlobCounting />
+        </section>
+
+        {/* Word Guesser Section with id */}
+        <section id="word-guesser">
+          <WordGuesser />
+        </section>
+
+        {/* University Projects Compilation Section with id */}
+        <section id="university-projects-compilation">
+          <UniversityProjectsCompilation />
+        </section>
       </div>
     </>
   );

@@ -2,12 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import Project from "./Project";
 import Modal from "./Modal";
 import "./ProjectsSection.css";
+import { Link } from "react-router-dom";
 
 const ProjectsSection: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<null | {
     title: string;
     description: string;
     image: string;
+    githubUrl: string; // Ensure we include the GitHub URL here
   }>(null);
 
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -51,7 +53,8 @@ const ProjectsSection: React.FC = () => {
         "A modern remake of the classic Minesweeper game, featuring essential mechanics such as flagging, win conditions, and a fully functional play button.",
       longDescription:
         "This modern remake of Minesweeper offers a polished gaming experience, incorporating all the classic features you expect: flagging of potential mines, clear win conditions, and an intuitive play button to start each game. The game is enhanced with smooth animations and a dynamic user interface. The randomly generated maps ensure that no two games are alike, providing endless replayability and a fresh challenge every time.",
-      image: "https://via.placeholder.com/800x800",
+      image: "/pictures/ProjectsSection/minesweeper/minesweeperPic.png",
+      githubUrl: "https://github.com/Can1Cyp2/Minesweeper---Remake",
     },
     {
       id: "project2",
@@ -60,7 +63,8 @@ const ProjectsSection: React.FC = () => {
         "A game inspired by classic games such as Mario and Doodle Jump.",
       longDescription:
         "JUMP! is a platformer game I created in Grade 11 (2020). In this game, you guide your character through levels, jumping from platform to platform, avoiding enemies, and aiming to reach the star at the top to win. Developed as a school project, JUMP! was my first experience in game development using Python and Pygame. The project taught me a lot about coding and game design. If I were to remake it now, I would improve the code to be cleaner, more precise, and reduce glitches.",
-      image: "https://via.placeholder.com/800x800",
+      image: "/pictures/ProjectsSection/jump/jumpPic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/JUMP-game-",
     },
     {
       id: "project3",
@@ -69,7 +73,8 @@ const ProjectsSection: React.FC = () => {
         "A mobile version of the classic 2048 game for Android devices.",
       longDescription:
         "The 2048 game is a modern puzzle game designed for Android devices using Android Studio. Players swipe to move tiles on a 4x4 grid, combining those with identical numbers to reach higher values. The game includes features like customizable point goals, a scoreboard, and a high scores menu to track top performances. This project showcases a deep understanding of mobile development, problem-solving, and user interface design.",
-      image: "https://via.placeholder.com/800x800",
+      image: "/pictures/ProjectsSection/2048/recreation2048Pic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/2048",
     },
     {
       id: "project4",
@@ -78,7 +83,8 @@ const ProjectsSection: React.FC = () => {
         "A Sudoku game with various difficulty levels and a user-friendly interface.",
       longDescription:
         "This Sudoku Game offers a highly interactive and engaging experience for users of all skill levels. Featuring multiple difficulty levels, from beginner to expert, it challenges players to solve puzzles with a sleek and intuitive interface. The game includes hints, auto-check features, and an undo button to enhance the playing experience. Whether you’re a seasoned Sudoku enthusiast or a newcomer to the game, this project provides endless hours of entertainment and mental stimulation.",
-      image: "https://via.placeholder.com/800x800",
+      image: "/pictures/ProjectsSection/sudoku/sudokuPic1.png",
+      githubUrl: "https://github.com/Can1Cyp2/Sudoku-with-solver",
     },
     {
       id: "project5",
@@ -87,7 +93,8 @@ const ProjectsSection: React.FC = () => {
         "A band website built entirely in HTML, showcasing Shinedown's albums, history, and official links.",
       longDescription:
         "This project represents the first website I created in grade 10 using only HTML. It features a comprehensive navigation menu that links to various sections of the site, including band members, show schedules, and a history section. The website also includes album details with cover images and descriptions. Through this project, I learned the basics of HTML, including layout structuring, linking, and basic CSS for styling. It served as a foundational experience in my journey into web development.",
-      image: "https://via.placeholder.com/800x800", // Replace with an actual image if available
+      image: "/pictures/ProjectsSection/fanpage/fanPagePic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/BandWebsite-Shinedown",
     },
     {
       id: "project6",
@@ -96,7 +103,8 @@ const ProjectsSection: React.FC = () => {
         "A C++ program that utilizes recursion to count connected blobs on a grid.",
       longDescription:
         "This C++ program, created during my early high school years while learning recursion, asks the user for the number of rows and columns to generate a grid filled with 'blobs' (*). The user is then prompted to select a position on the grid, and the program checks that position for a blob. If a blob is found, it recursively counts all connected blobs in that area, otherwise, it returns 0. This project was a foundational exercise in understanding recursion and basic grid traversal algorithms in C++.",
-      image: "https://via.placeholder.com/800x800", // Replace with an actual image if available
+      image: "/pictures/ProjectsSection/blob/blobPic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/BlobChecker-Recursion",
     },
     {
       id: "project7",
@@ -105,7 +113,8 @@ const ProjectsSection: React.FC = () => {
         "A game similar to Wordle where you try to guess a 5-letter word.",
       longDescription:
         "WordGuesser is a game inspired by the popular Wordle game. The player must guess a 5-letter word, with feedback provided for each guess. The game tracks the player's remaining guesses and highlights correct and incorrect letters. The game was built using HTML, CSS, and JavaScript, with a focus on creating a simple and fun user interface. This project helped me understand the fundamentals of web development and game logic.",
-      image: "https://via.placeholder.com/800x800", // Replace with an actual image if available
+      image: "/pictures/ProjectsSection/wordGuesser/wordGuessPic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/Word-Guesser",
     },
     {
       id: "project8",
@@ -135,7 +144,9 @@ const ProjectsSection: React.FC = () => {
         
         <p style="margin-top: 2rem;">Each project includes a JUnit test file to ensure the correctness of the implemented logic, solidifying my understanding of unit testing in Java.</p>
       `,
-      image: "https://via.placeholder.com/800x800", // Replace with an actual image if available
+      image:
+        "/pictures/ProjectsSection/universityCompilation/gitScreenshot.png",
+      githubUrl: "https://github.com/Can1Cyp2/UniversityJavaProjects",
     },
   ];
 
@@ -195,6 +206,7 @@ const ProjectsSection: React.FC = () => {
                 title: project.title,
                 description: project.longDescription || project.description,
                 image: project.image,
+                githubUrl: project.githubUrl,
               })
             }
           />
@@ -241,20 +253,48 @@ const ProjectsSection: React.FC = () => {
               justifyContent: "space-between",
               gap: "40px",
               flexWrap: "wrap",
+              position: "relative", // Ensure relative positioning for correct placement
             }}
           >
-            <img
-              src={selectedProject.image}
-              alt={selectedProject.title}
-              style={{
-                width: "100%",
-                maxWidth: "50%",
-                height: "auto",
-                borderRadius: "8px",
-                objectFit: "cover",
-                flexShrink: 0,
-              }}
-            />
+            {/* Image Container */}
+            <div style={{ position: "relative", maxWidth: "50%" }}>
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  borderRadius: "8px",
+                  objectFit: "cover",
+                }}
+              />
+
+              {/* GitHub link icon positioned at the top-right of the image */}
+              {selectedProject.githubUrl && (
+                <a
+                  href={selectedProject.githubUrl} // Use correct GitHub URL for each project
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    position: "absolute",
+                    top: "-10px",
+                    right: "-10px",
+                    fontSize: "1.5rem",
+                    color: "#007bff",
+                    backgroundColor: "rgba(255, 255, 255, 0.9)", // Slightly opaque background
+                    borderRadius: "50%",
+                    padding: "10px",
+                    cursor: "pointer", // Pointer cursor to indicate clickable link
+                    zIndex: 10,
+                    textDecoration: "none", // Remove the blue underline
+                  }}
+                >
+                  🔗
+                </a>
+              )}
+            </div>
+
+            {/* Project Description */}
             <div
               style={{
                 flex: "1",
@@ -262,28 +302,52 @@ const ProjectsSection: React.FC = () => {
                 textAlign: "left",
                 position: "relative",
                 padding: "20px",
-                paddingTop: "60px", // Increase the top padding to push text lower
+                paddingTop: "60px", // Push the description text lower
               }}
             >
               <h2
                 style={{
-                  fontSize: "2.8rem", // Increased font size for the title
-                  marginBottom: "40px", // Increased bottom margin to create more space below the title
-                  color: "#333",
+                  fontSize: "2.8rem",
+                  marginBottom: "40px",
                   textAlign: "center",
+                  color: "black",
+                  textDecoration: "underline",
+                  fontWeight: "bold",
                 }}
               >
-                {selectedProject.title}
+                <Link
+                  to="/projects"
+                  className="modal-link"
+                  style={{
+                    color: "black",
+                    textDecoration: "underline",
+                    cursor: "pointer",
+                    transition: "color 0.3s ease",
+                  }}
+                  onMouseEnter={(e: {
+                    currentTarget: { style: { color: string } };
+                  }) => {
+                    e.currentTarget.style.color = "#007bff"; // Change color on hover
+                  }}
+                  onMouseLeave={(e: {
+                    currentTarget: { style: { color: string } };
+                  }) => {
+                    e.currentTarget.style.color = "black"; // Revert color on mouse leave
+                  }}
+                >
+                  {selectedProject.title}
+                </Link>
               </h2>
+
               <div
                 dangerouslySetInnerHTML={{
                   __html: selectedProject.description,
                 }}
                 style={{
-                  fontSize: "1.5rem", // Increased font size for the description text
+                  fontSize: "1.5rem",
                   color: "#666",
-                  lineHeight: "1.8", // Slightly increased line height for better readability
-                  marginTop: "40px", // Increased top margin to create more space above the description
+                  lineHeight: "1.8",
+                  marginTop: "40px",
                 }}
               />
             </div>

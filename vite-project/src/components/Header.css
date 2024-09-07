@@ -1,3 +1,6 @@
+/* Import the Segoe Script font */
+@import url("https://fonts.googleapis.com/css2?family=Segoe+Script:wght@400;700&display=swap");
+
 /* Initial header positioning (placed below TitlePage) */
 .header {
   width: 100%;
@@ -16,12 +19,22 @@
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
+  position: relative; /* This helps in positioning elements within */
 }
 
-/* Logo styling */
-.logo h1 {
-  margin: 0;
-  font-size: 2.2rem;
+/* Logo styling for script font */
+.script-logo {
+  font-family: "Segoe Script", cursive;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  left: -50px; /* Move the logo to the left */
+}
+
+/* Add hover effects for the script logo */
+.script-logo:hover {
+  text-decoration: underline;
 }
 
 .nav-links {

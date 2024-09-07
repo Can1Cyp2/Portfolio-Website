@@ -46,7 +46,7 @@ export default function Header({ enableSticky = false }: Props) {
         <div className="header-content">
           <div className="logo">
             <Link to="/">
-              <h1>Your Logo</h1>
+              <h1 className="script-logo">Sebastian Landry</h1>
             </Link>
           </div>
           <nav className="nav-links">

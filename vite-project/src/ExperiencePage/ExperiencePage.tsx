@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "../components/Modal";
 import Header from "../components/Header";
 
 const ExperiencePage: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
+
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const handleImageClick = (imageUrl: string) => {

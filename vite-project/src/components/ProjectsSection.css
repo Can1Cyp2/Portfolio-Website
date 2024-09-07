@@ -84,6 +84,11 @@
   object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 
+/* My Projects Title: */
+.projects-title {
+  margin-bottom: -2rem;
+}
+
 .project-title {
   font-size: 2rem; /* Increase the font size of the title */
   margin-bottom: 1rem; /* Increase the space below the title */
@@ -146,4 +151,17 @@ body {
 
 .projects-section {
   position: relative; /* Ensure arrows are positioned relative to this section */
+}
+
+/* Style for the project titles (links) */
+.projects-section .modal-link {
+  color: #333; /* Default color for the title */
+  text-decoration: none; /* Remove the underline */
+  transition: color 0.3s ease; /* Smooth transition when color changes */
+}
+
+/* Change color on hover */
+.projects-section .modal-link:hover {
+  color: #007bff; /* Change to blue on hover */
+  text-decoration: underline; /* Optionally add underline on hover */
 }

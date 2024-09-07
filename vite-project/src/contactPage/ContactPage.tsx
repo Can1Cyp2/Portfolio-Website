@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ContactPage.css";
 import Header from "../components/Header";
 
 const ContactPage: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,7 +28,7 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
-      <Header></Header>
+      <Header />
       <section className="contact-page">
         <h2>Contact Me</h2>
 
