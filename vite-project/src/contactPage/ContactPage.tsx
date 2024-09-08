@@ -26,7 +26,7 @@ const ContactPage: React.FC = () => {
     window.alert(
       "This feature does not work right now, please email me at 99SebastianL@gmail.com"
     );
-    setFormData({ name: "", email: "", message: "" });
+    // setFormData({ name: "", email: "", message: "" });   // Resets form data
   };
 
   return (
