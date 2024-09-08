@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./MineSweeper.css"; // Import Minesweeper-specific styles
+import { VITE_BASE_URL } from "../App";
 
 const MineSweeper: React.FC = () => {
   const backgroundRef = useRef<HTMLImageElement | null>(null);
@@ -35,7 +36,7 @@ const MineSweeper: React.FC = () => {
       {/* Background image that moves on scroll */}
       <img
         ref={backgroundRef}
-        src="/pictures/ProjectsSection/minesweeper/mine.png"
+        src={VITE_BASE_URL + "/pictures/ProjectsSection/minesweeper/mine.png"}
         alt="Minesweeper Background"
         className="minesweeper-background"
       />
@@ -48,7 +49,10 @@ const MineSweeper: React.FC = () => {
           {/* Red flag positioned relative to the title */}
           <img
             ref={flagRef}
-            src="/pictures/ProjectsSection/minesweeper/red-flag.png"
+            src={
+              VITE_BASE_URL +
+              "/pictures/ProjectsSection/minesweeper/red-flag.png"
+            }
             alt="Minesweeper Flag"
             className="minesweeper-flag"
           />
@@ -68,7 +72,10 @@ const MineSweeper: React.FC = () => {
 
       {/* Tile in the bottom right */}
       <img
-        src="/pictures/ProjectsSection/minesweeper/Silver_square.png"
+        src={
+          VITE_BASE_URL +
+          "/pictures/ProjectsSection/minesweeper/Silver_square.png"
+        }
         alt="Minesweeper Tile"
         className="minesweeper-tile"
       />

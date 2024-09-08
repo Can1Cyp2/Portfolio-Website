@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Modal from "../components/Modal";
 import Header from "../components/Header";
+import { VITE_BASE_URL } from "../App";
 
 const ExperiencePage: React.FC = () => {
   useEffect(() => {
@@ -49,13 +50,13 @@ const ExperiencePage: React.FC = () => {
         >
           {/* Resume Images */}
           <img
-            src="/pictures/ResumePage1.jpg"
+            src={VITE_BASE_URL + "pictures/ResumePage1.jpg"}
             alt="Resume Page 1"
             style={{ width: "45%", cursor: "pointer" }}
             onClick={() => handleImageClick("/pictures/ResumePage1.jpg")}
           />
           <img
-            src="/pictures/ResumePage2.jpg"
+            src={VITE_BASE_URL + "pictures/ResumePage2.jpg"}
             alt="Resume Page 2"
             style={{ width: "45%", cursor: "pointer" }}
             onClick={() => handleImageClick("/pictures/ResumePage2.jpg")}
@@ -73,7 +74,7 @@ const ExperiencePage: React.FC = () => {
               }}
             >
               <img
-                src={selectedImage}
+                src={VITE_BASE_URL + selectedImage}
                 alt="Resume"
                 style={{
                   width: "100%", // Full width of the modal

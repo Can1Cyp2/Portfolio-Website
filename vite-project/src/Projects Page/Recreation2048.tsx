@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./Recreation2048.css"; // Ensure your CSS file is correctly imported
+import { VITE_BASE_URL } from "../App";
 
 const Recreation2048: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -59,7 +60,7 @@ const Recreation2048: React.FC = () => {
       {/* Video controlled by scroll */}
       <video
         ref={videoRef}
-        src="/pictures/ProjectsSection/2048/2048.mp4" // Ensure this path is correct
+        src={VITE_BASE_URL + "/pictures/ProjectsSection/2048/2048.mp4"}
         muted
         playsInline
         className="recreation2048-video"

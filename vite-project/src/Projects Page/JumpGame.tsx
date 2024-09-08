@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./JumpGame.css"; // Import JumpGame-specific styles
+import { VITE_BASE_URL } from "../App";
 
 const JumpGame: React.FC = () => {
   const backgroundRef = useRef<HTMLImageElement | null>(null);
@@ -36,7 +37,7 @@ const JumpGame: React.FC = () => {
       {/* Man image that moves on scroll */}
       <img
         ref={backgroundRef}
-        src="/pictures/ProjectsSection/jump/man.png"
+        src={VITE_BASE_URL + "/pictures/ProjectsSection/jump/man.png"}
         alt="Jump Game man"
         className="jumpgame-man"
       />
@@ -59,7 +60,7 @@ const JumpGame: React.FC = () => {
       {/* Trampoline Tile in the bottom */}
       <img
         ref={tileRef}
-        src="/pictures/ProjectsSection/jump/trampoline.png"
+        src={VITE_BASE_URL + "/pictures/ProjectsSection/jump/trampoline.png"}
         alt="Jump Tile"
         className="jumpgame-tile"
       />

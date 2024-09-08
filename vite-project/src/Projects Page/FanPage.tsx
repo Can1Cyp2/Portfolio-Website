@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "./FanPage.css"; // Import FanPage-specific styles
+import { VITE_BASE_URL } from "../App";
 
 const FanPage: React.FC = () => {
   const microphoneRef = useRef<HTMLDivElement | null>(null);
@@ -75,7 +76,9 @@ const FanPage: React.FC = () => {
         onMouseEnter={createMusicalNotes}
       >
         <img
-          src="/pictures/ProjectsSection/fanpage/microphone.png"
+          src={
+            VITE_BASE_URL + "/pictures/ProjectsSection/fanpage/microphone.png"
+          }
           alt="Microphone"
           className="fanpage-instrument"
         />

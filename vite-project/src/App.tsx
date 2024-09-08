@@ -8,13 +8,15 @@ import AboutMe from "./sections/AboutMe";
 import Footer from "./components/Footer";
 import ProjectsPage from "./Projects Page/ProjectsPage";
 
+export const VITE_BASE_URL = "/Portfolio-Website/";
+
 const App: React.FC = () => {
   return (
     <Router>
       <div>
         <Routes>
           <Route
-            path="/"
+            path={VITE_BASE_URL}
             element={
               <>
                 <TitlePage />
@@ -23,9 +25,12 @@ const App: React.FC = () => {
               </>
             }
           />
-          <Route path="/experience" element={<MyExperiencePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
+          <Route
+            path={VITE_BASE_URL + "experience"}
+            element={<MyExperiencePage />}
+          />
+          <Route path={VITE_BASE_URL + "contact"} element={<ContactPage />} />
+          <Route path={VITE_BASE_URL + "projects"} element={<ProjectsPage />} />
         </Routes>
         <Footer /> {/* Footer remains at the bottom of every page */}
       </div>

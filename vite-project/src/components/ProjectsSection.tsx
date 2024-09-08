@@ -3,6 +3,7 @@ import Project from "./Project";
 import Modal from "./Modal";
 import "./ProjectsSection.css";
 import { Link } from "react-router-dom";
+import { VITE_BASE_URL } from "../App";
 
 const ProjectsSection: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<null | {
@@ -274,7 +275,7 @@ const ProjectsSection: React.FC = () => {
             {/* Image Container */}
             <div style={{ position: "relative", maxWidth: "50%" }}>
               <img
-                src={selectedProject.image}
+                src={VITE_BASE_URL + selectedProject.image}
                 alt={selectedProject.title}
                 style={{
                   width: "100%",
@@ -287,7 +288,7 @@ const ProjectsSection: React.FC = () => {
               {/* GitHub link icon positioned at the top-right of the image */}
               {selectedProject.githubUrl && (
                 <a
-                  href={selectedProject.githubUrl} // Use correct GitHub URL for each project
+                  href={selectedProject.githubUrl} // Use correct GitHub URL for each project, but for now it only takes you to page
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -331,7 +332,7 @@ const ProjectsSection: React.FC = () => {
                 }}
               >
                 <Link
-                  to="/projects"
+                  to={VITE_BASE_URL + "projects"}
                   className="modal-link"
                   style={{
                     color: "black",

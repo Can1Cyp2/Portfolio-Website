@@ -1,4 +1,5 @@
 import React from "react";
+import { VITE_BASE_URL } from "../App";
 
 type ProjectProps = {
   title: string;
@@ -27,7 +28,7 @@ const Project: React.FC<ProjectProps> = ({
       }}
     >
       <img
-        src={image}
+        src={VITE_BASE_URL + image}
         alt={title}
         className="project-image"
         style={{

@@ -22,7 +22,10 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    // Show the warning message
+    window.alert(
+      "This feature does not work right now, please email me at 99SebastianL@gmail.com"
+    );
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -35,27 +38,27 @@ const ContactPage: React.FC = () => {
         <div className="contact-info">
           <div className="contact-info-item left">
             <h3>Email</h3>
-            <p>yourname@example.com</p>
+            <p>99SebastianL@gmail.com</p>
           </div>
           <div className="contact-info-item right">
             <h3>Phone</h3>
-            <p>(123) 456-7890</p>
+            <p>(647) 575-3734</p>
           </div>
           <div className="contact-info-item left">
             <h3>LinkedIn</h3>
             <p>
               <a
-                href="https://www.linkedin.com/in/your-profile"
+                href="https://www.linkedin.com/in/sebastian-landry/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                linkedin.com/in/your-profile
+                linkedin.com/in/sebastian-landry/
               </a>
             </p>
           </div>
           <div className="contact-info-item right">
             <h3>Location</h3>
-            <p>City, Country</p>
+            <p>Toronto, ON, Canada</p>
           </div>
         </div>
 

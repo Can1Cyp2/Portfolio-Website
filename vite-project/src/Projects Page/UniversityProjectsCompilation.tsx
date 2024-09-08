@@ -1,5 +1,6 @@
 import React from "react";
 import "./UniversityProjectsCompilation.css"; // Import UniversityProjectsCompilation-specific styles
+import { VITE_BASE_URL } from "../App";
 
 const UniversityProjectsCompilation: React.FC = () => {
   const handleImageClick = () => {
@@ -10,7 +11,10 @@ const UniversityProjectsCompilation: React.FC = () => {
     <div className="university-projects-container">
       <div className="github-preview" onClick={handleImageClick}>
         <img
-          src="/pictures/ProjectsSection/universityCompilation/gitScreenshot.png"
+          src={
+            VITE_BASE_URL +
+            "/pictures/ProjectsSection/universityCompilation/gitScreenshot.png"
+          }
           alt="GitHub Project Screenshot"
           className="github-screenshot"
         />

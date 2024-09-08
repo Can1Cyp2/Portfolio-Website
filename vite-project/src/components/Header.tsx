@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import { VITE_BASE_URL } from "../App";
 
 type Props = { enableSticky?: boolean };
 
@@ -45,16 +46,16 @@ export default function Header({ enableSticky = false }: Props) {
       >
         <div className="header-content">
           <div className="logo">
-            <Link to="/">
+            <Link to={VITE_BASE_URL}>
               <h1 className="script-logo">Sebastian Landry</h1>
             </Link>
           </div>
           <nav className="nav-links">
-            <Link to="/experience">Experience</Link>
+            <Link to={VITE_BASE_URL + "experience"}>Experience</Link>
             <span>|</span>
-            <Link to="/projects">Projects</Link>
+            <Link to={VITE_BASE_URL + "projects"}>Projects</Link>
             <span>|</span>
-            <Link to="/contact">Contact</Link>
+            <Link to={VITE_BASE_URL + "contact"}>Contact</Link>
           </nav>
         </div>
       </header>
