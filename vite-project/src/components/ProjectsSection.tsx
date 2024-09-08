@@ -190,9 +190,24 @@ const ProjectsSection: React.FC = () => {
           textAlign: "left", // Align to the left side
           marginBottom: "2rem",
           marginLeft: "5%", // Move the title to the right from the edge
+          display: "flex", // Make the title and text inline
+          alignItems: "center", // Align the new text with the title
+          gap: "1rem", // Add space between the title and the new text
         }}
       >
         My Projects
+        <span
+          style={{
+            fontSize: "1.2rem", // Slightly smaller than the title
+            color: "#ffffff", // White color to match
+            fontStyle: "italic", // Optional italic style for emphasis
+            opacity: "60%",
+            marginLeft: "8rem", // Add space between the title and the new text
+          }}
+        >
+          Check out my designated projects page for a more exciting look at my
+          creations!
+        </span>
       </h2>
       <div className="project-gallery" ref={galleryRef}>
         {projects.map((project) => (
