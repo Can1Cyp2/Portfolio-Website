@@ -29,7 +29,7 @@
   color: white;
   cursor: pointer;
   position: relative;
-  left: -50px; /* Move the logo to the left */
+  left: -50px;
 }
 
 /* Add hover effects for the script logo */

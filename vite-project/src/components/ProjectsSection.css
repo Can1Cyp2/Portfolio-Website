@@ -165,3 +165,38 @@ body {
   color: #007bff; /* Change to blue on hover */
   text-decoration: underline; /* Optionally add underline on hover */
 }
+
+/* For screens between 1024px and 768px (tablets) */
+@media (max-width: 1024px) {
+  .project-item {
+    flex: 0 0 45%; /* Make project items take up 45% width */
+    max-width: 45%; /* Adjust max width to avoid them getting too large */
+    height: auto; /* Remove fixed height for responsive behavior */
+  }
+}
+
+/* For screens between 768px and 480px (large smartphones) */
+@media (max-width: 768px) {
+  .project-item {
+    flex: 0 0 90%; /* Each item takes up most of the screen width */
+    max-width: 90%; /* Prevents overflow */
+    height: auto; /* height adjusts dynamically */
+  }
+
+  .project-image {
+    height: auto; /* image height dynamic */
+  }
+}
+
+/* For screens smaller than 480px (small smartphones) */
+@media (max-width: 480px) {
+  .project-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .project-image {
+    height: auto; /* Ensures image scales properly */
+  }
+}

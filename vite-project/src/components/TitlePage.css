@@ -66,14 +66,33 @@
   }
 }
 
+/* Adjustments for smaller screens */
 @media (max-width: 600px) {
   .title-text {
-    font-size: 4rem;
+    font-size: 3.5rem; /* Decrease font size for smaller screens */
+  }
+
+  .title-text-container {
+    padding: 1rem 1.5rem; /* Reduce padding to save space */
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .title-text {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Further decrease font size for very small screens */
+  }
+
+  .title-text-container {
+    padding: 0.5rem 1rem; /* Reduce padding even more */
+  }
+}
+
+@media (max-width: 360px) {
+  .title-text {
+    font-size: 2rem; /* ensure text fits on extremely small screens */
+  }
+
+  .title-text-container {
+    padding: 0.5rem; /* small padding for tiny screens */
   }
 }

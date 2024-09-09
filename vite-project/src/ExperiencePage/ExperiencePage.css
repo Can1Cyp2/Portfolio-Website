@@ -14,12 +14,34 @@
   font-size: 3rem;
 }
 
+#experience .experience-images {
+  display: flex;
+  flex-direction: row; /* Default for larger screens */
+  gap: 2rem;
+  justify-content: center;
+}
+
 #experience img {
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  width: 45%;
 }
 
 #experience img:hover {
   transform: scale(1.05);
+}
+
+/* Only adjust layout for screens smaller than 768px */
+@media (max-width: 768px) {
+  #experience div {
+    flex-direction: column; /* Stack the images vertically */
+    align-items: center;
+  }
+
+  #experience img {
+    width: 100%; /* Make images full width on small screens */
+    margin-bottom: 2rem; /* Add space between the stacked images */
+    height: auto; /* Maintain aspect ratio */
+  }
 }

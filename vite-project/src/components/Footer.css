@@ -4,8 +4,7 @@
   color: #ffffff;
   padding: 1rem 0;
   text-align: center;
-  position: relative; /* Change this to relative or remove the position property */
-  bottom: 0; /* Remove this line as it's no longer needed */
+  position: relative;
 }
 
 .footer-content {
@@ -20,4 +19,19 @@
 
 .footer p {
   margin: 0.5rem 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+    font-size: 0.9rem; /* Slightly smaller text on smaller screens */
+    padding: 1.5rem; /* Reduce padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    font-size: 0.8rem; /* Even smaller text for very small screens */
+    padding: 1.5rem;
+  }
 }

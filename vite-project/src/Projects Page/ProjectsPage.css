@@ -61,3 +61,39 @@
   text-align: center;
   margin-top: 4rem; /* Space between subtitle and previous text */
 }
+
+/* Responsive design for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Adjust header height to fit text */
+  .projects-header {
+    height: auto; /* Remove fixed height */
+    padding-top: 3rem; /* Reduce padding on top */
+    padding-bottom: 3rem; /* Adjust padding */
+  }
+
+  /* Adjust title size to fit screen width */
+  .projects-title {
+    font-size: 2.5rem; /* Reduce font size */
+    margin-bottom: 1.5rem; /* Adjust space below title */
+  }
+
+  /* Adjust subtitle font size and spacing */
+  .projects-subtitle {
+    font-size: 1.4rem; /* Reduce font size */
+    margin-top: 1.5rem; /* Adjust spacing between subtitle */
+  }
+
+  /* Adjust GitHub link font size and spacing */
+  .projects-link {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    word-wrap: break-word; /* Ensure long links wrap to the next line */
+    white-space: normal; /* Allow the link to break and wrap onto a new line if needed */
+  }
+
+  /* Adjust spacing for the last subtitle */
+  .projects-subtitle:last-of-type {
+    margin-top: 2rem; /* Reduce space between subtitle and text */
+  }
+}

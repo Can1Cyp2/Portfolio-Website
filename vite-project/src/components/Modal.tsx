@@ -1,5 +1,6 @@
 import React from "react";
 import { createPortal } from "react-dom";
+import "./Modal.css";
 
 type Props = {
   children: React.ReactNode;
@@ -13,18 +14,7 @@ export default function Modal({ children, open, onClose }: Props) {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    maxHeight: "90vh",
-    maxWidth: "95vw",
-    width: "80%", // Make the modal wider (80% of the viewport width)
-    backgroundColor: "#f0f0f0",
-    borderRadius: "10px",
-    border: "1px solid #ccc",
-    padding: "20px",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
     zIndex: 1000,
-    overflowY: "auto",
-    display: "flex", // Flexbox layout to align image and text side by side
-    gap: "20px", // Space between image and text
   };
 
   const OVERLAY_STYLES: React.CSSProperties = {
@@ -54,11 +44,11 @@ export default function Modal({ children, open, onClose }: Props) {
   return createPortal(
     <>
       <div style={OVERLAY_STYLES} onClick={onClose}></div>
-      <div style={MODAL_STYLES}>
+      <div className="modal" style={MODAL_STYLES}>
         <button style={CLOSE_BUTTON_STYLES} onClick={onClose}>
           &times;
         </button>
-        {children} {/* This is where the image and text content goes */}
+        {children}
       </div>
     </>,
     document.getElementById("modal")!

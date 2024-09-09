@@ -140,3 +140,83 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #21a1f1;
 }
+
+/* Media Queries for Responsive Design */
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .contact-info-item {
+    width: 100%; /* Make contact info items full width */
+    text-align: center; /* Center text for smaller screens */
+    transform: translateX(0); /* Remove the horizontal shift */
+  }
+
+  .contact-info {
+    margin-bottom: 8rem; /* Reduce space below contact info */
+  }
+
+  .contact-form {
+    width: 80%; /* Increase the form width */
+    padding: 2rem 3rem; /* Adjust padding */
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 4rem 2rem; /* Reduce padding */
+  }
+
+  .contact-info-item {
+    padding: 1rem 1.5rem; /* Reduce padding for smaller screens */
+  }
+
+  .contact-info {
+    margin-bottom: 5rem; /* Reduce margin below contact info */
+  }
+
+  .contact-form {
+    width: 100%; /* Make the form full width */
+    padding: 2rem; /* Reduce padding inside the form */
+  }
+
+  .form-group label {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem; /* Reduce font size inside inputs */
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .contact-page h2 {
+    font-size: 2.5rem; /* Reduce heading size for mobile */
+    margin-bottom: 2rem; /* Reduce space below heading */
+  }
+
+  .contact-form {
+    padding: 1.5rem; /* Further reduce padding */
+  }
+
+  .contact-info-item {
+    padding: 0.8rem 1rem; /* Reduce padding further */
+  }
+
+  .contact-info {
+    gap: 1rem; /* Reduce space between items */
+    margin-bottom: 3rem; /* Further reduce space below contact info */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.5rem; /* Reduce padding inside form fields */
+  }
+
+  button[type="submit"] {
+    padding: 0.5rem 1.5rem; /* Reduce button padding */
+    font-size: 1.1rem; /* Reduce button font size */
+  }
+}

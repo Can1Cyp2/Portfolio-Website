@@ -1,0 +1,99 @@
+.project-item {
+  z-index: 500;
+  position: relative;
+  flex: 1 1 30%; /* Flex-grow: 1, Flex-shrink: 1, and Flex-basis: 30% */
+  max-width: 30%; /* For large screens, max width of each project */
+  padding: 1.2rem;
+  border-radius: 12px;
+  background-color: #fff;
+  min-width: 300px; /* Ensure the project items don’t get too narrow */
+}
+
+.project-image {
+  width: 100%;
+  height: 73%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: -3px;
+  margin-top: 5px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.project-container .project-item {
+  z-index: 500;
+  flex: 1 1 30%;
+  max-width: 30%;
+  padding: 1.2rem;
+  border-radius: 12px;
+  background-color: #fff;
+  min-width: 300px;
+}
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .project-item {
+    flex: 1 1 50%;
+    max-width: 50%;
+    min-width: 300px;
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .project-item {
+    flex: 1 1 90%; /* Each item takes up 90% of the width */
+    max-width: 90%; /* Ensure the width fills most of the screen */
+    min-width: 300px; /* Prevent shrinking below 300px */
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .project-item {
+    flex: 1 1 100%; /* Full width for each item */
+    max-width: 100%; /* Ensure full width on smaller screens */
+    min-width: 300px; /* Keep the minimum width at 300px */
+    padding: 0.8rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .project-image {
+    height: auto; /* Adjust height to fit naturally */
+    width: 100%;
+  }
+}
