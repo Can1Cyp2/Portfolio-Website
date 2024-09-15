@@ -59,7 +59,7 @@
   z-index: 1; /* Set z-index to be behind the title */
 }
 
-/* Minesweeper text and content */
+/* Minesweeper Content Container */
 .minesweeper-content {
   z-index: 2; /* Keep the text on top of everything */
 }
@@ -69,7 +69,7 @@
   color: #cccccc;
   margin-bottom: 1.5rem;
   padding-top: 2rem;
-  margin-right: 40rem;
+  margin-right: 40rem; /* This large margin causes wrapping issues */
 }
 
 /* Responsive Design for Smaller Screens */
@@ -78,27 +78,26 @@
     padding-left: 2rem;
   }
 
-  .minesweeper-content h1 {
+  .minesweeper-title-container h1 {
     font-size: 4rem;
   }
 
   .minesweeper-content p {
     font-size: 1.8rem;
-    margin-right: 20rem;
+    margin-right: 10rem;
   }
 
   .minesweeper-tile,
   .minesweeper-background {
-    bottom: 25%;
-    right: 10%; /* Maintain alignment */
+    bottom: 25%; /* Move images further down */
+    right: 10%;
     width: 15vw;
   }
 
   .minesweeper-flag {
-    top: -60px; /* Adjust the flag's position for smaller screens */
-    left: -10px; /* Keep the horizontal position close to "M" */
-    width: 80px; /* Adjust the size for smaller screens */
-    z-index: 1; /* Ensure flag remains behind the title */
+    top: -60px;
+    left: -10px; /* Slight adjustment for medium screens */
+    width: 80px;
   }
 }
 
@@ -108,9 +107,10 @@
     align-items: center;
   }
 
-  .minesweeper-content h1 {
+  .minesweeper-title-container h1 {
     font-size: 3rem;
     text-align: center;
+    margin-left: 10%; /* Move the title further to the right */
   }
 
   .minesweeper-content p {
@@ -121,16 +121,15 @@
 
   .minesweeper-tile,
   .minesweeper-background {
-    bottom: 20%;
-    right: 10%; /* Keep alignment */
+    bottom: 15%; /* Move images further down on smaller screens */
+    right: 10%;
     width: 18vw;
   }
 
   .minesweeper-flag {
-    top: -50px; /* Adjust position for smaller screens */
-    left: -5px; /* Adjust horizontal position */
-    width: 70px; /* Adjust size for smaller screens */
-    z-index: 1; /* Keep flag behind */
+    top: -50px;
+    left: 12%; /* Align flag with the shifted title */
+    width: 70px;
   }
 }
 
@@ -139,8 +138,9 @@
     padding-left: 1rem;
   }
 
-  .minesweeper-content h1 {
+  .minesweeper-title-container h1 {
     font-size: 2.5rem;
+    margin-left: 12%; /* Move the title even more to the right */
   }
 
   .minesweeper-content p {
@@ -150,15 +150,14 @@
 
   .minesweeper-tile,
   .minesweeper-background {
-    bottom: 20%;
-    right: 10%; /* Align mine and tile */
+    bottom: 10%; /* Move images even further down on the smallest screens */
+    right: 10%;
     width: 20vw;
   }
 
   .minesweeper-flag {
-    top: -40px; /* Adjust position */
-    left: -5px; /* Adjust horizontal position */
-    width: 60px; /* Adjust size for smaller screens */
-    z-index: 1; /* Keep flag behind */
+    top: -40px;
+    left: 12%; /* Align flag with the shifted title */
+    width: 60px;
   }
 }

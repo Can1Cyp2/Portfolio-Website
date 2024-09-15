@@ -16,7 +16,7 @@ const FanPage: React.FC = () => {
     "#8E44AD",
   ]; // Array of colors
 
-  // Function to create and animate musical notes on hover
+  // Function to create and animate musical notes on hover or tap
   const createMusicalNotes = () => {
     if (!microphoneRef.current) return;
 
@@ -73,7 +73,8 @@ const FanPage: React.FC = () => {
       <div
         className="fanpage-instrument-container"
         ref={microphoneRef}
-        onMouseEnter={createMusicalNotes}
+        onMouseEnter={createMusicalNotes} // Trigger notes on hover
+        onClick={createMusicalNotes} // Trigger notes on tap/click
       >
         <img
           src={
@@ -82,7 +83,7 @@ const FanPage: React.FC = () => {
           alt="Microphone"
           className="fanpage-instrument"
         />
-        <p className="hover-text">try hovering over the microphone!</p>{" "}
+        <p className="hover-text">try hovering or tapping the microphone!</p>{" "}
         {/* Faint text */}
       </div>
     </div>

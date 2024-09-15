@@ -127,6 +127,17 @@
     text-align: center;
   }
 
+  /* Move the microphone below the text */
+  .fanpage-instrument-container {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .fanpage-instrument {
     width: 18vw;
   }
@@ -146,9 +157,18 @@
     text-align: center;
   }
 
+  /* Further adjustments for smallest screens */
+  .fanpage-instrument-container {
+    position: relative;
+    margin-top: 2rem;
+    right: auto;
+    bottom: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .fanpage-instrument {
-    bottom: 20%;
-    right: 10%;
     width: 20vw;
   }
 }

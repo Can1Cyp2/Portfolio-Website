@@ -53,7 +53,7 @@
 
   .recreation2048-content p {
     font-size: 1.8rem;
-    margin-right: 20rem;
+    margin-right: 10rem; /* Reduce margin to prevent overflow */
   }
 
   .recreation2048-video {
@@ -75,8 +75,10 @@
 
   .recreation2048-content p {
     font-size: 1.5rem;
-    margin-right: 0;
+    margin-right: 0; /* Remove margin to prevent overflow */
     text-align: center;
+    padding-left: 1rem; /* Add padding to ensure better spacing */
+    padding-right: 1rem; /* Add padding to ensure better spacing */
   }
 
   .recreation2048-video {
@@ -93,11 +95,14 @@
 
   .recreation2048-content h1 {
     font-size: 2.5rem;
+    text-align: center;
   }
 
   .recreation2048-content p {
     font-size: 1.2rem;
     text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .recreation2048-video {
