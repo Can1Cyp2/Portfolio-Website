@@ -35,7 +35,7 @@ const AboutMe: React.FC = () => {
           </ul>
         </div>
         <div className="about-me-awards">
-          <h3>Awards & Scholarships</h3>
+          <h3>Awards</h3>
           <ul>
             <li>$2,000 entrance scholarship to York University.</li>
             <li>Award from the Waterloo Computing Contest.</li>

@@ -34,62 +34,55 @@ const ProjectsPage: React.FC = () => {
   return (
     <>
       <Header />
-      <div className="projects-page">
-        {/* Projects Header */}
-        <div className="projects-header">
-          <h1 className="projects-title">My Projects</h1>
-          <h2 className="projects-subtitle">
-            All Projects Listed Here Can be found at:
-          </h2>
-          <a
-            href="https://github.com/Can1Cyp2"
-            className="projects-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://github.com/Can1Cyp2
-          </a>
-          <p className="projects-subtitle">
-            Please use the scroll bar for a better experience on the webpage.
-          </p>
-        </div>
+      {/* Projects Header */}
+      <div className="projects-header">
+        <h1 className="projects-title">My Projects</h1>
+        <h2 className="projects-page-subtitle">
+          All Projects Listed Here Can be found at:
+        </h2>
+        <a
+          href="https://github.com/Can1Cyp2"
+          className="projects-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://github.com/Can1Cyp2
+        </a>
+        <p className="projects-page-subtitle">
+          Please use the scroll bar for a better experience on the webpage.
+        </p>
+      </div>
 
-        {/* Minesweeper Section with id */}
+      {/* Projects Sections */}
+      <div className="projects-page">
         <section id="minesweeper">
           <MineSweeper />
         </section>
 
-        {/* Jump Game Section with id */}
         <section id="jump-game">
           <JumpGame />
         </section>
 
-        {/* 2048 Recreation Section with id */}
         <section id="recreation-2048">
           <Recreation2048 />
         </section>
 
-        {/* Sudoku Game Section with id */}
         <section id="sudoku-game">
           <SudokuGame />
         </section>
 
-        {/* Fan Page Section with id */}
         <section id="fan-page">
           <FanPage />
         </section>
 
-        {/* Blob Counting Section with id */}
         <section id="blob-counting">
           <BlobCounting />
         </section>
 
-        {/* Word Guesser Section with id */}
         <section id="word-guesser">
           <WordGuesser />
         </section>
 
-        {/* University Projects Compilation Section with id */}
         <section id="university-projects-compilation">
           <UniversityProjectsCompilation />
         </section>

@@ -6,18 +6,19 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
 }
 
 /* Projects header (contains the title and subtitle) */
 .projects-header {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Space between title and subtitle */
-  align-items: center;
-  height: 55vh; /* Ensure it takes up 55% of the viewport height */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   width: 100%;
   padding-top: 6rem;
   padding-bottom: 2rem;
+  text-align: center; /* Ensure text is centered */
 }
 
 /* Title: My Projects */
@@ -26,15 +27,19 @@
   color: #ffffff; /* White text for contrast */
   margin-bottom: 2rem;
   text-align: center;
+  width: fit-content; /* Adjust to fit content, not the entire width */
+  padding-right: 5%;
 }
 
 /* Subtitle: All Projects Listed Here... */
-.projects-subtitle {
+.projects-page-subtitle {
   font-size: 1.8rem; /* Larger font size for the subtitle */
   color: #cccccc; /* Lighter gray for the subtitle */
   margin-bottom: 0;
-  text-align: center;
   margin-top: 2rem;
+  text-align: center;
+  width: fit-content; /* Prevent text from stretching */
+  padding: 0 2rem; /* Add padding to maintain space around the text */
 }
 
 /* GitHub link */
@@ -42,11 +47,13 @@
   font-family: "Courier New", Courier, monospace; /* Old computer style font */
   font-size: 1.8rem; /* Font size to match the subtitle */
   color: #00bfff; /* Blue color for the link */
-  text-align: center;
   display: block;
   margin-top: 1rem; /* Space between subtitle and link */
   margin-bottom: 2rem;
   text-decoration: none; /* Remove underline */
+  text-align: center;
+  width: fit-content; /* Ensure the link fits within the content width */
+  padding: 0 2rem;
 }
 
 .projects-link:hover {
@@ -54,12 +61,14 @@
 }
 
 /* Subtitle: Please use the scroll bar... */
-.projects-subtitle:last-of-type {
+.projects-page-subtitle:last-of-type {
   font-size: 1.8rem; /* Font size for the subtitle */
   color: #cccccc; /* Lighter gray for the subtitle */
   margin-bottom: 0;
-  text-align: center;
   margin-top: 4rem; /* Space between subtitle and previous text */
+  text-align: center;
+  width: fit-content; /* Prevent stretching */
+  padding: 0 2rem;
 }
 
 /* Responsive design for screens smaller than 768px */
@@ -69,18 +78,31 @@
     height: auto; /* Remove fixed height */
     padding-top: 3rem; /* Reduce padding on top */
     padding-bottom: 3rem; /* Adjust padding */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    padding-left: 1rem; /* Add some padding on the left */
+    padding-right: 1rem; /* Add some padding on the right */
+    text-align: left; /* Align text to the left */
   }
 
-  /* Adjust title size to fit screen width */
+  /* Adjust title size and position for smaller screens */
   .projects-title {
     font-size: 2.5rem; /* Reduce font size */
     margin-bottom: 1.5rem; /* Adjust space below title */
+    text-align: left; /* Align the title to the left */
+    margin-left: 15%; /* Move the "My Projects" title slightly to the right */
+    width: fit-content; /* Prevent it from taking full width */
   }
 
   /* Adjust subtitle font size and spacing */
-  .projects-subtitle {
+  .projects-page-subtitle {
     font-size: 1.4rem; /* Reduce font size */
     margin-top: 1.5rem; /* Adjust spacing between subtitle */
+    text-align: center; /* Align the text to the left */
+    word-wrap: break-word; /* Ensure text wraps properly */
+    white-space: normal; /* Allow text to wrap */
+    width: 100%; /* Full width to prevent overflow */
   }
 
   /* Adjust GitHub link font size and spacing */
@@ -88,12 +110,19 @@
     font-size: 1.3rem;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-    word-wrap: break-word; /* Ensure long links wrap to the next line */
-    white-space: normal; /* Allow the link to break and wrap onto a new line if needed */
+    text-align: center; /* Align the link to the left */
+    word-wrap: break-word; /* Ensure long links wrap properly */
+    white-space: normal; /* Allow the link to wrap */
+    width: 100%; /* Full width to prevent overflow */
   }
 
   /* Adjust spacing for the last subtitle */
-  .projects-subtitle:last-of-type {
+  .projects-page-subtitle:last-of-type {
     margin-top: 2rem; /* Reduce space between subtitle and text */
+    font-size: 1.4rem; /* Reduce font size */
+    text-align: center; /* Align text to the left */
+    word-wrap: break-word; /* Ensure text wraps properly */
+    white-space: normal; /* Allow text to wrap */
+    width: 100%; /* Full width to prevent overflow */
   }
 }
