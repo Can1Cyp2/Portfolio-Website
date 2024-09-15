@@ -10,7 +10,7 @@ const ProjectsSection: React.FC = () => {
     title: string;
     description: string;
     image: string;
-    githubUrl: string; // Ensure we include the GitHub URL here
+    githubUrl: string;
   }>(null);
 
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -183,33 +183,14 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <section id="projects" ref={sectionRef} className="projects-section">
-      <h2
-        className="projects-title"
-        style={{
-          fontSize: "3rem", // Larger font size for the title
-          color: "#ffffff", // White color for contrast
-          textAlign: "left", // Align to the left side
-          marginBottom: "2rem",
-          marginLeft: "5%", // Move the title to the right from the edge
-          display: "flex", // Make the title and text inline
-          alignItems: "center", // Align the new text with the title
-          gap: "1rem", // Add space between the title and the new text
-        }}
-      >
+      <h2 className="projects-title">
         My Projects
-        <span
-          style={{
-            fontSize: "1.2rem", // Slightly smaller than the title
-            color: "#ffffff", // White color to match
-            fontStyle: "italic", // Optional italic style for emphasis
-            opacity: "60%",
-            marginLeft: "8rem", // Add space between the title and the new text
-          }}
-        >
+        <span className="projects-subtitle">
           Check out my designated projects page for a more exciting look at my
           work!
         </span>
       </h2>
+
       <div className="project-gallery" ref={galleryRef}>
         {projects.map((project) => (
           <Project
