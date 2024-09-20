@@ -112,7 +112,7 @@
 
   .jumpgame-tile,
   .jumpgame-man {
-    bottom: 14%;
+    bottom: 10%;
     left: 10%; /* Align man and tile */
     width: 20vw;
     margin-top: 10%;

@@ -88,27 +88,64 @@
 }
 
 /* Responsive Design for Smaller Screens */
+@media (max-width: 1300px) {
+  .wordguesser-container {
+    padding-left: 2rem;
+  }
+
+  .wordguesser-content h1 {
+    font-size: 4rem;
+  }
+
+  .wordguesser-content p {
+    font-size: 1.8rem;
+    margin-right: 25rem;
+  }
+
+  .letter {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+/* Smaller Monitors or Laptop Screens */
+@media (max-width: 1024px) and (min-height: 600px) {
+  .wordguesser-content h1 {
+    font-size: 3.5rem; /* Reduce heading size */
+  }
+
+  .wordguesser-content p {
+    font-size: 1.6rem; /* Reduce paragraph text size */
+    margin-right: 25rem; /* Adjust the margin for narrower screens */
+  }
+
+  .letter {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   .wordguesser-container {
     padding-left: 1.5rem;
-    align-items: center;
   }
 
   .wordguesser-content h1 {
     font-size: 3rem;
-    text-align: center;
   }
 
   .wordguesser-content p {
     font-size: 1.5rem;
     margin-right: 0;
-    text-align: center;
   }
 
   /* Reposition the words to appear above the header and below the text */
   .wordguesser-word:nth-child(2),
   .wordguesser-word:nth-child(3) {
-    top: 15%; /* Move the first two words above the text */
+    top: 12%; /* Move the first two words above the text */
     left: 50%;
     transform: translateX(-50%);
   }
@@ -140,7 +177,6 @@
 
   .wordguesser-content p {
     font-size: 1.2rem;
-    text-align: center;
   }
 
   .letter {

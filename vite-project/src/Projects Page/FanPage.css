@@ -91,7 +91,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .fanpage-container {
     padding-left: 2rem;
   }
@@ -107,6 +107,22 @@
 
   .fanpage-instrument {
     width: 15vw;
+  }
+}
+
+/* Smaller Monitors or Laptop Screens */
+@media (max-width: 1024px) and (min-height: 600px) {
+  .fanpage-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .fanpage-content p {
+    font-size: 1.6rem;
+    margin-right: 15rem;
+  }
+
+  .fanpage-instrument {
+    width: 13vw;
   }
 }
 
