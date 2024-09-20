@@ -113,18 +113,15 @@
 @media (max-width: 768px) {
   .fanpage-container {
     padding-left: 1.5rem;
-    align-items: center;
   }
 
   .fanpage-content h1 {
     font-size: 3rem;
-    text-align: center;
   }
 
   .fanpage-content p {
     font-size: 1.5rem;
     margin-right: 0;
-    text-align: center;
   }
 
   /* Move the microphone below the text */
@@ -154,7 +151,6 @@
 
   .fanpage-content p {
     font-size: 1.2rem;
-    text-align: center;
   }
 
   /* Further adjustments for smallest screens */

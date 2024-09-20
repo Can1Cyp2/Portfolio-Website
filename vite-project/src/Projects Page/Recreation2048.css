@@ -65,7 +65,6 @@
 @media (max-width: 768px) {
   .recreation2048-container {
     padding-left: 1.5rem;
-    align-items: center;
   }
 
   .recreation2048-content h1 {
@@ -76,7 +75,6 @@
   .recreation2048-content p {
     font-size: 1.5rem;
     margin-right: 0; /* Remove margin to prevent overflow */
-    text-align: center;
     padding-left: 1rem; /* Add padding to ensure better spacing */
     padding-right: 1rem; /* Add padding to ensure better spacing */
   }
@@ -100,7 +98,6 @@
 
   .recreation2048-content p {
     font-size: 1.2rem;
-    text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
   }

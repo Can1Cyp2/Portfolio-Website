@@ -77,18 +77,15 @@
 @media (max-width: 768px) {
   .blob-counting-container {
     padding-right: 1.5rem;
-    align-items: center;
   }
 
   .blob-counting-content h1 {
     font-size: 3rem;
-    text-align: center;
   }
 
   .blob-counting-content p {
     font-size: 1.5rem;
     margin-left: 0;
-    text-align: center;
   }
 
   .blob {
@@ -108,7 +105,6 @@
 
   .blob-counting-content p {
     font-size: 1.2rem;
-    text-align: center;
   }
 
   .blob {

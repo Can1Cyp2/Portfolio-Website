@@ -87,18 +87,15 @@
 @media (max-width: 768px) {
   .sudoku-game-container {
     padding-right: 1.5rem;
-    align-items: center;
   }
 
   .sudoku-game-content h1 {
     font-size: 3rem;
-    text-align: center;
   }
 
   .sudoku-game-content p {
     font-size: 1.5rem;
     margin-left: 0;
-    text-align: center;
   }
 
   .sudoku-number {
@@ -117,7 +114,6 @@
 
   .sudoku-game-content p {
     font-size: 1.2rem;
-    text-align: center;
   }
 
   .sudoku-number {

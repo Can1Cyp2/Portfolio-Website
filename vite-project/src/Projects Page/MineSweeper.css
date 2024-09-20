@@ -104,19 +104,16 @@
 @media (max-width: 768px) {
   .minesweeper-container {
     padding-left: 1.5rem;
-    align-items: center;
   }
 
   .minesweeper-title-container h1 {
     font-size: 3rem;
-    text-align: center;
     margin-left: 10%; /* Move the title further to the right */
   }
 
   .minesweeper-content p {
     font-size: 1.5rem;
     margin-right: 0;
-    text-align: center;
   }
 
   .minesweeper-tile,
@@ -145,7 +142,6 @@
 
   .minesweeper-content p {
     font-size: 1.2rem;
-    text-align: center;
   }
 
   .minesweeper-tile,
@@ -157,7 +153,7 @@
 
   .minesweeper-flag {
     top: -40px;
-    left: 12%; /* Align flag with the shifted title */
+    left: 10%; /* Align flag with the shifted title */
     width: 60px;
   }
 }

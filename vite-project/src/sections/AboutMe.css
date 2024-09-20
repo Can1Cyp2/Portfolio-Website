@@ -62,3 +62,29 @@
 .about-me-awards li {
   margin-bottom: 1rem;
 }
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .about-me-section {
+    padding: 1rem 0.8rem;
+  }
+
+  .about-me-section h2 {
+    font-size: 3rem;
+  }
+
+  .about-me-text {
+    padding-top: 0.8rem;
+    font-size: 1.4rem;
+    max-width: 90%;
+  }
+
+  .about-me-details {
+    font-size: 1.1rem;
+  }
+
+  .about-me-skills h3,
+  .about-me-awards h3 {
+    font-size: 1.6rem;
+  }
+}

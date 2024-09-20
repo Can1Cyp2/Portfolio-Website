@@ -88,27 +88,6 @@
 }
 
 /* Responsive Design for Smaller Screens */
-@media (max-width: 1200px) {
-  .wordguesser-container {
-    padding-left: 2rem;
-  }
-
-  .wordguesser-content h1 {
-    font-size: 4rem;
-  }
-
-  .wordguesser-content p {
-    font-size: 1.8rem;
-    margin-right: 20rem;
-  }
-
-  .letter {
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-  }
-}
-
 @media (max-width: 768px) {
   .wordguesser-container {
     padding-left: 1.5rem;
@@ -126,8 +105,21 @@
     text-align: center;
   }
 
-  .wordguesser-word {
-    right: 10%;
+  /* Reposition the words to appear above the header and below the text */
+  .wordguesser-word:nth-child(2),
+  .wordguesser-word:nth-child(3) {
+    top: 15%; /* Move the first two words above the text */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .wordguesser-word:nth-child(4),
+  .wordguesser-word:nth-child(5),
+  .wordguesser-word:nth-child(6) {
+    top: auto; /* Reset top positioning */
+    bottom: 10%; /* Move the remaining three below the text */
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .letter {
@@ -149,10 +141,6 @@
   .wordguesser-content p {
     font-size: 1.2rem;
     text-align: center;
-  }
-
-  .wordguesser-word {
-    right: 10%;
   }
 
   .letter {

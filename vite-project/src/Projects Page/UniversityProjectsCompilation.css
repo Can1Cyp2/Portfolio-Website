@@ -78,6 +78,8 @@
     flex-direction: column; /* Stack the image and text vertically on smaller screens */
     align-items: center;
     padding: 2rem;
+    height: auto; /* Remove fixed height to allow content to expand */
+    padding-bottom: 4rem; /* Add extra padding at the bottom to avoid cutting off text */
   }
 
   .university-projects-content {
@@ -92,6 +94,10 @@
 }
 
 @media (max-width: 768px) {
+  .university-projects-container {
+    padding-bottom: 6rem; /* Add more space at the bottom to prevent footer overlap */
+  }
+
   .university-projects-content h1 {
     font-size: 3rem;
     text-align: center;
@@ -107,6 +113,10 @@
 }
 
 @media (max-width: 480px) {
+  .university-projects-container {
+    padding-bottom: 8rem; /* Increase bottom padding to ensure no content is cut off */
+  }
+
   .university-projects-content h1 {
     font-size: 2.5rem;
   }

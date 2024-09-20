@@ -78,18 +78,15 @@
 @media (max-width: 768px) {
   .jumpgame-container {
     padding-right: 1.5rem;
-    align-items: center;
   }
 
   .jumpgame-content h1 {
     font-size: 3rem;
-    text-align: center;
   }
 
   .jumpgame-content p {
     font-size: 1.5rem;
     margin-left: 0;
-    text-align: center;
   }
 
   .jumpgame-tile,
@@ -111,13 +108,13 @@
 
   .jumpgame-content p {
     font-size: 1.2rem;
-    text-align: center;
   }
 
   .jumpgame-tile,
   .jumpgame-man {
-    bottom: 10%;
+    bottom: 14%;
     left: 10%; /* Align man and tile */
     width: 20vw;
+    margin-top: 10%;
   }
 }

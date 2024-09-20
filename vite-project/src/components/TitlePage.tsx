@@ -19,6 +19,20 @@ const TitlePage: React.FC<TitlePageProps> = ({ id }) => {
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout>;
 
+    // Find the video element and ensure it plays on mobile
+    const videoElement = document.querySelector("video");
+
+    if (videoElement) {
+      videoElement.muted = true; // Ensure video is muted
+      videoElement.play().catch(() => {
+        // Fallback: Play video when the user clicks on it if autoplay fails
+        videoElement.addEventListener("click", () => {
+          videoElement.play();
+        });
+      });
+    }
+
+    // Handle the typing effect logic:
     if (!isDeleting && !isFinished) {
       if (index < nameWithMistake.length) {
         timeout = setTimeout(() => {
@@ -50,13 +64,13 @@ const TitlePage: React.FC<TitlePageProps> = ({ id }) => {
       }
     }
 
-    return () => clearTimeout(timeout);
+    return () => clearTimeout(timeout); // Cleanup timeout on component unmount
   }, [index, isDeleting, isFinished, nameWithMistake, fullText]);
 
   return (
     <>
       <div className="title-page" id={id}>
-        <video autoPlay loop muted>
+        <video autoPlay playsInline loop muted controls={false}>
           <source src="./videos/TitleBackgroundVideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
