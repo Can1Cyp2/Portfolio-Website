@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ContactPage.css";
 import Header from "../components/Header";
+import emailjs from "@emailjs/browser";
 
 const ContactPage: React.FC = () => {
   useEffect(() => {
@@ -22,11 +23,34 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Show the warning message
-    window.alert(
-      "This feature does not work right now, please email me at 99SebastianL@gmail.com"
-    );
-    // setFormData({ name: "", email: "", message: "" });   // Resets form data
+
+    const templateParams = {
+      from_name: formData.name, // Maps to {{from_name}} in EmailJS template
+      reply_to: formData.email, // Maps to {{reply_to}} in EmailJS template
+      message: formData.message, // Maps to {{message}} in EmailJS template
+      to_name: "Sebastian", // Maps to {{to_name}} in EmailJS template
+    };
+
+    emailjs
+      .send(
+        "service_portfolio", // Your EmailJS service ID
+        "template_v7rdyih", // Updated with your actual template ID
+        templateParams,
+        "TW2CZ1oM6qoDgEhmm" // Public Key
+      )
+      .then(
+        (result) => {
+          console.log("Email successfully sent!", result.status, result.text);
+          alert("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" }); // Reset form after sending
+        },
+        (error) => {
+          console.error("Failed to send email:", error);
+          alert(
+            "Failed to send message. Please try again later or email me directly at 99SebastianL@gmail.com"
+          );
+        }
+      );
   };
 
   return (
