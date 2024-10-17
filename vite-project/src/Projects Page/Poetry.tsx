@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./Poetry.css"; // Import Poetry-specific styles
-import { VITE_BASE_URL } from "../App";
+//import { VITE_BASE_URL } from "../App";
 
 const Poetry: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
