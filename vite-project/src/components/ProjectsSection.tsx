@@ -103,7 +103,7 @@ const ProjectsSection: React.FC = () => {
         
         ### Contribution:<br>
         We follow Git Flow branching strategy for code contributions, and track issues and features via Trello. New contributions are always welcome!`,
-      image: "/pictures/ProjectsSection/buyease/BuyEaseLogo.jpg",
+      image: "/pictures/ProjectsSection/buyEase/BuyEaseLogo.jpg",
       githubUrl: "https://github.com/EECS3311F24/project-buyease",
     },
     {
