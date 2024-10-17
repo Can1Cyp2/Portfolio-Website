@@ -1,0 +1,132 @@
+.buyease-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 5rem;
+  height: 100vh;
+  width: 100%;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.buyease-content {
+  z-index: 2;
+  text-align: right;
+}
+
+.buyease-content h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.buyease-content p {
+  font-size: 2rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  margin-left: 40rem;
+}
+
+.buyease-images {
+  position: absolute;
+  left: 5%;
+  top: 18%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 3;
+}
+
+.buyease-image {
+  width: 10vw;
+  height: auto;
+  opacity: 0; /* Start with the images hidden */
+  transform: translateY(50px); /* Start below final position */
+  transition: transform 0.8s ease, opacity 0.8s ease; /* Smooth slide-up and fade-in */
+}
+
+.buyease-image.money {
+  transform: translateY(30px); /* Slight adjustment for the money image */
+}
+
+.buyease-image.hat {
+  transform: translateY(35px) !important; /* Move the hat down more */
+}
+
+.buyease-image.in-view {
+  opacity: 1;
+  transform: translateY(0); /* Move up to final position */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1200px) {
+  .buyease-container {
+    padding-right: 2rem;
+  }
+
+  .buyease-content h1 {
+    font-size: 4rem;
+  }
+
+  .buyease-content p {
+    font-size: 1.8rem;
+    margin-left: 20rem;
+  }
+
+  .buyease-image {
+    width: 12vw;
+  }
+
+  .buyease-images {
+    top: 25%; /* Adjust image position for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .buyease-container {
+    padding-right: 1.5rem;
+  }
+
+  .buyease-content h1 {
+    font-size: 3rem;
+  }
+
+  .buyease-content p {
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+
+  .buyease-image {
+    width: 14vw;
+  }
+
+  .buyease-images {
+    top: 30%; /* Adjust image position for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .buyease-container {
+    padding-right: 1rem;
+  }
+
+  .buyease-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .buyease-content p {
+    font-size: 1.2rem;
+  }
+
+  .buyease-image {
+    width: 16vw;
+  }
+
+  .buyease-images {
+    top: 35%; /* Further adjust image position for small screens */
+  }
+}

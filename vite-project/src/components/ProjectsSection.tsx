@@ -69,6 +69,45 @@ const ProjectsSection: React.FC = () => {
     },
     {
       id: "project3",
+      title: "Poetry Website for Paulos L. Ioannou",
+      description:
+        "A poetry website showcasing and managing poems with a fully implemented backend and admin controls for adding, editing, or deleting poems.",
+      longDescription: `
+        The Poetry Website is designed for poet Paulos L. Ioannou, providing a platform for presenting his works. Users can explore, read, and engage with poetry, while an admin dashboard allows authorized users to manage content.<br>
+
+        **Frontend**:<br>
+        - Built with React for a dynamic and interactive user interface.<br>
+        - Key features include a homepage, poetry list, detailed poem view with English and Greek versions, and an admin dashboard for content management.<br>
+
+        **Backend**:<br>
+        - Powered by Node.js and Express, the backend handles API requests for poem data and user management.<br>
+        - RESTful API for CRUD operations on poems and user data.<br>
+
+        **Deployment**:<br>
+        - Front-end is hosted on GitHub Pages with a custom domain (paulospoetry.com).<br>
+        - Secure user authentication ensures admin-level access for content updates.<br>
+      `,
+      image: "/pictures/ProjectsSection/poetry/poetryPic.png",
+      githubUrl: "https://github.com/Can1Cyp2/poetry-website",
+    },
+    {
+      id: "project4",
+      title: "BuyEase",
+      description:
+        "A marketplace platform for university students to buy and sell goods and services within their campus community.",
+      longDescription: `
+        BuyEase is designed to create a secure, student-centered marketplace that allows university students to buy and sell goods and services. It addresses the challenges of connecting local buyers and sellers and fosters a community-based environment. Key features include a secure marketplace for goods and services, user-friendly UI, and tools for student entrepreneurs to sell their products or services. Built using MongoDB for data storage, Node.js for the back-end, and React for the front-end.<br>
+        
+        ### Motivation:<br>
+        The platform helps students save money by purchasing second-hand goods or affordable services. It's a safe and convenient marketplace within the campus, providing a space for student entrepreneurs to thrive.<br>
+        
+        ### Contribution:<br>
+        We follow Git Flow branching strategy for code contributions, and track issues and features via Trello. New contributions are always welcome!`,
+      image: "/pictures/ProjectsSection/buyease/BuyEaseLogo.jpg",
+      githubUrl: "https://github.com/EECS3311F24/project-buyease",
+    },
+    {
+      id: "project5",
       title: "2048 Recreation",
       description:
         "A mobile version of the classic 2048 game for Android devices.",
@@ -78,7 +117,7 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/2048",
     },
     {
-      id: "project4",
+      id: "project6",
       title: "Sudoku Game",
       description:
         "A Sudoku game with various difficulty levels and a user-friendly interface.",
@@ -88,7 +127,7 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/Sudoku-with-solver",
     },
     {
-      id: "project5",
+      id: "project7",
       title: "Fan Page Website",
       description:
         "A band website built entirely in HTML, showcasing Shinedown's albums, history, and official links.",
@@ -98,7 +137,7 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/BandWebsite-Shinedown",
     },
     {
-      id: "project6",
+      id: "project8",
       title: "Blob Counting (recursion)",
       description:
         "A C++ program that utilizes recursion to count connected blobs on a grid.",
@@ -108,7 +147,7 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/BlobChecker-Recursion",
     },
     {
-      id: "project7",
+      id: "project9",
       title: "WordGuesser",
       description:
         "A game similar to Wordle where you try to guess a 5-letter word.",
@@ -118,7 +157,7 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/Word-Guesser",
     },
     {
-      id: "project8",
+      id: "project10",
       title: "University Projects Compilation",
       description:
         "A collection of various university projects showcasing skills in Java and Android development.",

@@ -13,6 +13,8 @@ import UniversityProjectsCompilation from "./UniversityProjectsCompilation";
 import "./ProjectsPage.css";
 import Header from "../components/Header";
 import { useLocation } from "react-router-dom";
+import Poetry from "./Poetry";
+import BuyEase from "./BuyEase";
 
 const ProjectsPage: React.FC = () => {
   const location = useLocation();
@@ -61,6 +63,14 @@ const ProjectsPage: React.FC = () => {
 
         <section id="jump-game">
           <JumpGame />
+        </section>
+
+        <section id="poetry">
+          <Poetry />
+        </section>
+
+        <section id="BuyEase">
+          <BuyEase />
         </section>
 
         <section id="recreation-2048">
