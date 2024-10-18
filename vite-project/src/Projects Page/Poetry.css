@@ -5,23 +5,26 @@
   align-items: center;
   padding-left: 5rem;
   padding-right: 5rem;
+  padding-top: 5rem; /* Add padding at the top */
   height: 100vh;
   width: 100%;
   background-color: #1a1a1a;
   color: #ffffff;
   position: relative;
+  box-sizing: border-box; /* Ensure padding doesn't break layout */
 }
 
 .poetry-content {
   width: 60%;
   z-index: 2;
-  text-align: left;
+  text-align: left; /* Lean text to the left */
 }
 
 .poetry-content h1 {
   font-size: 5rem;
   color: #ffffff;
   margin-bottom: 2rem;
+  text-align: left; /* Align title to the left */
 }
 
 .poetry-content p {
@@ -29,6 +32,7 @@
   color: #cccccc;
   margin-bottom: 1.5rem;
   padding-top: 2rem;
+  text-align: left; /* Align paragraphs to the left */
 }
 
 .poetry-svg-container {
@@ -54,6 +58,7 @@
   .poetry-container {
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-top: 3rem; /* Add top padding for medium screens */
   }
 
   .poetry-content h1 {
@@ -63,6 +68,10 @@
   .poetry-content p {
     font-size: 1.8rem;
   }
+
+  .poetry-svg-container {
+    width: 40%; /* Slightly increase the width for medium screens */
+  }
 }
 
 @media (max-width: 768px) {
@@ -70,33 +79,62 @@
     flex-direction: column;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    padding-top: 3rem; /* Adjust top padding for smaller screens */
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .poetry-content {
+    width: 100%;
   }
 
   .poetry-content h1 {
     font-size: 3rem;
-    text-align: center;
+    text-align: left; /* Keep text leaning left on smaller screens */
   }
 
   .poetry-content p {
     font-size: 1.5rem;
+    text-align: left;
+    padding: 0 1rem; /* Add padding for better spacing on small screens */
   }
 
   .poetry-svg-container {
-    width: 100%;
+    width: 80%;
+    height: 200px;
+    margin-top: 2rem;
+  }
+
+  .poetry-pencil {
+    width: 40px; /* Adjust pencil size for smaller screens */
+    height: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .poetry-container {
     padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem; /* Adjust top padding for the smallest screens */
   }
 
   .poetry-content h1 {
     font-size: 2.5rem;
-    text-align: center;
+    text-align: left; /* Keep text leaning left */
   }
 
   .poetry-content p {
     font-size: 1.2rem;
+    text-align: left; /* Ensure text is aligned to the left */
+  }
+
+  .poetry-svg-container {
+    width: 100%;
+    height: 250px;
+  }
+
+  .poetry-pencil {
+    width: 30px; /* Adjust pencil size for smallest screens */
+    height: 30px;
   }
 }
