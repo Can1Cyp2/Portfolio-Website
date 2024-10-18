@@ -1,34 +1,33 @@
 .modal {
   width: 80%;
   max-width: 95vw;
+  max-height: 90vh; /* Ensure it doesn’t overflow the screen height */
   padding: 20px;
   border-radius: 10px;
   background-color: #f0f0f0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
+  overflow-y: auto; /* Allow vertical scrolling when content overflows */
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Responsive styles for screens smaller than 768px */
 @media (max-width: 768px) {
   .modal {
-    width: 95%;
+    width: 90%;
     max-width: 90vw;
     padding: 10px;
-    max-height: 85vh;
+    max-height: 85vh; /* Modal will take up a maximum of 85% of the viewport height */
     overflow-x: hidden;
+    overflow-y: auto; /* Ensure scrollable content vertically */
     box-sizing: border-box;
   }
 
-  /* Adjust font size for text inside the modal */
   .modal-content {
     font-size: 0.9rem;
     text-align: center;
   }
 
-  /* Ensure images fit inside the modal */
   .modal img {
     width: 100%;
     height: auto;
@@ -36,7 +35,6 @@
     margin-bottom: 15px;
   }
 
-  /* Further reduce padding for the modal content if necessary */
   .modal-text {
     padding: 10px;
   }

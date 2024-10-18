@@ -83,7 +83,9 @@ const FanPage: React.FC = () => {
           alt="Microphone"
           className="fanpage-instrument"
         />
-        <p className="hover-text">try hovering or tapping the microphone!</p>{" "}
+        <p className="hover-text">
+          try hovering over or tapping the microphone!
+        </p>{" "}
         {/* Faint text */}
       </div>
     </div>

@@ -1,43 +1,49 @@
 import React, { useEffect, useRef } from "react";
-import "./Poetry.css"; // Import Poetry-specific styles
-//import { VITE_BASE_URL } from "../App";
+import "./Poetry.css";
+import { VITE_BASE_URL } from "../App";
 
 const Poetry: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const svgPathRef = useRef<SVGPathElement | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const video = videoRef.current;
-      const section = sectionRef.current;
+    const svgPath = svgPathRef.current;
 
-      if (video && section) {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const scrollY = window.scrollY + window.innerHeight;
+    if (!svgPath) return;
 
-        let scrollPosition = scrollY - sectionTop;
-        scrollPosition = Math.max(0, scrollPosition);
+    const length = svgPath.getTotalLength();
 
-        const scrollPercent = Math.min(scrollPosition / sectionHeight, 1);
-        const videoDuration = Math.min(video.duration, 5);
-        const targetTime = scrollPercent * videoDuration;
+    // Set up the stroke dash to create the line drawing effect
+    svgPath.style.strokeDasharray = `${length}`;
+    svgPath.style.strokeDashoffset = `${length}`;
 
-        if (video.currentTime !== targetTime) {
-          video.currentTime = targetTime;
-        }
-      }
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            svgPath.style.transition = "stroke-dashoffset 3s ease-in-out"; // Slow down the line drawing
+            svgPath.style.strokeDashoffset = "0"; // Start the line drawing
 
-    window.addEventListener("scroll", handleScroll);
+            const pencilAnimation =
+              svgPath.parentElement?.querySelector("animateMotion");
+            if (pencilAnimation) {
+              pencilAnimation?.beginElement(); // Start the pencil animation
+            }
+          }
+        });
+      },
+      { threshold: 0.3 } // Trigger when 30% of the section is in view
+    );
+
+    const section = svgPath.parentElement?.parentElement;
+    if (section) observer.observe(section);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (section) observer.unobserve(section);
     };
   }, []);
 
   return (
-    <div className="poetry-container" ref={sectionRef}>
+    <div className="poetry-container">
       <div className="poetry-content">
         <h1>Poetry Website</h1>
         <p>
@@ -52,15 +58,43 @@ const Poetry: React.FC = () => {
         </p>
       </div>
 
-      {/* Video controlled by scroll */}
-      {/* <video
-        ref={videoRef}
-        src={VITE_BASE_URL + "/pictures/ProjectsSection/poetry/poetryVideo.mp4"}
-        muted
-        playsInline
-        className="poetry-video"
-        preload="auto"
-      /> */}
+      {/* SVG Drawing on the right */}
+      <div className="poetry-svg-container">
+        <svg
+          id="pen-drawing"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 150 150"
+        >
+          {/* Drawing Path */}
+          <path
+            id="path"
+            ref={svgPathRef}
+            className="svg-path"
+            fill="none"
+            stroke="#ffffff"
+            strokeWidth="5"
+            d="M10,10 C30,80 90,40 120,140" /* Path */
+          />
+
+          {/* Pencil Image following the path */}
+          <image
+            href={VITE_BASE_URL + "/pictures/ProjectsSection/poetry/pencil.png"}
+            width="50"
+            height="50"
+            className="poetry-pencil"
+            transform="translate(0, -5)" /* Move pencil higher */
+          >
+            <animateMotion
+              dur="2s" /* Match the duration of the line drawing */
+              repeatCount="1"
+              fill="freeze"
+              begin="indefinite"
+            >
+              <mpath href="#path" />
+            </animateMotion>
+          </image>
+        </svg>
+      </div>
     </div>
   );
 };

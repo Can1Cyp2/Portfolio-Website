@@ -69,9 +69,9 @@ const ProjectsSection: React.FC = () => {
     },
     {
       id: "project3",
-      title: "Poetry Website for Paulos L. Ioannou",
+      title: "Poetry Website for Paulos Ioannou",
       description:
-        "A poetry website showcasing and managing poems with a fully implemented backend and admin controls for adding, editing, or deleting poems.",
+        "A poetry website showcasing poems with a fully implemented backend, including admin controls for adding, editing, or deleting poems.",
       longDescription: `
         The Poetry Website is designed for poet Paulos L. Ioannou, providing a platform for presenting his works. Users can explore, read, and engage with poetry, while an admin dashboard allows authorized users to manage content.<br>
 

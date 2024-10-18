@@ -83,6 +83,7 @@
 
   .buyease-images {
     top: 25%; /* Adjust image position for medium screens */
+    gap: 4rem; /* Increased gap between images for medium screens */
   }
 }
 
@@ -105,7 +106,8 @@
   }
 
   .buyease-images {
-    top: 30%; /* Adjust image position for smaller screens */
+    top: 28%; /* Adjust image position for smaller screens */
+    gap: 5rem; /* Increased gap for smaller screens */
   }
 }
 
@@ -127,6 +129,7 @@
   }
 
   .buyease-images {
-    top: 35%; /* Further adjust image position for small screens */
+    top: 30%; /* Adjust image position for small screens */
+    gap: 6rem; /* Maximum gap for smallest screens */
   }
 }
