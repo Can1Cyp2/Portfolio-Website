@@ -75,15 +75,15 @@ const ProjectsSection: React.FC = () => {
       longDescription: `
         The Poetry Website is designed for poet Paulos L. Ioannou, providing a platform for presenting his works. Users can explore, read, and engage with poetry, while an admin dashboard allows authorized users to manage content.<br>
 
-        **Frontend**:<br>
+        *Frontend:<br>
         - Built with React for a dynamic and interactive user interface.<br>
         - Key features include a homepage, poetry list, detailed poem view with English and Greek versions, and an admin dashboard for content management.<br>
 
-        **Backend**:<br>
+        *Backend:<br>
         - Powered by Node.js and Express, the backend handles API requests for poem data and user management.<br>
         - RESTful API for CRUD operations on poems and user data.<br>
 
-        **Deployment**:<br>
+        *Deployment:<br>
         - Front-end is hosted on GitHub Pages with a custom domain (paulospoetry.com).<br>
         - Secure user authentication ensures admin-level access for content updates.<br>
       `,
@@ -98,10 +98,10 @@ const ProjectsSection: React.FC = () => {
       longDescription: `
         BuyEase is designed to create a secure, student-centered marketplace that allows university students to buy and sell goods and services. It addresses the challenges of connecting local buyers and sellers and fosters a community-based environment. Key features include a secure marketplace for goods and services, user-friendly UI, and tools for student entrepreneurs to sell their products or services. Built using MongoDB for data storage, Node.js for the back-end, and React for the front-end.<br>
         
-        ### Motivation:<br>
+        # Motivation:<br>
         The platform helps students save money by purchasing second-hand goods or affordable services. It's a safe and convenient marketplace within the campus, providing a space for student entrepreneurs to thrive.<br>
         
-        ### Contribution:<br>
+        # Contribution:<br>
         We follow Git Flow branching strategy for code contributions, and track issues and features via Trello. New contributions are always welcome!`,
       image: "/pictures/ProjectsSection/buyEase/BuyEaseLogo.jpg",
       githubUrl: "https://github.com/EECS3311F24/project-buyease",
