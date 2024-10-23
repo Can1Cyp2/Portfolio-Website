@@ -7,6 +7,7 @@ import MyExperiencePage from "./ExperiencePage/ExperiencePage";
 import AboutMe from "./sections/AboutMe";
 import Footer from "./components/Footer";
 import ProjectsPage from "./Projects Page/ProjectsPage";
+import "./index.css"; // Ensure your global CSS is imported
 
 export const VITE_BASE_URL = "/Portfolio-Website/";
 

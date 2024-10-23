@@ -42,6 +42,11 @@ const Poetry: React.FC = () => {
     };
   }, []);
 
+  // Function to open the poetry website in a new tab
+  const openPoetryWebsite = () => {
+    window.open("https://paulospoetry.com", "_blank");
+  };
+
   return (
     <div className="poetry-container">
       <div className="poetry-content">
@@ -56,6 +61,11 @@ const Poetry: React.FC = () => {
           leave feedback, while admin authenticated users can manage content and
           users efficiently.
         </p>
+
+        {/* Add the button to redirect to the external website */}
+        <button className="redirect-button" onClick={openPoetryWebsite}>
+          Visit Paul's Poetry
+        </button>
       </div>
 
       {/* SVG Drawing on the right */}

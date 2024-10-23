@@ -53,6 +53,29 @@
   z-index: 3;
 }
 
+.redirect-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #646cff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.redirect-button:hover {
+  background-color: #535bf2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.redirect-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.5);
+}
+
 /* Responsive Design for Smaller Screens */
 @media (max-width: 1200px) {
   .poetry-container {
