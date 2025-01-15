@@ -7,7 +7,7 @@ import MyExperiencePage from "./ExperiencePage/ExperiencePage";
 import AboutMe from "./sections/AboutMe";
 import Footer from "./components/Footer";
 import ProjectsPage from "./Projects Page/ProjectsPage";
-import "./index.css"; // Ensure your global CSS is imported
+import "./index.css";
 
 export const VITE_BASE_URL = "/Portfolio-Website/";
 
@@ -28,10 +28,15 @@ const App: React.FC = () => {
           />
           <Route
             path={VITE_BASE_URL + "experience"}
-            element={<MyExperiencePage />}
+            element={<MyExperiencePage />} // Experience Page
           />
-          <Route path={VITE_BASE_URL + "contact"} element={<ContactPage />} />
-          <Route path={VITE_BASE_URL + "projects"} element={<ProjectsPage />} />
+          <Route path={VITE_BASE_URL + "contact"} element={<ContactPage />} />{" "}
+          {/* Contact Page */}
+          <Route
+            path={VITE_BASE_URL + "projects"}
+            element={<ProjectsPage />}
+          />{" "}
+          {/* Projects Page */}
         </Routes>
         <Footer /> {/* Footer remains at the bottom of every page */}
       </div>

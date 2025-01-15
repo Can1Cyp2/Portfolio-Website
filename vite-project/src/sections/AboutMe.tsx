@@ -7,17 +7,19 @@ const AboutMe: React.FC = () => {
       <h2>About Me</h2>
       <div className="about-me-text">
         <p>
-          I am a 21-year-old Computer Science student at York University's
-          Lassonde School of Engineering, set to graduate at the end of 2024. I
-          completed high school in June 2021 with a 90% grade average at Monarch
-          Park Collegiate Institute.
+          I am a 21-year-old graduate of the Computer Science program at York
+          University's Lassonde School of Engineering. I completed my studies at
+          the end of 2024 with a GPA over 3.3. I completed high school in June
+          2021 with greater than a 90% grade average at Monarch Park Collegiate
+          Institute.
         </p>
         <p>
           I am passionate about technology and music, with extensive knowledge
-          in coding languages such as Python, C++, JavaScript, CSS, and HTML.
-          One of my proudest achievements is building a portfolio website to
-          showcase my work. Additionally, I am a self-taught musician,
-          proficient in guitar, piano, and drums.
+          in coding languages such as Python, C++, JavaScript, TypeScript, CSS,
+          and HTML. One of my proudest achievements is building this portfolio
+          website to showcase my work. Additionally, I am a self-taught
+          musician, proficient in guitar, piano, and drums, now also commiting
+          myself to vocal training.
         </p>
       </div>
       <div className="about-me-details">
@@ -25,7 +27,16 @@ const AboutMe: React.FC = () => {
           <h3>Skills</h3>
           <ul>
             <li>
-              Proficient in C++, Python, JavaScript, HTML, CSS, and ReactJS.
+              Proficient in C++, Python, JavaScript, TypeScript, HTML, CSS, and
+              ReactJS.
+            </li>
+            <li>
+              Experienced with Front-End Development, TypeScript, and Generative
+              AI Tools.
+            </li>
+            <li>
+              Strong interpersonal communication, emotional intelligence, and
+              professional communication skills.
             </li>
             <li>
               Effective in independent work, team collaboration, and customer
@@ -37,10 +48,18 @@ const AboutMe: React.FC = () => {
         <div className="about-me-awards">
           <h3>Awards</h3>
           <ul>
+            <li>
+              Early acceptance into York University's Lassonde School of
+              Engineering Computer Science Program.
+            </li>
             <li>$2,000 entrance scholarship to York University.</li>
             <li>Award from the Waterloo Computing Contest.</li>
             <li>Multiple-year honors student.</li>
-            <li>Graduated high school with high honors.</li>
+            <li>Graduated high school with high honours (+90%).</li>
+            <li>
+              Graduated from the Computer Science program at York University
+              with a 3.3+ GPA.
+            </li>
           </ul>
         </div>
       </div>

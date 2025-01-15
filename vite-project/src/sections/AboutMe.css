@@ -13,11 +13,11 @@
 }
 
 .about-me-text {
-  margin: 0 auto 6rem auto; /* Center and add space below */
+  margin: 0 auto 6rem auto;
   font-size: 1.6rem;
   line-height: 1.8;
-  max-width: 50%; /* Limit the width to 50% of the screen */
-  text-align: center; /* Center-align the text */
+  max-width: 50%;
+  text-align: center;
 }
 
 .about-me-text p {
@@ -33,7 +33,7 @@
 
 .about-me-skills,
 .about-me-awards {
-  width: 30%; /* Adjusted width to ensure text wraps sooner */
+  width: 30%;
 }
 
 .about-me-skills {

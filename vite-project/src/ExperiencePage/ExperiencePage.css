@@ -21,6 +21,15 @@
   justify-content: center;
 }
 
+#experience .tcps-certification {
+  text-align: center;
+  color: #fff;
+  background-color: #444;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 90%;
+}
+
 #experience img {
   border-radius: 8px;
   cursor: pointer;
