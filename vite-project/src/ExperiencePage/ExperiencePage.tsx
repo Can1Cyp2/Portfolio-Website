@@ -45,7 +45,7 @@ const ExperiencePage: React.FC = () => {
           My Experience
         </h2>
 
-        {/* Display the PDF front and center */}
+        {/* Current Resume PDF ( front and center)*/}
         <div
           style={{
             textAlign: "center",
@@ -53,18 +53,31 @@ const ExperiencePage: React.FC = () => {
             backgroundColor: "#444",
             padding: "1.5rem",
             borderRadius: "8px",
-            maxWidth: "70%",
+            maxWidth: "90%",
             margin: "0 auto 3rem auto",
           }}
         >
-          <h3 style={{ marginBottom: "1.5rem" }}>My Latest Resume</h3>{" "}
-          {/* Adds spacing */}
-          <embed
-            src={VITE_BASE_URL + "pictures/Sebastian_Landry_Resume.pdf"}
-            type="application/pdf"
-            width="80%" // Reduces width for better layout
-            height="700px"
-          />
+          <h3 style={{ marginBottom: "1.5rem" }}>My Latest Resume</h3>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              overflow: "hidden",
+              borderRadius: "8px",
+            }}
+          >
+            <embed
+              src={VITE_BASE_URL + "pictures/Sebastian_Landry_Resume.pdf"}
+              type="application/pdf"
+              style={{
+                width: "85%", // Adjusts width for larger screens
+                height: "70vh", // Sets height dynamically
+                maxWidth: "100%", // Prevents overflow on small screens
+                border: "none",
+              }}
+            />
+          </div>
         </div>
 
         {/* Button to toggle old resume */}

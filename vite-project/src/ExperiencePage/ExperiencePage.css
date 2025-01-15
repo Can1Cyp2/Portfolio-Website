@@ -41,16 +41,69 @@
   transform: scale(1.05);
 }
 
-/* Only adjust layout for screens smaller than 768px */
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
-  #experience div {
-    flex-direction: column; /* Stack the images vertically */
-    align-items: center;
+  #experience h2 {
+    font-size: 2.5rem;
+  }
+
+  #experience .pdf-section embed {
+    width: 100%;
+    height: 60vh;
   }
 
   #experience img {
     width: 100%; /* Make images full width on small screens */
-    margin-bottom: 2rem; /* Add space between the stacked images */
+    margin-bottom: 1.5rem;
     height: auto; /* Maintain aspect ratio */
+  }
+
+  #experience .certifications-section {
+    padding: 1.5rem;
+  }
+
+  #experience .certifications-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #experience .certifications-section .certification-item {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Styles for very small screens (mobile devices) */
+@media (max-width: 480px) {
+  #experience h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #experience img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  #experience .certifications-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  #experience .certifications-section .certification-item {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  #experience .tcps-certification {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  #experience .pdf-section embed {
+    width: 100%;
+    height: 50vh;
   }
 }
