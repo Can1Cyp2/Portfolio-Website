@@ -68,7 +68,7 @@ const ExperiencePage: React.FC = () => {
             }}
           >
             <embed
-              src={VITE_BASE_URL + "pictures/Sebastian_Landry_Resume.pdf"}
+              src="https://raw.githubusercontent.com/Can1Cyp2/Portfolio-Website/main/vite-project/pictures/Sebastian_Landry_Resume.pdf"
               type="application/pdf"
               style={{
                 width: "85%", // Adjusts width for larger screens
