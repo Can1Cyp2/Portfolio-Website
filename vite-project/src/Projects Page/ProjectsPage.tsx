@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 // imports for page sections:
 import MineSweeper from "./MineSweeper";
@@ -9,12 +10,12 @@ import FanPage from "./FanPage";
 import BlobCounting from "./BlobCounting";
 import WordGuesser from "./WordGuesser";
 import UniversityProjectsCompilation from "./UniversityProjectsCompilation";
-
 import "./ProjectsPage.css";
 import Header from "../components/Header";
-import { useLocation } from "react-router-dom";
 import Poetry from "./Poetry";
 import BuyEase from "./BuyEase";
+import PoetryBackend from "./PoetryBackend";
+import VoiceVault from "./VoiceVault";
 
 const ProjectsPage: React.FC = () => {
   const location = useLocation();
@@ -67,6 +68,14 @@ const ProjectsPage: React.FC = () => {
 
         <section id="poetry">
           <Poetry />
+        </section>
+
+        <section id="poetry-backend">
+          <PoetryBackend />
+        </section>
+
+        <section id="voicevault">
+          <VoiceVault />
         </section>
 
         <section id="BuyEase">

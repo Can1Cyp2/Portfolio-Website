@@ -1,0 +1,210 @@
+.poetry-backend-container {
+  display: flex;
+  flex-direction: row; /* Design on the left, text on the right */
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+  height: 100vh;
+  width: 100%;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Design Section */
+.poetry-backend-design {
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+/* API section */
+.api-box {
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.api-box h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.api-box ul {
+  list-style: none;
+}
+
+.api-box li {
+  background-color: #444;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding-right: 20rem;
+}
+
+.api-box li:hover {
+  background-color: #555;
+}
+
+/* Text Section */
+.poetry-backend-content {
+  z-index: 2;
+  max-width: 50%;
+  text-align: right;
+}
+
+.poetry-backend-content h1 {
+  font-size: 5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.poetry-backend-content p {
+  font-size: 2rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+}
+
+/* Modal Styles */
+.api-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Fully opaque to prevent see-through */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Disable scrolling */
+  z-index: 1000; /* Ensures modal appears above all other content */
+  pointer-events: auto;
+}
+
+.api-modal-content {
+  background: #222;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.api-modal-content button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.api-modal-content button:hover {
+  background-color: #555;
+}
+
+/* Responsive Design for Medium Screens */
+@media (max-width: 1200px) {
+  .poetry-backend-container {
+    padding: 3rem;
+  }
+
+  .poetry-backend-content h1 {
+    font-size: 4rem;
+  }
+
+  .poetry-backend-content p {
+    font-size: 1.8rem;
+  }
+
+  .api-box {
+    padding: 1.5rem; /* Reduce padding for API box */
+  }
+
+  .api-box h3 {
+    font-size: 2rem; /* Slightly smaller heading */
+  }
+
+  .api-box li {
+    padding: 1rem; /* Reduce padding for API items */
+    padding-right: 15rem; /* Adjust for smaller screen space */
+  }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .poetry-backend-container {
+    flex-direction: column; /* Stack text and design vertically */
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .poetry-backend-content {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .poetry-backend-design {
+    margin-left: 0rem;
+  }
+
+  .poetry-backend-content h1 {
+    font-size: 3rem;
+  }
+
+  .poetry-backend-content p {
+    font-size: 1.5rem;
+  }
+
+  .poetry-backend-design {
+    max-width: 100%;
+  }
+
+  .api-box {
+    padding: 1.2rem;
+  }
+
+  .api-box h3 {
+    font-size: 1.8rem;
+  }
+
+  .api-box li {
+    padding: 0.8rem;
+    padding-right: 10rem;
+  }
+}
+
+/* Responsive Design for Extra Small Screens */
+@media (max-width: 480px) {
+  .poetry-backend-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .poetry-backend-content p {
+    font-size: 1.2rem;
+  }
+
+  .api-box {
+    padding: 1rem;
+  }
+
+  .api-box h3 {
+    font-size: 1.5rem; /* Smaller heading for mobile */
+  }
+
+  .api-box li {
+    padding: 0.6rem; /* Smaller padding for list items */
+    padding-right: 4rem;
+  }
+}

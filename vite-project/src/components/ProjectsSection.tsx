@@ -92,6 +92,53 @@ const ProjectsSection: React.FC = () => {
     },
     {
       id: "project4",
+      title: "Poetry Site Backend",
+      description:
+        "A robust backend system developed to support a full-stack poetry platform.",
+      longDescription: `
+        The Poetry Site Backend serves as the foundation of a full-stack poetry platform, providing seamless integration with the frontend for a rich user experience.<br>
+    
+        *Core Features:*<br>
+        - **CRUD API Endpoints:** Fully functional endpoints to manage poems and user data.<br>
+        - **Authentication:** Secure user login and admin-level access for managing poetry content.<br>
+        - **Database Management:** Uses MongoDB to store and retrieve poems and user information.<br>
+    
+        *Technologies Used:*<br>
+        - **Node.js and Express:** Build robust and scalable APIs.<br>
+        - **MongoDB:** Efficiently handle data storage and retrieval.<br>
+    
+        *Deployment:*<br>
+        - The backend APIs are hosted on a secure server, ensuring reliability and performance.<br>
+      `,
+      image: "/pictures/ProjectsSection/poetryBackend/poetryBackendPic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/poetry-backend",
+    },
+    {
+      id: "project5",
+      title: "VoiceVault",
+      description:
+        "A React Native application for exploring vocal ranges of artists and songs.",
+      longDescription: `
+        VoiceVault is an innovative mobile application designed for music enthusiasts and professionals to explore vocal ranges of artists and songs.<br>
+    
+        *Core Features:*<br>
+        - **Vocal Range Exploration:** Search for artists and songs and view their vocal ranges.<br>
+        - **Built-in Tuner:** Includes a tuner for singers to match their pitch.<br>
+        - **Modern UI/UX:** A sleek and intuitive design enhances user experience.<br>
+    
+        *Technologies Used:*<br>
+        - **React Native:** Enables cross-platform development for iOS and Android.<br>
+        - **APIs:** Fetch data for vocal ranges and song information from reliable sources.<br>
+    
+        *Design Highlights:*<br>
+        - Includes an interactive piano interface for users to explore basic notes (C, D, E).<br>
+        - Provides visual and auditory feedback for an engaging learning experience.<br>
+      `,
+      image: "/pictures/ProjectsSection/voiceVault/voiceVaultPic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/VoiceVault",
+    },
+    {
+      id: "project6",
       title: "BuyEase",
       description:
         "A marketplace platform for university students to buy and sell goods and services within their campus community.",
@@ -104,10 +151,10 @@ const ProjectsSection: React.FC = () => {
         # Contribution:<br>
         We follow Git Flow branching strategy for code contributions, and track issues and features via Trello. New contributions are always welcome!`,
       image: "/pictures/ProjectsSection/buyEase/BuyEaseLogo.jpg",
-      githubUrl: "https://github.com/EECS3311F24/project-buyease",
+      githubUrl: "https://github.com/Can1Cyp2/BuyEase_Project",
     },
     {
-      id: "project5",
+      id: "project7",
       title: "2048 Recreation",
       description:
         "A mobile version of the classic 2048 game for Android devices.",
@@ -117,7 +164,7 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/2048",
     },
     {
-      id: "project6",
+      id: "project8",
       title: "Sudoku Game",
       description:
         "A Sudoku game with various difficulty levels and a user-friendly interface.",
@@ -127,7 +174,7 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/Sudoku-with-solver",
     },
     {
-      id: "project7",
+      id: "project9",
       title: "Fan Page Website",
       description:
         "A band website built entirely in HTML, showcasing Shinedown's albums, history, and official links.",
@@ -137,7 +184,7 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/BandWebsite-Shinedown",
     },
     {
-      id: "project8",
+      id: "project10",
       title: "Blob Counting (recursion)",
       description:
         "A C++ program that utilizes recursion to count connected blobs on a grid.",
@@ -147,7 +194,7 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/BlobChecker-Recursion",
     },
     {
-      id: "project9",
+      id: "project11",
       title: "WordGuesser",
       description:
         "A game similar to Wordle where you try to guess a 5-letter word.",
@@ -157,7 +204,7 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/Word-Guesser",
     },
     {
-      id: "project10",
+      id: "project12",
       title: "University Projects Compilation",
       description:
         "A collection of various university projects showcasing skills in Java and Android development.",
