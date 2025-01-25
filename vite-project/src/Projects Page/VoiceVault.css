@@ -38,9 +38,10 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  margin-right: 10rem;
+  margin-right: 5rem; /* Adjusted to fit screen width */
   background-color: #333;
   border-radius: 10px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .voicevault-key {
@@ -77,30 +78,35 @@
   .voicevault-container {
     flex-direction: column; /* Stack content vertically */
     padding: 2rem;
+    align-items: center; /* Center the entire section */
+    height: auto; /* Allow dynamic height for wrapping content */
   }
 
   .voicevault-content {
-    text-align: center;
-    max-width: 100%;
+    text-align: left; /* Ensure text leans left */
+    max-width: 90%; /* Reduce width for smaller screens */
     margin-bottom: 2rem;
   }
 
   .voicevault-content h1 {
-    font-size: 3rem;
+    font-size: 3rem; /* Adjust heading size */
   }
 
   .voicevault-content p {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Adjust paragraph size */
   }
 
   .voicevault-piano {
-    flex-wrap: wrap; /* Allow keys to wrap */
-    justify-content: center;
+    flex-wrap: wrap; /* Allow keys to wrap if needed */
+    justify-content: center; /* Center the piano keys */
+    margin-right: 0; /* Remove extra margin */
+    width: 100%; /* Ensure the piano fits within the screen */
+    gap: 1rem; /* Maintain spacing between keys */
   }
 
   .voicevault-key {
-    width: 60px; /* Reduce size for smaller screens */
-    height: 150px;
+    width: 60px; /* Reduce key width */
+    height: 150px; /* Reduce key height */
   }
 
   .key-label {
@@ -108,21 +114,31 @@
   }
 }
 
+/* Responsive Design for Extra Small Screens */
 @media (max-width: 480px) {
+  .voicevault-container {
+    padding: 1.5rem;
+    height: auto; /* Allow content to expand */
+  }
+
   .voicevault-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Further reduce heading size */
   }
 
   .voicevault-content p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Further reduce paragraph size */
+  }
+
+  .voicevault-piano {
+    gap: 0.5rem; /* Reduce spacing between keys */
   }
 
   .voicevault-key {
-    width: 50px;
-    height: 120px;
+    width: 50px; /* Reduce key width further */
+    height: 120px; /* Reduce key height further */
   }
 
   .key-label {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Further adjust label size */
   }
 }

@@ -141,7 +141,7 @@
   }
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design for Smaller Screens (Mobile) */
 @media (max-width: 768px) {
   .poetry-backend-container {
     flex-direction: column; /* Stack text and design vertically */
@@ -150,13 +150,8 @@
   }
 
   .poetry-backend-content {
-    text-align: center;
-    max-width: 100%;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
-  .poetry-backend-design {
-    margin-left: 0rem;
+    text-align: right; /* Lean text to the right */
+    max-width: 100%; /* Use full width for better spacing */
   }
 
   .poetry-backend-content h1 {
@@ -169,6 +164,7 @@
 
   .poetry-backend-design {
     max-width: 100%;
+    margin-bottom: 2rem; /* Add spacing between sections */
   }
 
   .api-box {
@@ -205,6 +201,11 @@
 
   .api-box li {
     padding: 0.6rem; /* Smaller padding for list items */
-    padding-right: 4rem;
+    padding-right: 5rem;
+  }
+
+  .poetry-backend-content {
+    text-align: right; /* Ensure text leans right */
+    margin-bottom: 1rem; /* Adjust bottom spacing */
   }
 }

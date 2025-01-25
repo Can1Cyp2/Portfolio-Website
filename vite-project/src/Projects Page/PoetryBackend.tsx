@@ -2,15 +2,19 @@ import React, { useState, useEffect } from "react";
 import "./PoetryBackend.css";
 
 const PoetryBackend: React.FC = () => {
-  const [selectedEndpoint, setSelectedEndpoint] = useState<string | null>(null);
+  const [selectedEndpoint, setSelectedEndpoint] = useState<{
+    method: string;
+    path: string;
+    description: string;
+  } | null>(null);
 
   const endpoints = [
     { method: "GET", path: "/poems", description: "Fetch all poems" },
-    { method: "POST", path: "/poems", description: "Add a new poem" },
+    { method: "POST", path: "/poems/new", description: "Add a new poem" },
     { method: "GET", path: "/poems/:id", description: "Fetch a poem by ID" },
     {
       method: "DELETE",
-      path: "/poems/:id",
+      path: "/poems/:id/delete",
       description: "Delete a poem by ID",
     },
   ];
@@ -39,7 +43,7 @@ const PoetryBackend: React.FC = () => {
             {endpoints.map((endpoint) => (
               <li
                 key={endpoint.path}
-                onClick={() => setSelectedEndpoint(endpoint.path)}
+                onClick={() => setSelectedEndpoint(endpoint)}
               >
                 <strong>{endpoint.method}</strong> {endpoint.path}
               </li>
@@ -69,11 +73,14 @@ const PoetryBackend: React.FC = () => {
           <div className="api-modal-content">
             <h4>API Details</h4>
             <p>
-              <strong>Path:</strong> {selectedEndpoint}
+              <strong>Path:</strong> {selectedEndpoint.path}
             </p>
             <p>
               <strong>Description:</strong>{" "}
-              {endpoints.find((e) => e.path === selectedEndpoint)?.description}
+              {
+                endpoints.find((e) => e.path === selectedEndpoint.path)
+                  ?.description
+              }
             </p>
             <button onClick={closeModal}>Close</button>
           </div>
