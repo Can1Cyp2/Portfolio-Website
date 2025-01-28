@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import ProjectsPage from "./Projects Page/ProjectsPage";
 import "./index.css";
 
+import VoiceVaultUsers from "./VoiceVault/VoiceVaultUsers"; // Importing the VoiceVaultUsers component
+
 export const VITE_BASE_URL = "/Portfolio-Website/";
 
 const App: React.FC = () => {
@@ -37,6 +39,10 @@ const App: React.FC = () => {
             element={<ProjectsPage />}
           />{" "}
           {/* Projects Page */}
+          <Route
+            path={VITE_BASE_URL + "voicevault-users"}
+            element={<VoiceVaultUsers />}
+          />
         </Routes>
         <Footer /> {/* Footer remains at the bottom of every page */}
       </div>

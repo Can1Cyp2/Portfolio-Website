@@ -178,6 +178,12 @@ body {
   transition: color 0.3s ease; /* Smooth transition when color changes */
 }
 
+.voicevault-container a {
+  color: #4caf50; /* Highlighted email link */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 /* Change color on hover */
 .projects-section .modal-link:hover {
   color: #007bff; /* Change to blue on hover */

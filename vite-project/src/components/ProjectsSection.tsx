@@ -120,20 +120,24 @@ const ProjectsSection: React.FC = () => {
         "A React Native application for exploring vocal ranges of artists and songs.",
       longDescription: `
         VoiceVault is an innovative mobile application designed for music enthusiasts and professionals to explore vocal ranges of artists and songs.<br>
-    
-        *Core Features:*<br>
-        - **Vocal Range Exploration:** Search for artists and songs and view their vocal ranges.<br>
-        - **Built-in Tuner:** Includes a tuner for singers to match their pitch.<br>
-        - **Modern UI/UX:** A sleek and intuitive design enhances user experience.<br>
-    
-        *Technologies Used:*<br>
-        - **React Native:** Enables cross-platform development for iOS and Android.<br>
-        - **APIs:** Fetch data for vocal ranges and song information from reliable sources.<br>
-    
-        *Design Highlights:*<br>
+    <br>
+        Core Features:<br>
+        - Vocal Range Exploration: Search for artists and songs and view their vocal ranges.<br>
+        - Built-in Tuner: Includes a tuner for singers to match their pitch.<br>
+        - Modern UI/UX: A sleek and intuitive design enhances user experience.<br>
+     <br>
+        Technologies Used:<br>
+        - React Native: Enables cross-platform development for iOS and Android.<br>
+        - APIs: Fetch data for vocal ranges and song information from reliable sources.<br>
+    <br>
+        Design Highlights on Products Page:<br>
         - Includes an interactive piano interface for users to explore basic notes (C, D, E).<br>
         - Provides visual and auditory feedback for an engaging learning experience.<br>
+      <br>
+        Learn More:<br>
+        <a href="/voicevault-users" target="_blank" style="color:rgb(0, 155, 10); text-decoration: underline;">Visit VoiceVault Landing Page</a>
       `,
+
       image: "/pictures/ProjectsSection/voiceVault/voiceVaultPic.jpg",
       githubUrl: "https://github.com/Can1Cyp2/VoiceVault",
     },
