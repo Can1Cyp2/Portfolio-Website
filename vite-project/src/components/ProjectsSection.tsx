@@ -11,6 +11,7 @@ const ProjectsSection: React.FC = () => {
     description: string;
     image: string;
     githubUrl: string;
+    learnMoreLink?: string; // Optional
   }>(null);
 
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -133,13 +134,11 @@ const ProjectsSection: React.FC = () => {
         Design Highlights on Products Page:<br>
         - Includes an interactive piano interface for users to explore basic notes (C, D, E).<br>
         - Provides visual and auditory feedback for an engaging learning experience.<br>
-      <br>
-        Learn More:<br>
-        <a href="/Portfolio-Website/voicevault-users" target="_blank" style="color:rgb(0, 155, 10); text-decoration: underline;">Visit VoiceVault Landing Page</a>
+    <br>
       `,
-
       image: "/pictures/ProjectsSection/voiceVault/voiceVaultPic.jpg",
       githubUrl: "https://github.com/Can1Cyp2/VoiceVault",
+      learnMoreLink: `${VITE_BASE_URL}voicevault-users`,
     },
     {
       id: "project6",
@@ -294,6 +293,7 @@ const ProjectsSection: React.FC = () => {
                 description: project.longDescription || project.description,
                 image: project.image,
                 githubUrl: project.githubUrl,
+                learnMoreLink: project.learnMoreLink,
               })
             }
           />
@@ -425,10 +425,13 @@ const ProjectsSection: React.FC = () => {
                   {selectedProject.title}
                 </Link>
               </h2>
-
+              {/* Render the Description */}
               <div
                 dangerouslySetInnerHTML={{
-                  __html: selectedProject.description,
+                  __html: selectedProject.description.replace(
+                    `<span class="voicevault-link">Visit VoiceVault Landing Page</span>`,
+                    `<a href="${VITE_BASE_URL}voicevault-users" style="color: rgb(0, 155, 10); text-decoration: underline;" target="_blank">Visit VoiceVault Landing Page</a>`
+                  ),
                 }}
                 style={{
                   fontSize: "1.5rem",
@@ -437,6 +440,28 @@ const ProjectsSection: React.FC = () => {
                   marginTop: "40px",
                 }}
               />
+              {/* Add Learn More link if available */}
+              {selectedProject?.learnMoreLink && (
+                <div
+                  style={{
+                    marginTop: "2rem",
+                    fontSize: "1.5rem",
+                    color: "rgb(0, 155, 10)",
+                  }}
+                >
+                  <Link
+                    to={selectedProject.learnMoreLink}
+                    style={{
+                      textDecoration: "underline",
+                      fontWeight: "bold",
+                      cursor: "pointer",
+                      color: "rgb(0, 155, 10)",
+                    }}
+                  >
+                    Visit VoiceVault Landing Page
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         )}
