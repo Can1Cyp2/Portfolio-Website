@@ -12,16 +12,21 @@
 
 .voicevault-container h1 {
   font-size: 3rem;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem;
 }
 
 .voicevault-container p {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem;
+}
+
+.voicevault-container h3 {
+  opacity: 65%;
 }
 
 .voicevault-container a {
   color: #4caf50; /* Highlighted email link */
   text-decoration: underline;
   font-weight: bold;
+  margin: 1rem;
 }

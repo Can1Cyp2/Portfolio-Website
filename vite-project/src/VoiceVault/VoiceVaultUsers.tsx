@@ -17,6 +17,10 @@ const VoiceVaultUsers: React.FC = () => {
             VoiceVaultContact@gmail.com
           </a>
         </p>
+        <h3>
+          in your message, please include the email you use for your account on
+          the app
+        </h3>
       </div>
     </>
   );

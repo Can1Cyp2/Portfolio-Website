@@ -135,7 +135,7 @@ const ProjectsSection: React.FC = () => {
         - Provides visual and auditory feedback for an engaging learning experience.<br>
       <br>
         Learn More:<br>
-        <a href="/voicevault-users" target="_blank" style="color:rgb(0, 155, 10); text-decoration: underline;">Visit VoiceVault Landing Page</a>
+        <a href="/Portfolio-Website/voicevault-users" target="_blank" style="color:rgb(0, 155, 10); text-decoration: underline;">Visit VoiceVault Landing Page</a>
       `,
 
       image: "/pictures/ProjectsSection/voiceVault/voiceVaultPic.jpg",
