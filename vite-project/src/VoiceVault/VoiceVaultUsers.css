@@ -1,4 +1,4 @@
-.voicevault-container {
+.voicevaultUsers-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,21 +10,21 @@
   text-align: center;
 }
 
-.voicevault-container h1 {
+.voicevaultUsers-container h1 {
   font-size: 3rem;
   margin: 1.5rem;
 }
 
-.voicevault-container p {
+.voicevaultUsers-container p {
   font-size: 1.5rem;
   margin: 1rem;
 }
 
-.voicevault-container h3 {
+.voicevaultUsers-container h3 {
   opacity: 65%;
 }
 
-.voicevault-container a {
+.voicevaultUsers-container a {
   color: #4caf50; /* Highlighted email link */
   text-decoration: underline;
   font-weight: bold;

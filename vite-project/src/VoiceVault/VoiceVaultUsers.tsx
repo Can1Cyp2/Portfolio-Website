@@ -8,7 +8,7 @@ const VoiceVaultUsers: React.FC = () => {
   return (
     <>
       <Header />
-      <div className="voicevault-container">
+      <div className="voicevaultUsers-container">
         <h1>Welcome to VoiceVault Help Landing Page</h1>
         <p>
           If you would like to delete your account, have any inquiries or more,
