@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-      var pathname = window.location.pathname;
-      var newPath = "/Portfolio-Website" + pathname;
-      window.location.replace(newPath);
+      // Get the current path and remove the "/Portfolio-Website" prefix
+      var path = window.location.pathname.replace("/Portfolio-Website", "");
+
+      // Redirect to the correct route using hash-based navigation
+      window.location.replace("/Portfolio-Website#" + path);
     </script>
   </head>
   <body>
