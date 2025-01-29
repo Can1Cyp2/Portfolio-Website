@@ -43,6 +43,8 @@ const App: React.FC = () => {
             path={VITE_BASE_URL + "voicevault-users"}
             element={<VoiceVaultUsers />}
           />
+          {/* 404 fallback page (keep user on the same page if direct link fails) */}
+          <Route path="*" element={<TitlePage />} />
         </Routes>
         <Footer /> {/* Footer remains at the bottom of every page */}
       </div>
