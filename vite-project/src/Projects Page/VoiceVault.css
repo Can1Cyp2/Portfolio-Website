@@ -19,7 +19,7 @@
 }
 
 .voicevault-content h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: #ffffff;
   margin-bottom: 2rem;
 }
@@ -38,10 +38,10 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  margin-right: 5rem; /* Adjusted to fit screen width */
+  margin-right: 3rem;
   background-color: #333;
   border-radius: 10px;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
 .voicevault-key {
