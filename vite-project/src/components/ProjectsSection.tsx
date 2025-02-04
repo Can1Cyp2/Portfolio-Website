@@ -238,6 +238,30 @@ const ProjectsSection: React.FC = () => {
         "/pictures/ProjectsSection/universityCompilation/gitScreenshot.png",
       githubUrl: "https://github.com/Can1Cyp2/UniversityJavaProjects",
     },
+    {
+      id: "project13",
+      title: "Guitar Scale Visualizer",
+      description:
+        "An interactive guitar fretboard visualizer that helps musicians explore scales, tunings, and note positions.",
+      longDescription: `
+        The Guitar Scale Visualizer is an interactive web application designed to help guitarists explore different scales, tunings, and note positions on the fretboard.<br>
+<br>
+        Key Features:<br>
+        - Scale Selection: Users can choose from a variety of scales such as major, minor, pentatonic, and more.<br>
+        - Custom Tunings: Manually adjust each string's tuning or use preset tunings.<br>
+        - Interactive UI: The fretboard dynamically updates to display selected notes and scales.<br>
+<br>
+        Technologies Used:<br>
+        - React.js: Provides a responsive and interactive user interface.<br>
+        - CSS & JavaScript: Enhances styling and interactivity.<br>
+    <br>
+        Deployment:<br>
+        - Hosted on GitHub Pages for easy access.<br>
+      `,
+      image:
+        "/pictures/ProjectsSection/guitarScaleVisualizer/guitar-scale-visualizer.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/guitar-scale-visualizer",
+    },
   ];
 
   const scrollLeft = () => {

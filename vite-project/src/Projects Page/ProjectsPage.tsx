@@ -16,6 +16,7 @@ import Poetry from "./Poetry";
 import BuyEase from "./BuyEase";
 import PoetryBackend from "./PoetryBackend";
 import VoiceVault from "./VoiceVault";
+import GuitarScaleVisualizer from "./GuitarScaleVisualizer";
 
 const ProjectsPage: React.FC = () => {
   const location = useLocation();
@@ -60,6 +61,10 @@ const ProjectsPage: React.FC = () => {
       <div className="projects-page">
         <section id="minesweeper">
           <MineSweeper />
+        </section>
+
+        <section id="guitar-scale-visualizer">
+          <GuitarScaleVisualizer />
         </section>
 
         <section id="jump-game">
