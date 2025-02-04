@@ -16,6 +16,7 @@ import Poetry from "./Poetry";
 import BuyEase from "./BuyEase";
 import PoetryBackend from "./PoetryBackend";
 import VoiceVault from "./VoiceVault";
+import GuitarScaleVisualizer from "./GuitarScaleVisualizer";
 
 const ProjectsPage: React.FC = () => {
   const location = useLocation();
@@ -62,6 +63,14 @@ const ProjectsPage: React.FC = () => {
           <MineSweeper />
         </section>
 
+        <section id="guitar-scale-visualizer">
+          <GuitarScaleVisualizer />
+        </section>
+
+        <section id="voicevault">
+          <VoiceVault />
+        </section>
+
         <section id="jump-game">
           <JumpGame />
         </section>
@@ -74,32 +83,28 @@ const ProjectsPage: React.FC = () => {
           <PoetryBackend />
         </section>
 
-        <section id="voicevault">
-          <VoiceVault />
+        <section id="fan-page">
+          <FanPage />
         </section>
 
         <section id="BuyEase">
           <BuyEase />
         </section>
 
-        <section id="recreation-2048">
-          <Recreation2048 />
+        <section id="word-guesser">
+          <WordGuesser />
         </section>
 
         <section id="sudoku-game">
           <SudokuGame />
         </section>
 
-        <section id="fan-page">
-          <FanPage />
+        <section id="recreation-2048">
+          <Recreation2048 />
         </section>
 
         <section id="blob-counting">
           <BlobCounting />
-        </section>
-
-        <section id="word-guesser">
-          <WordGuesser />
         </section>
 
         <section id="university-projects-compilation">

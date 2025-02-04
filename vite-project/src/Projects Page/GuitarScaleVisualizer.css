@@ -1,0 +1,125 @@
+/* Main Container */
+.guitar-visualizer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  height: 100vh;
+  width: 100%;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  position: relative;
+}
+
+/* Left Side: Controls + Guitar Fretboard */
+.guitar-visualizer-left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Guitar Fretboard */
+.guitar-visualizer-neck {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #8b4513;
+  border: 2px solid #000;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.string {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #555;
+  height: 30px;
+}
+
+.fret {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #666;
+}
+
+/* Highlight Active Notes */
+.fret.active {
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.note {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+/* Right Side: Description */
+.guitar-visualizer-content {
+  width: 55%;
+  text-align: right;
+}
+
+.guitar-visualizer-content h1 {
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.guitar-visualizer-content p {
+  font-size: 1.8rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+}
+
+/* Controls Styling */
+.controls {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+select {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .guitar-visualizer-container {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  .guitar-visualizer-left {
+    width: 100%;
+    align-items: center;
+  }
+
+  .guitar-visualizer-content {
+    width: 90%;
+    text-align: center;
+  }
+
+  .guitar-visualizer-neck {
+    width: 100%;
+  }
+}

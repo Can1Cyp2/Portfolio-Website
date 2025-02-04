@@ -15,7 +15,7 @@
 /* The man image background */
 .jumpgame-man {
   position: absolute;
-  top: 0%; /* Start the man from the top of the section */
+  top: -18%; /* Start the man from the top of the section */
   left: 5%; /* Align to the left side */
   width: 10vw; /* Adjust size */
   height: auto;
