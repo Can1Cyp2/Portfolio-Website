@@ -59,6 +59,56 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/Minesweeper---Remake",
     },
     {
+      id: "project13",
+      title: "Guitar Scale Visualizer",
+      description:
+        "An interactive guitar fretboard visualizer that helps musicians explore scales, tunings, and note positions.",
+      longDescription: `
+        The Guitar Scale Visualizer is an interactive web application designed to help guitarists explore different scales, tunings, and note positions on the fretboard.<br>
+<br>
+        Key Features:<br>
+        - Scale Selection: Users can choose from a variety of scales such as major, minor, pentatonic, and more.<br>
+        - Custom Tunings: Manually adjust each string's tuning or use preset tunings.<br>
+        - Interactive UI: The fretboard dynamically updates to display selected notes and scales.<br>
+<br>
+        Technologies Used:<br>
+        - React.js: Provides a responsive and interactive user interface.<br>
+        - CSS & JavaScript: Enhances styling and interactivity.<br>
+    <br>
+        Deployment:<br>
+        - Hosted on GitHub Pages for easy access.<br>
+      `,
+      image:
+        "/pictures/ProjectsSection/guitarScaleVisualizer/guitar-scale-visualizer.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/guitar-scale-visualizer",
+    },
+    {
+      id: "project5",
+      title: "VoiceVault",
+      description:
+        "A React Native application for exploring vocal ranges of artists and songs.",
+      longDescription: `
+        VoiceVault is an innovative mobile application designed for music enthusiasts and professionals to explore vocal ranges of artists and songs.<br>
+    <br>
+        Core Features:<br>
+        - Vocal Range Exploration: Search for artists and songs and view their vocal ranges.<br>
+        - Built-in Tuner: Includes a tuner for singers to match their pitch.<br>
+        - Modern UI/UX: A sleek and intuitive design enhances user experience.<br>
+     <br>
+        Technologies Used:<br>
+        - React Native: Enables cross-platform development for iOS and Android.<br>
+        - APIs: Fetch data for vocal ranges and song information from reliable sources.<br>
+    <br>
+        Design Highlights on Products Page:<br>
+        - Includes an interactive piano interface for users to explore basic notes (C, D, E).<br>
+        - Provides visual and auditory feedback for an engaging learning experience.<br>
+    <br>
+      `,
+      image: "/pictures/ProjectsSection/voiceVault/voiceVaultPic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/VoiceVault",
+      learnMoreLink: `${VITE_BASE_URL}voicevault-users`,
+    },
+    {
       id: "project2",
       title: "JUMP!",
       description:
@@ -115,30 +165,14 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/poetry-backend",
     },
     {
-      id: "project5",
-      title: "VoiceVault",
+      id: "project9",
+      title: "Fan Page Website",
       description:
-        "A React Native application for exploring vocal ranges of artists and songs.",
-      longDescription: `
-        VoiceVault is an innovative mobile application designed for music enthusiasts and professionals to explore vocal ranges of artists and songs.<br>
-    <br>
-        Core Features:<br>
-        - Vocal Range Exploration: Search for artists and songs and view their vocal ranges.<br>
-        - Built-in Tuner: Includes a tuner for singers to match their pitch.<br>
-        - Modern UI/UX: A sleek and intuitive design enhances user experience.<br>
-     <br>
-        Technologies Used:<br>
-        - React Native: Enables cross-platform development for iOS and Android.<br>
-        - APIs: Fetch data for vocal ranges and song information from reliable sources.<br>
-    <br>
-        Design Highlights on Products Page:<br>
-        - Includes an interactive piano interface for users to explore basic notes (C, D, E).<br>
-        - Provides visual and auditory feedback for an engaging learning experience.<br>
-    <br>
-      `,
-      image: "/pictures/ProjectsSection/voiceVault/voiceVaultPic.jpg",
-      githubUrl: "https://github.com/Can1Cyp2/VoiceVault",
-      learnMoreLink: `${VITE_BASE_URL}voicevault-users`,
+        "A band website built entirely in HTML, showcasing Shinedown's albums, history, and official links.",
+      longDescription:
+        "This project represents the first website I created in grade 10 using only HTML. It features a comprehensive navigation menu that links to various sections of the site, including band members, show schedules, and a history section. The website also includes album details with cover images and descriptions. Through this project, I learned the basics of HTML, including layout structuring, linking, and basic CSS for styling. It served as a foundational experience in my journey into web development.",
+      image: "/pictures/ProjectsSection/fanpage/fanPagePic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/BandWebsite-Shinedown",
     },
     {
       id: "project6",
@@ -157,14 +191,14 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/BuyEase_Project",
     },
     {
-      id: "project7",
-      title: "2048 Recreation",
+      id: "project11",
+      title: "WordGuesser",
       description:
-        "A mobile version of the classic 2048 game for Android devices.",
+        "A game similar to Wordle where you try to guess a 5-letter word.",
       longDescription:
-        "The 2048 game is a modern puzzle game designed for Android devices using Android Studio. Players swipe to move tiles on a 4x4 grid, combining those with identical numbers to reach higher values. The game includes features like customizable point goals, a scoreboard, and a high scores menu to track top performances. This project showcases a deep understanding of mobile development, problem-solving, and user interface design.",
-      image: "/pictures/ProjectsSection/2048/recreation2048Pic.jpg",
-      githubUrl: "https://github.com/Can1Cyp2/2048",
+        "WordGuesser is a game inspired by the popular Wordle game. The player must guess a 5-letter word, with feedback provided for each guess. The game tracks the player's remaining guesses and highlights correct and incorrect letters. The game was built using HTML, CSS, and JavaScript, with a focus on creating a simple and fun user interface. This project helped me understand the fundamentals of web development and game logic.",
+      image: "/pictures/ProjectsSection/wordGuesser/wordGuessPic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/Word-Guesser",
     },
     {
       id: "project8",
@@ -177,14 +211,14 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/Sudoku-with-solver",
     },
     {
-      id: "project9",
-      title: "Fan Page Website",
+      id: "project7",
+      title: "2048 Recreation",
       description:
-        "A band website built entirely in HTML, showcasing Shinedown's albums, history, and official links.",
+        "A mobile version of the classic 2048 game for Android devices.",
       longDescription:
-        "This project represents the first website I created in grade 10 using only HTML. It features a comprehensive navigation menu that links to various sections of the site, including band members, show schedules, and a history section. The website also includes album details with cover images and descriptions. Through this project, I learned the basics of HTML, including layout structuring, linking, and basic CSS for styling. It served as a foundational experience in my journey into web development.",
-      image: "/pictures/ProjectsSection/fanpage/fanPagePic.jpg",
-      githubUrl: "https://github.com/Can1Cyp2/BandWebsite-Shinedown",
+        "The 2048 game is a modern puzzle game designed for Android devices using Android Studio. Players swipe to move tiles on a 4x4 grid, combining those with identical numbers to reach higher values. The game includes features like customizable point goals, a scoreboard, and a high scores menu to track top performances. This project showcases a deep understanding of mobile development, problem-solving, and user interface design.",
+      image: "/pictures/ProjectsSection/2048/recreation2048Pic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/2048",
     },
     {
       id: "project10",
@@ -195,16 +229,6 @@ const ProjectsSection: React.FC = () => {
         "This C++ program, created during my early high school years while learning recursion, asks the user for the number of rows and columns to generate a grid filled with 'blobs' (*). The user is then prompted to select a position on the grid, and the program checks that position for a blob. If a blob is found, it recursively counts all connected blobs in that area, otherwise, it returns 0. This project was a foundational exercise in understanding recursion and basic grid traversal algorithms in C++.",
       image: "/pictures/ProjectsSection/blob/blobPic.jpg",
       githubUrl: "https://github.com/Can1Cyp2/BlobChecker-Recursion",
-    },
-    {
-      id: "project11",
-      title: "WordGuesser",
-      description:
-        "A game similar to Wordle where you try to guess a 5-letter word.",
-      longDescription:
-        "WordGuesser is a game inspired by the popular Wordle game. The player must guess a 5-letter word, with feedback provided for each guess. The game tracks the player's remaining guesses and highlights correct and incorrect letters. The game was built using HTML, CSS, and JavaScript, with a focus on creating a simple and fun user interface. This project helped me understand the fundamentals of web development and game logic.",
-      image: "/pictures/ProjectsSection/wordGuesser/wordGuessPic.jpg",
-      githubUrl: "https://github.com/Can1Cyp2/Word-Guesser",
     },
     {
       id: "project12",
@@ -237,30 +261,6 @@ const ProjectsSection: React.FC = () => {
       image:
         "/pictures/ProjectsSection/universityCompilation/gitScreenshot.png",
       githubUrl: "https://github.com/Can1Cyp2/UniversityJavaProjects",
-    },
-    {
-      id: "project13",
-      title: "Guitar Scale Visualizer",
-      description:
-        "An interactive guitar fretboard visualizer that helps musicians explore scales, tunings, and note positions.",
-      longDescription: `
-        The Guitar Scale Visualizer is an interactive web application designed to help guitarists explore different scales, tunings, and note positions on the fretboard.<br>
-<br>
-        Key Features:<br>
-        - Scale Selection: Users can choose from a variety of scales such as major, minor, pentatonic, and more.<br>
-        - Custom Tunings: Manually adjust each string's tuning or use preset tunings.<br>
-        - Interactive UI: The fretboard dynamically updates to display selected notes and scales.<br>
-<br>
-        Technologies Used:<br>
-        - React.js: Provides a responsive and interactive user interface.<br>
-        - CSS & JavaScript: Enhances styling and interactivity.<br>
-    <br>
-        Deployment:<br>
-        - Hosted on GitHub Pages for easy access.<br>
-      `,
-      image:
-        "/pictures/ProjectsSection/guitarScaleVisualizer/guitar-scale-visualizer.jpg",
-      githubUrl: "https://github.com/Can1Cyp2/guitar-scale-visualizer",
     },
   ];
 
