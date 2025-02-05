@@ -101,12 +101,14 @@ select {
   border-radius: 5px;
 }
 
-/* Responsive Design */
+/* Mobile Screens */
 @media (max-width: 768px) {
   .guitar-visualizer-container {
     flex-direction: column;
-    align-items: center;
-    height: 100%;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .guitar-visualizer-left {
@@ -115,11 +117,64 @@ select {
   }
 
   .guitar-visualizer-content {
-    width: 90%;
-    text-align: center;
+    width: 100%;
   }
 
   .guitar-visualizer-neck {
     width: 100%;
+    padding: 0.5rem;
+    margin-top: -1rem;
+  }
+
+  .guitar-visualizer-content h1 {
+    font-size: 2rem;
+  }
+
+  .guitar-visualizer-content p {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+
+  .fret {
+    width: 10%;
+    min-width: 25px;
+  }
+
+  select {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+
+  .guitar-visualizer-content {
+    padding-bottom: 2rem;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .guitar-visualizer-container {
+    padding-top: 3rem;
+  }
+
+  .guitar-visualizer-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .guitar-visualizer-content p {
+    font-size: 1.2rem;
+  }
+
+  .guitar-visualizer-neck {
+    padding: 0.1rem;
+  }
+
+  .fret {
+    width: 12%;
+    min-width: 20px;
+  }
+
+  select {
+    font-size: 0.9rem;
+    padding: 0.3rem;
   }
 }
