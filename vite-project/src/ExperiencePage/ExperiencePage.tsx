@@ -99,6 +99,24 @@ const ExperiencePage: React.FC = () => {
         {/* Licenses & Certifications Section */}
         <div className="certifications-section">
           <h3>Licenses & Certifications</h3>
+
+          <div className="certification-item">
+            <h4>AI Prompt Engineering</h4>
+            <p>
+              <strong>Platform:</strong> LinkedIn (Issued Feb 2025)
+            </p>
+            <p>
+              <strong>Skills:</strong> AI Prompting · Prompt Engineering ·
+              Generative AI Tools · Responsible AI Use · Large Language Models
+              (LLMs) · Text & Image Generation
+            </p>
+            <p>
+              <strong>Learning Objectives:</strong> Understand prompt
+              engineering, use tools like ChatGPT & Gemini, evaluate AI
+              capabilities, and apply ethical AI considerations.
+            </p>
+          </div>
+
           <div className="certification-item">
             <h4>Building Communication Skills in the Age of AI</h4>
             <p>
