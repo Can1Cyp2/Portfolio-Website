@@ -51,3 +51,4 @@ Feel free to reach out to me if you have any questions or suggestions!
 
 - **Email**: [99SebastianL@gmail.com](mailto:99SebastianL@gmail.com)
 - **LinkedIn**: [linkedin.com/in/sebastian-landry](https://www.linkedin.com/in/sebastian-landry/)
+- **GitHub**: [https://github.com/Can1Cyp2/Portfolio-Website](https://github.com/Can1Cyp2/Portfolio-Website)
