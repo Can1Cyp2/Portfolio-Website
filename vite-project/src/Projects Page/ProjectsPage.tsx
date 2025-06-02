@@ -17,6 +17,7 @@ import BuyEase from "./BuyEase";
 import PoetryBackend from "./PoetryBackend";
 import VoiceVault from "./VoiceVault";
 import GuitarScaleVisualizer from "./GuitarScaleVisualizer";
+import VocalSite from "./VocalSite";
 
 const ProjectsPage: React.FC = () => {
   const location = useLocation();
@@ -71,8 +72,8 @@ const ProjectsPage: React.FC = () => {
           <VoiceVault />
         </section>
 
-        <section id="jump-game">
-          <JumpGame />
+        <section id="vocalsite">
+          <VocalSite />
         </section>
 
         <section id="poetry">
@@ -105,6 +106,10 @@ const ProjectsPage: React.FC = () => {
 
         <section id="blob-counting">
           <BlobCounting />
+        </section>
+
+        <section id="jump-game">
+          <JumpGame />
         </section>
 
         <section id="university-projects-compilation">
