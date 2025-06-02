@@ -128,7 +128,7 @@ const ProjectsSection: React.FC = () => {
         Deployment:<br>
         - Hosted on GitHub Pages<br>
       `,
-      image: "/pictures/ProjectsSection/vocalsite/micLogo.png",
+      image: "/pictures/ProjectsSection/vocalSite/micLogo.png",
       githubUrl: "https://github.com/Can1Cyp2/vocal-coach-site",
       learnMoreLink: "https://can1cyp2.github.io/vocal-coach-site/",
     },

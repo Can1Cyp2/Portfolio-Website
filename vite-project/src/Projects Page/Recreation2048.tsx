@@ -21,14 +21,14 @@ const Recreation2048: React.FC = () => {
         scrollPosition = Math.max(0, scrollPosition); // Ensure no negative values
 
         // Increase the scroll range to slow down video playback
-        const scrollPercent = Math.min(scrollPosition / sectionHeight, 1); // Extend the scroll range (1.5 times section height)
+        const scrollPercent = Math.min(scrollPosition / sectionHeight, 1); // Extend the scroll range (1.5 times section height )
 
         // Limit the video playback to the first 5 seconds
         const videoDuration = Math.min(video.duration, 5);
         const targetTime = scrollPercent * videoDuration;
 
         if (video.currentTime !== targetTime) {
-          video.currentTime = targetTime; // Update the video based on scroll
+          video.currentTime = targetTime; // Update the video based on scroll position
         }
       }
     };
@@ -57,7 +57,7 @@ const Recreation2048: React.FC = () => {
         </p>
       </div>
 
-      {/* Video controlled by scroll */}
+      {/* Video controlled by scroll: */}
       <video
         ref={videoRef}
         src={VITE_BASE_URL + "/pictures/ProjectsSection/2048/2048.mp4"}

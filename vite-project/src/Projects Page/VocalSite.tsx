@@ -48,7 +48,7 @@ const VocalSite: React.FC = () => {
     <div className="vocalsite-container">
       <div className="vocalsite-animation">
         <img
-          src={VITE_BASE_URL + "/pictures/ProjectsSection/vocalsite/mic.png"}
+          src={VITE_BASE_URL + "/pictures/ProjectsSection/vocalSite/mic.png"}
           alt="Microphone"
           className="vocalsite-mic"
         />
