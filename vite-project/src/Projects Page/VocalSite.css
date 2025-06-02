@@ -1,0 +1,162 @@
+.vocalsite-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+  height: 100vh;
+  background-color: #121212;
+  color: white;
+  overflow: hidden;
+  gap: 3rem;
+}
+
+.vocalsite-content {
+  width: 50%;
+  text-align: right;
+  z-index: 2;
+}
+
+.vocalsite-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.vocalsite-content p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.vocalsite-animation {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1.2);
+}
+
+.vocalsite-mic {
+  width: 160px;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.vocalsite-mic.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vocalsite-mic.dancing {
+  animation: micDance 0.6s ease-in-out;
+}
+
+@keyframes micDance {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-5px, -5px) rotate(-5deg); }
+  40% { transform: translate(5px, -3px) rotate(5deg); }
+  60% { transform: translate(-3px, 5px) rotate(-3deg); }
+  80% { transform: translate(3px, 3px) rotate(3deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.vocalsite-wave {
+  width: 160px;
+  height: 20px;
+  margin: 10px 0;
+  background: linear-gradient(to right, #646cff, #535bf2);
+  border-radius: 10px;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.vocalsite-wave.in-view {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.wave1.in-view {
+  animation: pulseWave1 1.2s infinite ease-in-out;
+}
+.wave2.in-view {
+  animation: pulseWave2 1.6s infinite ease-in-out;
+}
+.wave3.in-view {
+  animation: pulseWave3 2s infinite ease-in-out;
+}
+
+@keyframes pulseWave1 {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(1.5); }
+}
+@keyframes pulseWave2 {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(2); }
+}
+@keyframes pulseWave3 {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(1.7); }
+}
+
+.redirect-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.redirect-button:hover {
+  background-color: #535bf2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*
+   Responsive Layout
+    */
+@media (max-width: 768px) {
+  .vocalsite-container {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    height: auto;
+  }
+
+  .vocalsite-animation {
+    width: 100%;
+    transform: scale(1);
+    margin-bottom: 2rem;
+  }
+
+  .vocalsite-mic {
+    width: 120px;
+  }
+
+  .vocalsite-wave {
+    width: 120px;
+    height: 16px;
+  }
+
+  .vocalsite-content {
+    width: 100%;
+  }
+
+  .vocalsite-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .vocalsite-content p {
+    font-size: 1.4rem;
+  }
+
+  .redirect-button {
+    font-size: 1rem;
+  }
+}
