@@ -109,6 +109,30 @@ const ProjectsSection: React.FC = () => {
       learnMoreLink: `${VITE_BASE_URL}voicevault-users`,
     },
     {
+      id: "project14",
+      title: "VocalCoach",
+      description:
+        "A full-stack vocal coaching platform with booking, authentication, and recurring sessions.",
+      longDescription: `
+        VocalCoach is a modern full-stack web application built to simplify vocal lesson scheduling for singers and vocal coaches.<br><br>
+        
+        Key Features:<br>
+        - Weekly calendar with time-slot booking<br>
+        - Recurring session support for ongoing lessons<br>
+        - Email integration and account management<br>
+        - Secure authentication using Supabase<br><br>
+
+        Technologies Used:<br>
+        - React (TypeScript), Supabase, styled-components, EmailJS<br><br>
+
+        Deployment:<br>
+        - Hosted on GitHub Pages<br>
+      `,
+      image: "/pictures/ProjectsSection/vocalsite/micLogo.png",
+      githubUrl: "https://github.com/Can1Cyp2/vocal-coach-site",
+      learnMoreLink: "https://can1cyp2.github.io/vocal-coach-site/",
+    },
+    {
       id: "project2",
       title: "JUMP!",
       description:
