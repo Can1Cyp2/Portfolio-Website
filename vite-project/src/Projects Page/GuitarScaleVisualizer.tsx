@@ -125,7 +125,7 @@ const GuitarScaleVisualizer: React.FC = () => {
           rel="noopener noreferrer"
           className="guitar-visualizer-title-link"
         >
-        <h1>Guitar Visualizer</h1>
+        <h1>Guitar Scale Visualizer</h1>
         </a>
         <p>
           This is an interactive web tool designed for musicians, guitarists,
