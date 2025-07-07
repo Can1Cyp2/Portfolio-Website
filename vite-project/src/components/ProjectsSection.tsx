@@ -110,10 +110,15 @@ const ProjectsSection: React.FC = () => {
     },
     {
       id: "project14",
-      title: "VocalCoach",
+      title: "Vocal Coach Site",
       description:
-        "A full-stack vocal coaching platform with booking, authentication, and recurring sessions.",
+        "* STILL UNDER CONSTRUCTION * | A full-stack vocal coaching platform with booking, authentication, and recurring sessions.",
       longDescription: `
+        <div style="background: linear-gradient(135deg, #ff6b6b, #ffa500); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; font-size: 1.2em; margin: 20px 0; border: 2px solid #ff4757; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          🚧 UNDER CONSTRUCTION 🚧<br>
+          <span style="font-size: 0.9em; font-weight: normal;">This site is currently being developed and enhanced</span>
+        </div>
+
         VocalCoach is a modern full-stack web application built to simplify vocal lesson scheduling for singers and vocal coaches.<br><br>
         
         Key Features:<br>
@@ -488,7 +493,6 @@ const ProjectsSection: React.FC = () => {
                   marginTop: "40px",
                 }}
               />
-              {/* Add Learn More link if available */}
               {selectedProject?.learnMoreLink && (
                 <div
                   style={{
@@ -506,7 +510,12 @@ const ProjectsSection: React.FC = () => {
                       color: "rgb(0, 155, 10)",
                     }}
                   >
-                    Visit VoiceVault Landing Page
+                    {/* Conditional link text based on project title: */}
+                    {selectedProject.title === "VoiceVault"
+                      ? "Visit VoiceVault Landing Page"
+                      : selectedProject.title === "Vocal Coach Site"
+                        ? "[*NOT YET FINISHED*] Visit Vocal Coach Live Site [*NOT YET FINISHED*]"
+                        : "Learn More"}
                   </Link>
                 </div>
               )}
