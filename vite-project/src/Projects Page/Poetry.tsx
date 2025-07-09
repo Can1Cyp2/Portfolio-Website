@@ -50,7 +50,13 @@ const Poetry: React.FC = () => {
   return (
     <div className="poetry-container">
       <div className="poetry-content">
-        <h1>Poetry Website</h1>
+        <a href="https://github.com/your-username/your-poetry-repo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="poetry-title-link"
+        >
+          <h1>Poetry Website</h1>
+        </a>
         <p>
           A website showcasing and managing the poems of Paulos Ioannou, with a
           fully implemented backend and admin controls for adding, editing, or

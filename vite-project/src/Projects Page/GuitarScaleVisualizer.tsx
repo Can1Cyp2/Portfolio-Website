@@ -119,7 +119,14 @@ const GuitarScaleVisualizer: React.FC = () => {
       </div>
 
       <div className="guitar-visualizer-content">
+        <a
+          href="https://github.com/your-username/your-guitar-visualizer-repo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="guitar-visualizer-title-link"
+        >
         <h1>Guitar Scale Visualizer</h1>
+        </a>
         <p>
           This is an interactive web tool designed for musicians, guitarists,
           and learners who want to explore different scales and tunings

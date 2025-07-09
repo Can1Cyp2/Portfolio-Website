@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import "./MineSweeper.css"; // Import Minesweeper-specific styles
 import { VITE_BASE_URL } from "../App";
 
+// Comments here act as a template to follow for other components
+
 const MineSweeper: React.FC = () => {
   const backgroundRef = useRef<HTMLImageElement | null>(null);
   const flagRef = useRef<HTMLImageElement | null>(null); // Ref for the flag
@@ -20,8 +22,8 @@ const MineSweeper: React.FC = () => {
 
       // Slight scroll effect for the flag
       if (flagRef.current) {
-        const flagTranslation = Math.min(scrollPosition * 0.02, 50); // Move the flag only a few pixels (limit to 5px)
-        flagRef.current.style.transform = `translateY(${flagTranslation}px)`; // Apply slight translation
+        const flagTranslation = Math.min(scrollPosition * 0.02, 50); // Move the flag only a few pixels (limited to 5px)
+        flagRef.current.style.transform = `translateY(${flagTranslation}px)`; // slight translation
       }
     };
 
@@ -45,7 +47,14 @@ const MineSweeper: React.FC = () => {
       <div className="minesweeper-content">
         {/* Wrap the title and flag together */}
         <div className="minesweeper-title-container">
-          <h1>Minesweeper</h1>
+          <a
+            href="https://github.com/Can1Cyp2/Minesweeper---Remake?tab=readme-ov-file"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="minesweeper-title-link"
+          >
+            <h1>Minesweeper</h1>
+          </a>
           {/* Red flag positioned relative to the title */}
           <img
             ref={flagRef}

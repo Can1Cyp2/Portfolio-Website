@@ -42,11 +42,8 @@
 
 /* Minesweeper title */
 .minesweeper-title-container h1 {
-  font-size: 5rem;
-  color: #ffffff;
-  margin-bottom: 2rem;
-  position: relative;
-  z-index: 2; /* Keep the title above everything */
+  font-size: 3rem;
+  margin-left: 10%; /* Keep the title above everything */
 }
 
 /* Red flag positioned relative to the "M" */
@@ -72,35 +69,68 @@
   margin-right: 40rem; /* This large margin causes wrapping issues */
 }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 1200px) {
-  .minesweeper-container {
-    padding-left: 2rem;
-  }
+/* Link styles for the title */
+.minesweeper-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
 
-  .minesweeper-title-container h1 {
-    font-size: 4rem;
-  }
+.minesweeper-title-link h1 {
+  font-size: 5rem;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  color: white;
 
-  .minesweeper-content p {
-    font-size: 1.8rem;
-    margin-right: 10rem;
-  }
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #00bfff 20%,
+    #ffffff 40%,
+    #00bfff 60%,
+    #ffffff 80%,
+    #ffffff 100%
+  );
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
 
-  .minesweeper-tile,
-  .minesweeper-background {
-    bottom: 25%; /* Move images further down */
-    right: 10%;
-    width: 15vw;
-  }
+  animation: shimmerSubtle 6s ease-in-out infinite;
+}
 
-  .minesweeper-flag {
-    top: -60px;
-    left: -10px; /* Slight adjustment for medium screens */
-    width: 80px;
+@keyframes shimmerSubtle {
+  0%,
+  85% {
+    background-position: -200% 0;
+    -webkit-text-fill-color: white;
+  }
+  90% {
+    background-position: -100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  95% {
+    background-position: 0% 0;
+     -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+  }
+  97% {
+    background-position: 100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    background-position: 200% 0;
+    -webkit-text-fill-color: white;
   }
 }
 
+.minesweeper-title-link h1:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
   .minesweeper-container {
     padding-left: 1.5rem;
