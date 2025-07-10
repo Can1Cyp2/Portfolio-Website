@@ -50,7 +50,7 @@ const Poetry: React.FC = () => {
   return (
     <div className="poetry-container">
       <div className="poetry-content">
-        <a href="PaulosPoetry.com"
+        <a href="https://paulospoetry.com"
           target="_blank"
           rel="noopener noreferrer"
           className="poetry-title-link"
