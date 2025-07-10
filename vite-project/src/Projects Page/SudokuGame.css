@@ -64,6 +64,68 @@
   color: #cccccc;
 }
 
+/* Link styles for the title */
+.sudoku-game-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.sudoku-game-title-link h1 {
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  color: white;
+
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #00bfff 20%,
+    #ffffff 40%,
+    #00bfff 60%,
+    #ffffff 80%,
+    #ffffff 100%
+  );
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: shimmerSubtle 8s ease-in-out infinite;
+}
+
+@keyframes shimmerSubtle {
+  0%,
+  85% {
+    background-position: -200% 0;
+    -webkit-text-fill-color: white;
+  }
+  90% {
+    background-position: -100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  95% {
+    background-position: 0% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+  }
+  97% {
+    background-position: 100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    background-position: 200% 0;
+    -webkit-text-fill-color: white;
+  }
+}
+
+.sudoku-game-title-link h1:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
 /* Responsive Design for Smaller Screens */
 @media (max-width: 1200px) {
   .sudoku-game-container {
@@ -71,6 +133,10 @@
   }
 
   .sudoku-game-content h1 {
+    font-size: 4rem;
+  }
+
+  .sudoku-game-title-link h1 {
     font-size: 4rem;
   }
 
@@ -93,6 +159,10 @@
     font-size: 3rem;
   }
 
+  .sudoku-game-title-link h1 {
+    font-size: 3rem;
+  }
+
   .sudoku-game-content p {
     font-size: 1.5rem;
     margin-left: 0;
@@ -109,6 +179,10 @@
   }
 
   .sudoku-game-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .sudoku-game-title-link h1 {
     font-size: 2.5rem;
   }
 

@@ -41,6 +41,68 @@
   margin-right: 40rem;
 }
 
+/* Link styles for the title */
+.recreation2048-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.recreation2048-title-link h1 {
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  color: white;
+
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #00bfff 20%,
+    #ffffff 40%,
+    #00bfff 60%,
+    #ffffff 80%,
+    #ffffff 100%
+  );
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: shimmerSubtle 8s ease-in-out infinite;
+}
+
+@keyframes shimmerSubtle {
+  0%,
+  85% {
+    background-position: -200% 0;
+    -webkit-text-fill-color: white;
+  }
+  90% {
+    background-position: -100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  95% {
+    background-position: 0% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+  }
+  97% {
+    background-position: 100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    background-position: 200% 0;
+    -webkit-text-fill-color: white;
+  }
+}
+
+.recreation2048-title-link h1:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
 /* Responsive Design for Smaller Screens */
 @media (max-width: 1200px) {
   .recreation2048-container {
@@ -48,6 +110,10 @@
   }
 
   .recreation2048-content h1 {
+    font-size: 4rem;
+  }
+
+  .recreation2048-title-link h1 {
     font-size: 4rem;
   }
 
@@ -72,6 +138,10 @@
     text-align: center;
   }
 
+  .recreation2048-title-link h1 {
+    font-size: 3rem;
+  }
+
   .recreation2048-content p {
     font-size: 1.5rem;
     margin-right: 0; /* Remove margin to prevent overflow */
@@ -94,6 +164,10 @@
   .recreation2048-content h1 {
     font-size: 2.5rem;
     text-align: center;
+  }
+
+  .recreation2048-title-link h1 {
+    font-size: 2.5rem;
   }
 
   .recreation2048-content p {

@@ -54,7 +54,13 @@ const PoetryBackend: React.FC = () => {
 
       {/* Text Section on the Right */}
       <div className="poetry-backend-content">
-        <h1>Poetry Site Backend</h1>
+        <a href="https://github.com/Can1Cyp2/poetry-backend"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="poetry-backend-title-link"
+          >
+            <h1>Poetry Site Backend</h1>
+        </a>
         <p>
           A robust backend system developed to support a full-stack poetry
           platform. The backend provides APIs for managing poems, user

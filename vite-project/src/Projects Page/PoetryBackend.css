@@ -113,6 +113,78 @@
   background-color: #555;
 }
 
+/* Link styles for the title */
+.poetry-backend-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.poetry-backend-title-link:visited,
+.poetry-backend-title-link:link,
+.poetry-backend-title-link:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.poetry-backend-title-link h1 {
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  color: white;
+
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #00bfff 20%,
+    #ffffff 40%,
+    #00bfff 60%,
+    #ffffff 80%,
+    #ffffff 100%
+  );
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: shimmerSubtle 8s ease-in-out infinite;
+}
+
+@keyframes shimmerSubtle {
+  0%,
+  85% {
+    background-position: -200% 0;
+    -webkit-text-fill-color: white;
+  }
+  90% {
+    background-position: -100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  95% {
+    background-position: 0% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+  }
+  97% {
+    background-position: 100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    background-position: 200% 0;
+    -webkit-text-fill-color: white;
+  }
+}
+
+.poetry-backend-title-link h1:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+  text-decoration-color: white;
+}
+
 /* Responsive Design for Medium Screens */
 @media (max-width: 1200px) {
   .poetry-backend-container {
@@ -120,6 +192,10 @@
   }
 
   .poetry-backend-content h1 {
+    font-size: 4rem;
+  }
+
+  .poetry-backend-title-link h1 {
     font-size: 4rem;
   }
 
@@ -162,6 +238,10 @@
     font-size: 3rem;
   }
 
+  .poetry-backend-title-link h1 {
+    font-size: 3rem;
+  }
+
   .poetry-backend-content p {
     font-size: 1.5rem;
   }
@@ -187,6 +267,10 @@
 /* Responsive Design for Extra Small Screens */
 @media (max-width: 480px) {
   .poetry-backend-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .poetry-backend-title-link h1 {
     font-size: 2.5rem;
   }
 

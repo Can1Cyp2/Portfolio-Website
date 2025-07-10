@@ -33,8 +33,8 @@ const ContactPage: React.FC = () => {
 
     emailjs
       .send(
-        "service_portfolio", // Your EmailJS service ID
-        "template_v7rdyih", // Updated with your actual template ID
+        "service_portfolio", // EmailJS service ID
+        "template_v7rdyih", // template ID
         templateParams,
         "TW2CZ1oM6qoDgEhmm" // Public Key
       )

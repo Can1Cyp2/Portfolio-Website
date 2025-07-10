@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./Recreation2048.css"; // Ensure your CSS file is correctly imported
+import "./Recreation2048.css";
 import { VITE_BASE_URL } from "../App";
 
 const Recreation2048: React.FC = () => {
@@ -44,7 +44,14 @@ const Recreation2048: React.FC = () => {
   return (
     <div className="recreation2048-container" ref={sectionRef}>
       <div className="recreation2048-content">
-        <h1>2048 Recreation</h1>
+        <a
+          href="https://github.com/Can1Cyp2/2048"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="recreation2048-title-link"
+        >
+          <h1>2048 Recreation</h1>
+        </a>
         <p>
           A mobile version of the classic 2048 game for Android devices. Players
           swipe to move tiles, combining identical numbers to reach higher

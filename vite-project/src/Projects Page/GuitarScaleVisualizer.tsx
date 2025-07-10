@@ -120,7 +120,7 @@ const GuitarScaleVisualizer: React.FC = () => {
 
       <div className="guitar-visualizer-content">
         <a
-          href="https://github.com/your-username/your-guitar-visualizer-repo"
+          href="https://github.com/Can1Cyp2/guitar-scale-visualizer"
           target="_blank"
           rel="noopener noreferrer"
           className="guitar-visualizer-title-link"
