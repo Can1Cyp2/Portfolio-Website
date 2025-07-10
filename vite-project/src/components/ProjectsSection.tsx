@@ -195,7 +195,7 @@ const ProjectsSection: React.FC = () => {
     },
     {
       id: "project9",
-      title: "Fan Page Website",
+      title: "Artist Website",
       description:
         "A band website built entirely in HTML, showcasing Shinedown's albums, history, and official links.",
       longDescription:

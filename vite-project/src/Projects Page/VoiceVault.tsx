@@ -15,7 +15,7 @@ const VoiceVault: React.FC = () => {
       {/* VoiceVault Content on the Left */}
       <div className="voicevault-content">
       <a
-        href="https://github.com/your-username/your-voicevault-repo"
+        href="https://github.com/Can1Cyp2/VoiceVault"
         target="_blank"
         rel="noopener noreferrer"
         className="voicevault-title-link"

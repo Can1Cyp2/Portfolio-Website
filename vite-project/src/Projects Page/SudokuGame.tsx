@@ -52,7 +52,13 @@ const SudokuGame: React.FC = () => {
   return (
     <div className="sudoku-game-container" ref={sectionRef}>
       <div className="sudoku-game-content">
-        <h1>Sudoku Game</h1>
+        <a href="https://github.com/Can1Cyp2/Sudoku-with-solver"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sudoku-game-title-link"
+        >
+          <h1>Sudoku Game</h1>
+        </a>
         <p>
           A Sudoku game with various difficulty levels and a user-friendly
           interface. It challenges players to solve puzzles with multiple

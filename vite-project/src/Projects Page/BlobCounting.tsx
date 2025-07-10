@@ -56,7 +56,14 @@ const BlobCounting: React.FC = () => {
   return (
     <div className="blob-counting-container" ref={sectionRef}>
       <div className="blob-counting-content">
-        <h1>Blob Counting (Recursion)</h1>
+        <a
+          href="https://github.com/Can1Cyp2/BlobChecker-Recursion"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="blob-counting-title-link"
+        >
+          <h1>Blob Counting (Recursion)</h1>
+        </a>
         <p>
           This C++ program, created during my early high school years while
           learning recursion, asks the user for the number of rows and columns

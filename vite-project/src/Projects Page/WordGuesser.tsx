@@ -1,11 +1,17 @@
 import React from "react";
-import "./WordGuesser.css"; // Ensure your CSS file is correctly imported
+import "./WordGuesser.css";
 
 const WordGuesser: React.FC = () => {
   return (
     <div className="wordguesser-container">
       <div className="wordguesser-content">
-        <h1>WordGuesser</h1>
+        <a href="https://github.com/Can1Cyp2/Word-Guesser"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="wordguesser-title-link"
+        >
+          <h1>WordGuesser</h1>
+        </a>
         <p>
           WordGuesser is a game inspired by the popular Wordle game. The player
           must guess a 5-letter word, with feedback provided for each guess. The

@@ -63,6 +63,10 @@
     font-size: 4rem;
   }
 
+  .jumpgame-title-link h1 {
+    font-size: 4rem;
+  }
+
   .jumpgame-content p {
     font-size: 1.8rem;
     margin-left: 20rem;
@@ -81,6 +85,10 @@
   }
 
   .jumpgame-content h1 {
+    font-size: 3rem;
+  }
+
+  .jumpgame-title-link h1 {
     font-size: 3rem;
   }
 
@@ -103,6 +111,10 @@
   }
 
   .jumpgame-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .jumpgame-title-link h1 {
     font-size: 2.5rem;
   }
 

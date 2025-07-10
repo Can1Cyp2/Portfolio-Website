@@ -53,6 +53,68 @@
   transition: transform 0.1s ease-in-out;
 }
 
+/* Link styles for the title */
+.blob-counting-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.blob-counting-title-link h1 {
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  color: white;
+
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #00bfff 20%,
+    #ffffff 40%,
+    #00bfff 60%,
+    #ffffff 80%,
+    #ffffff 100%
+  );
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: shimmerSubtle 8s ease-in-out infinite;
+}
+
+@keyframes shimmerSubtle {
+  0%,
+  85% {
+    background-position: -200% 0;
+    -webkit-text-fill-color: white;
+  }
+  90% {
+    background-position: -100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  95% {
+    background-position: 0% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+  }
+  97% {
+    background-position: 100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    background-position: 200% 0;
+    -webkit-text-fill-color: white;
+  }
+}
+
+.blob-counting-title-link h1:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
 /* Responsive Design */
 @media (max-width: 1300px) {
   .blob-counting-container {
@@ -60,6 +122,10 @@
   }
 
   .blob-counting-content h1 {
+    font-size: 4rem;
+  }
+
+  .blob-counting-title-link h1 {
     font-size: 4rem;
   }
 
@@ -78,6 +144,10 @@
 @media (max-width: 1024px) and (min-height: 600px) {
   .blob-counting-content h1 {
     font-size: 3.5rem; /* Slightly reduce the heading size */
+  }
+
+  .blob-counting-title-link h1 {
+    font-size: 3.5rem; /* Match the heading size */
   }
 
   .blob-counting-content p {
@@ -100,6 +170,10 @@
     font-size: 3rem;
   }
 
+  .blob-counting-title-link h1 {
+    font-size: 3rem;
+  }
+
   .blob-counting-content p {
     font-size: 1.5rem;
     margin-left: 0;
@@ -117,6 +191,10 @@
   }
 
   .blob-counting-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .blob-counting-title-link h1 {
     font-size: 2.5rem;
   }
 

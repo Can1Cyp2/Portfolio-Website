@@ -55,7 +55,14 @@ const FanPage: React.FC = () => {
   return (
     <div className="fanpage-container">
       <div className="fanpage-content">
-        <h1>Fan Page Website</h1>
+        <a 
+          href="https://github.com/Can1Cyp2/BandWebsite-Shinedown" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="fanpage-title-link"
+        >
+          <h1>Artist Website</h1>
+        </a>
         <p>
           This project represents the first website I created in grade 10 using
           only HTML. It features a comprehensive navigation menu that links to

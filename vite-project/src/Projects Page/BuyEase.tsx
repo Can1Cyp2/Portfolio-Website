@@ -54,18 +54,24 @@ const BuyEase: React.FC = () => {
 
       {/* BuyEase Content */}
       <div className="buyease-content">
+        <a href="https://github.com/Can1Cyp2/BuyEase_Project"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="buyease-title-link"
+          >
         <h1>BuyEase</h1>
-        <p>
-          BuyEase is a marketplace platform for university students to buy and
-          sell goods and services within their campus community.
-        </p>
-        <p>
-          The platform helps students save money by purchasing second-hand goods
-          or accessing affordable services, in hypothetical scenarios for a
-          school project.
-        </p>
-      </div>
+      </a>
+      <p>
+        BuyEase is a marketplace platform for university students to buy and
+        sell goods and services within their campus community.
+      </p>
+      <p>
+        The platform helps students save money by purchasing second-hand goods
+        or accessing affordable services, in hypothetical scenarios for a
+        school project.
+      </p>
     </div>
+    </div >
   );
 };
 

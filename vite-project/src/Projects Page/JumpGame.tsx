@@ -44,7 +44,13 @@ const JumpGame: React.FC = () => {
 
       {/* Foreground content */}
       <div className="jumpgame-content">
-        <h1>Jump!</h1>
+        <a href="https://github.com/Can1Cyp2/JUMP-game-"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="jumpgame-title-link"
+        >
+          <h1>Jump!</h1>
+        </a>
         <p>
           Jump! is a platformer game inspired by classics like Mario and Doodle
           Jump. The player navigates levels by jumping from platform to
