@@ -63,7 +63,7 @@ const VocalSite: React.FC = () => {
           **UNDER CONSTRUCTION - Will replace the placeholder text and values when the VocalCoach Site is done**
         </p>
         <p>
-          VocalCoach is a full-stack application designed to help users book and manage singing lessons with vocal coaches.
+          VocalCoach Site is a full-stack website application designed to help users book and manage singing lessons with vocal coaches.
         </p>
         <p>
           Built with React, TypeScript, Supabase, and styled-components, it features secure auth, a dynamic calendar, and recurring session handling.
