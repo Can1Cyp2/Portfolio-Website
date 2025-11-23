@@ -1,0 +1,222 @@
+.ownitsooner-features-list {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+  list-style-type: disc;
+  color: #f3f3f3; /* High contrast for dark backgrounds */
+  font-size: 1.45em; /* Restored larger size */
+}
+
+.ownitsooner-features-list li {
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+}
+.ownitsooner-container {
+  display: flex;
+  flex-direction: row; /* Text on left, icon on right */
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+  height: 100vh;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.ownitsooner-content {
+  z-index: 2;
+  max-width: 60%;
+  text-align: left;
+}
+
+.ownitsooner-content h1 {
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.ownitsooner-content p {
+  font-size: 2rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+}
+
+/* House Icon Section */
+.ownitsooner-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.ownitsooner-house {
+  width: 400px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+}
+
+.ownitsooner-house:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 12px 24px rgba(0, 123, 255, 0.4));
+}
+
+.ownitsooner-house:active {
+  transform: scale(0.98);
+}
+
+/* Link styles for the title */
+.ownitsooner-title-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.ownitsooner-title-link:visited,
+.ownitsooner-title-link:link,
+.ownitsooner-title-link:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ownitsooner-title-link h1 {
+  font-size: 4rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  color: white;
+
+  background: linear-gradient(
+    120deg,
+    #ffffff 0%,
+    #00bfff 20%,
+    #ffffff 40%,
+    #00bfff 60%,
+    #ffffff 80%,
+    #ffffff 100%
+  );
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: shimmerSubtle 8s ease-in-out infinite;
+}
+
+@keyframes shimmerSubtle {
+  0%,
+  85% {
+    background-position: -200% 0;
+    -webkit-text-fill-color: white;
+  }
+  90% {
+    background-position: -100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  95% {
+    background-position: 0% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+  }
+  97% {
+    background-position: 100% 0;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    background-position: 200% 0;
+    -webkit-text-fill-color: white;
+  }
+}
+
+.ownitsooner-title-link h1:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .ownitsooner-container {
+    flex-direction: column; /* Stack content vertically */
+    padding: 2rem;
+    align-items: center;
+    height: auto;
+  }
+
+  .ownitsooner-content {
+    text-align: left;
+    max-width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  .ownitsooner-content h1 {
+    font-size: 3rem;
+  }
+
+  .ownitsooner-title-link h1 {
+    font-size: 3rem;
+  }
+
+  .ownitsooner-content p {
+    font-size: 1.5rem;
+  }
+
+  /* Make feature list more compact on tablet / small screens */
+  .ownitsooner-features-list {
+    font-size: 1.25em;
+    padding-left: 1.25em;
+  }
+
+  .ownitsooner-features-list li {
+    margin-bottom: 0.35em;
+  }
+
+  .ownitsooner-icon {
+    margin-right: 0;
+  }
+
+  .ownitsooner-house {
+    width: 300px;
+  }
+}
+
+/* Responsive Design for Extra Small Screens */
+@media (max-width: 480px) {
+  .ownitsooner-container {
+    padding: 1.5rem;
+    height: auto;
+  }
+
+  .ownitsooner-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .ownitsooner-title-link h1 {
+    font-size: 2.5rem;
+  }
+
+  .ownitsooner-content p {
+    font-size: 1.2rem;
+  }
+
+  .ownitsooner-house {
+    width: 250px;
+  }
+
+  /* Extra small screens: tighter list spacing and inside bullets */
+  .ownitsooner-features-list {
+    font-size: 1.05em;
+    padding-left: 1em;
+    list-style-position: inside;
+  }
+
+  .ownitsooner-features-list li {
+    margin-bottom: 0.3em;
+  }
+}

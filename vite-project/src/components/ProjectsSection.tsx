@@ -11,7 +11,7 @@ const ProjectsSection: React.FC = () => {
     description: string;
     image: string;
     githubUrl: string;
-    learnMoreLink?: string; // Optional
+    learnMoreLink?: string;
   }>(null);
 
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -40,48 +40,15 @@ const ProjectsSection: React.FC = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Trigger the scroll function to check initial visibility
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const projects = [
-    {
-      id: "project1",
-      title: "Minesweeper",
-      description:
-        "A modern remake of the classic Minesweeper game, featuring essential mechanics such as flagging, win conditions, and a fully functional play button.",
-      longDescription:
-        "This modern remake of Minesweeper offers a polished gaming experience, incorporating all the classic features you expect: flagging of potential mines, clear win conditions, and an intuitive play button to start each game. The game is enhanced with smooth animations and a dynamic user interface. The randomly generated maps ensure that no two games are alike, providing endless replayability and a fresh challenge every time.",
-      image: "/pictures/ProjectsSection/minesweeper/minesweeperPic.png",
-      githubUrl: "https://github.com/Can1Cyp2/Minesweeper---Remake",
-    },
-    {
-      id: "project13",
-      title: "Guitar Scale Visualizer",
-      description:
-        "An interactive guitar fretboard visualizer that helps musicians explore scales, tunings, and note positions.",
-      longDescription: `
-        The Guitar Scale Visualizer is an interactive web application designed to help guitarists explore different scales, tunings, and note positions on the fretboard.<br>
-<br>
-        Key Features:<br>
-        - Scale Selection: Users can choose from a variety of scales such as major, minor, pentatonic, and more.<br>
-        - Custom Tunings: Manually adjust each string's tuning or use preset tunings.<br>
-        - Interactive UI: The fretboard dynamically updates to display selected notes and scales.<br>
-<br>
-        Technologies Used:<br>
-        - React.js: Provides a responsive and interactive user interface.<br>
-        - CSS & JavaScript: Enhances styling and interactivity.<br>
-    <br>
-        Deployment:<br>
-        - Hosted on GitHub Pages for easy access.<br>
-      `,
-      image:
-        "/pictures/ProjectsSection/guitarScaleVisualizer/guitar-scale-visualizer.jpg",
-      githubUrl: "https://github.com/Can1Cyp2/guitar-scale-visualizer",
-    },
+  // Featured projects (top 3)
+  const featuredProjects = [
     {
       id: "project5",
       title: "VoiceVault",
@@ -109,43 +76,35 @@ const ProjectsSection: React.FC = () => {
       learnMoreLink: `${VITE_BASE_URL}voicevault-users`,
     },
     {
-      id: "project14",
-      title: "Vocal Coach Site",
+      id: "project15",
+      title: "OwnItSooner - Mortgage Calculator",
       description:
-        "* STILL UNDER CONSTRUCTION * | A full-stack vocal coaching platform with booking, authentication, and recurring sessions.",
+        "A professional React Native mortgage calculator that helps homeowners optimize payments and save thousands in interest through strategic payment planning.",
       longDescription: `
-        <div style="background: linear-gradient(135deg, #ff6b6b, #ffa500); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; font-size: 1.2em; margin: 20px 0; border: 2px solid #ff4757; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-          🚧 UNDER CONSTRUCTION 🚧<br>
-          <span style="font-size: 0.9em; font-weight: normal;">This site is currently being developed and enhanced</span>
-        </div>
-
-        VocalCoach is a modern full-stack web application built to simplify vocal lesson scheduling for singers and vocal coaches.<br><br>
+        OwnItSooner is a professional-grade mobile application that empowers homeowners and prospective buyers to make informed mortgage decisions.<br><br>
         
         Key Features:<br>
-        - Weekly calendar with time-slot booking<br>
-        - Recurring session support for ongoing lessons<br>
-        - Email integration and account management<br>
-        - Secure authentication using Supabase<br><br>
-
+        - Monthly Payment Calculator with real-time updates and precise amortization calculations<br>
+        - Extra Payment Strategies: Compare regular vs. optimized payment plans side-by-side<br>
+        - Interest & Time Savings: See exactly how much money and time you save with extra payments<br>
+        - One-Time Lump Sum Payments: Calculate impact of bonuses, inheritance, or savings<br>
+        - Flexible Options: Choose between reducing monthly payments or shortening loan term<br>
+        - Professional UI: Clean, intuitive design optimized for all mobile screen sizes<br><br>
+        
         Technologies Used:<br>
-        - React (TypeScript), Supabase, styled-components, EmailJS<br><br>
-
-        Deployment:<br>
-        - Hosted on GitHub Pages<br>
+        - React Native with Expo for cross-platform development<br>
+        - TypeScript for type safety and maintainability<br>
+        - Custom financial algorithms for precise calculations<br>
+        - Component-based modular architecture<br>
+        - Professional styling system with consistent color palette<br><br>
+        
+        Privacy-First Design:<br>
+        - All calculations performed on-device<br>
+        - No data collection or network requests<br>
+        - Your financial information never leaves your device<br>
       `,
-      image: "/pictures/ProjectsSection/vocalSite/micLogo.png",
-      githubUrl: "https://github.com/Can1Cyp2/vocal-coach-site",
-      learnMoreLink: "https://can1cyp2.github.io/vocal-coach-site/",
-    },
-    {
-      id: "project2",
-      title: "JUMP!",
-      description:
-        "A game inspired by classic games such as Mario and Doodle Jump.",
-      longDescription:
-        "JUMP! is a platformer game I created in Grade 11 (2020). In this game, you guide your character through levels, jumping from platform to platform, avoiding enemies, and aiming to reach the star at the top to win. Developed as a school project, JUMP! was my first experience in game development using Python and Pygame. The project taught me a lot about coding and game design. If I were to remake it now, I would improve the code to be cleaner, more precise, and reduce glitches.",
-      image: "/pictures/ProjectsSection/jump/jumpPic.jpg",
-      githubUrl: "https://github.com/Can1Cyp2/JUMP-game-",
+      image: "/pictures/ProjectsSection/ownItSooner/ownItSoonerPic.png",
+      githubUrl: "https://github.com/Can1Cyp2/mortgage-saver-app",
     },
     {
       id: "project3",
@@ -169,6 +128,79 @@ const ProjectsSection: React.FC = () => {
       `,
       image: "/pictures/ProjectsSection/poetry/poetryPic.png",
       githubUrl: "https://github.com/Can1Cyp2/poetry-website",
+    },
+  ];
+
+  // All other projects
+  const otherProjects = [
+    {
+      id: "project14",
+      title: "Vocal Coach Site",
+      description:
+        "* STILL UNDER CONSTRUCTION * | A full-stack vocal coaching platform with booking, authentication, and recurring sessions.",
+      longDescription: `
+        <div style="background: linear-gradient(135deg, #ff6b6b, #ffa500); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; font-size: 1.2em; margin: 20px 0; border: 2px solid #ff4757; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          🚧 UNDER CONSTRUCTION 🚧<br>
+          <span style="font-size: 0.9em; font-weight: normal;">This site is currently being developed and enhanced</span>
+        </div>
+
+        VocalCoach is a modern full-stack website application built to simplify vocal lesson scheduling for singers and vocal coaches.<br><br>
+        
+        Key Features:<br>
+        - Weekly calendar with time-slot booking<br>
+        - Recurring session support for ongoing lessons<br>
+        - Email integration and account management<br>
+        - Secure authentication using Supabase<br><br>
+
+        Technologies Used:<br>
+        - React (TypeScript), Supabase, styled-components, EmailJS<br><br>
+
+        Deployment:<br>
+        - Hosted on GitHub Pages<br>
+      `,
+      image: "/pictures/ProjectsSection/vocalSite/micLogo.png",
+      githubUrl: "https://github.com/Can1Cyp2/vocal-coach-site",
+      learnMoreLink: "https://can1cyp2.github.io/vocal-coach-site/",
+    },
+    {
+      id: "project6",
+      title: "BuyEase",
+      description:
+        "A marketplace platform for university students to buy and sell goods and services within their campus community.",
+      longDescription: `
+        BuyEase is designed to create a secure, student-centered marketplace that allows university students to buy and sell goods and services. It addresses the challenges of connecting local buyers and sellers and fosters a community-based environment. Key features include a secure marketplace for goods and services, user-friendly UI, and tools for student entrepreneurs to sell their products or services. Built using MongoDB for data storage, Node.js for the back-end, and React for the front-end.<br>
+        
+        # Motivation:<br>
+        The platform helps students save money by purchasing second-hand goods or affordable services. It's a safe and convenient marketplace within the campus, providing a space for student entrepreneurs to thrive.<br>
+        
+        # Contribution:<br>
+        We follow Git Flow branching strategy for code contributions, and track issues and features via Trello. New contributions are always welcome!`,
+      image: "/pictures/ProjectsSection/buyEase/BuyEaseLogo.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/BuyEase_Project",
+    },
+    {
+      id: "project13",
+      title: "Guitar Scale Visualizer",
+      description:
+        "An interactive guitar fretboard visualizer that helps musicians explore scales, tunings, and note positions.",
+      longDescription: `
+        The Guitar Scale Visualizer is an interactive web application designed to help guitarists explore different scales, tunings, and note positions on the fretboard.<br>
+<br>
+        Key Features:<br>
+        - Scale Selection: Users can choose from a variety of scales such as major, minor, pentatonic, and more.<br>
+        - Custom Tunings: Manually adjust each string's tuning or use preset tunings.<br>
+        - Interactive UI: The fretboard dynamically updates to display selected notes and scales.<br>
+<br>
+        Technologies Used:<br>
+        - React.js: Provides a responsive and interactive user interface.<br>
+        - CSS & JavaScript: Enhances styling and interactivity.<br>
+    <br>
+        Deployment:<br>
+        - Hosted on GitHub Pages for easy access.<br>
+      `,
+      image:
+        "/pictures/ProjectsSection/guitarScaleVisualizer/guitar-scale-visualizer.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/guitar-scale-visualizer",
     },
     {
       id: "project4",
@@ -194,40 +226,14 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/poetry-backend",
     },
     {
-      id: "project9",
-      title: "Artist Website",
+      id: "project1",
+      title: "Minesweeper",
       description:
-        "A band website built entirely in HTML, showcasing Shinedown's albums, history, and official links.",
+        "A modern remake of the classic Minesweeper game, featuring essential mechanics such as flagging, win conditions, and a fully functional play button.",
       longDescription:
-        "This project represents the first website I created in grade 10 using only HTML. It features a comprehensive navigation menu that links to various sections of the site, including band members, show schedules, and a history section. The website also includes album details with cover images and descriptions. Through this project, I learned the basics of HTML, including layout structuring, linking, and basic CSS for styling. It served as a foundational experience in my journey into web development.",
-      image: "/pictures/ProjectsSection/fanpage/fanPagePic.jpg",
-      githubUrl: "https://github.com/Can1Cyp2/BandWebsite-Shinedown",
-    },
-    {
-      id: "project6",
-      title: "BuyEase",
-      description:
-        "A marketplace platform for university students to buy and sell goods and services within their campus community.",
-      longDescription: `
-        BuyEase is designed to create a secure, student-centered marketplace that allows university students to buy and sell goods and services. It addresses the challenges of connecting local buyers and sellers and fosters a community-based environment. Key features include a secure marketplace for goods and services, user-friendly UI, and tools for student entrepreneurs to sell their products or services. Built using MongoDB for data storage, Node.js for the back-end, and React for the front-end.<br>
-        
-        # Motivation:<br>
-        The platform helps students save money by purchasing second-hand goods or affordable services. It's a safe and convenient marketplace within the campus, providing a space for student entrepreneurs to thrive.<br>
-        
-        # Contribution:<br>
-        We follow Git Flow branching strategy for code contributions, and track issues and features via Trello. New contributions are always welcome!`,
-      image: "/pictures/ProjectsSection/buyEase/BuyEaseLogo.jpg",
-      githubUrl: "https://github.com/Can1Cyp2/BuyEase_Project",
-    },
-    {
-      id: "project11",
-      title: "WordGuesser",
-      description:
-        "A game similar to Wordle where you try to guess a 5-letter word.",
-      longDescription:
-        "WordGuesser is a game inspired by the popular Wordle game. The player must guess a 5-letter word, with feedback provided for each guess. The game tracks the player's remaining guesses and highlights correct and incorrect letters. The game was built using HTML, CSS, and JavaScript, with a focus on creating a simple and fun user interface. This project helped me understand the fundamentals of web development and game logic.",
-      image: "/pictures/ProjectsSection/wordGuesser/wordGuessPic.jpg",
-      githubUrl: "https://github.com/Can1Cyp2/Word-Guesser",
+        "This modern remake of Minesweeper offers a polished gaming experience, incorporating all the classic features you expect: flagging of potential mines, clear win conditions, and an intuitive play button to start each game. The game is enhanced with smooth animations and a dynamic user interface. The randomly generated maps ensure that no two games are alike, providing endless replayability and a fresh challenge every time.",
+      image: "/pictures/ProjectsSection/minesweeper/minesweeperPic.png",
+      githubUrl: "https://github.com/Can1Cyp2/Minesweeper---Remake",
     },
     {
       id: "project8",
@@ -235,7 +241,7 @@ const ProjectsSection: React.FC = () => {
       description:
         "A Sudoku game with various difficulty levels and a user-friendly interface.",
       longDescription:
-        "This Sudoku Game offers a highly interactive and engaging experience for users of all skill levels. Featuring multiple difficulty levels, from beginner to expert, it challenges players to solve puzzles with a sleek and intuitive interface. The game includes hints, auto-check features, and an undo button to enhance the playing experience. Whether you’re a seasoned Sudoku enthusiast or a newcomer to the game, this project provides endless hours of entertainment and mental stimulation.",
+        "This Sudoku Game offers a highly interactive and engaging experience for users of all skill levels. Featuring multiple difficulty levels, from beginner to expert, it challenges players to solve puzzles with a sleek and intuitive interface. The game includes hints, auto-check features, and an undo button to enhance the playing experience. Whether you're a seasoned Sudoku enthusiast or a newcomer to the game, this project provides endless hours of entertainment and mental stimulation.",
       image: "/pictures/ProjectsSection/sudoku/sudokuPic1.png",
       githubUrl: "https://github.com/Can1Cyp2/Sudoku-with-solver",
     },
@@ -250,14 +256,14 @@ const ProjectsSection: React.FC = () => {
       githubUrl: "https://github.com/Can1Cyp2/2048",
     },
     {
-      id: "project10",
-      title: "Blob Counting (recursion)",
+      id: "project11",
+      title: "WordGuesser",
       description:
-        "A C++ program that utilizes recursion to count connected blobs on a grid.",
+        "A game similar to Wordle where you try to guess a 5-letter word.",
       longDescription:
-        "This C++ program, created during my early high school years while learning recursion, asks the user for the number of rows and columns to generate a grid filled with 'blobs' (*). The user is then prompted to select a position on the grid, and the program checks that position for a blob. If a blob is found, it recursively counts all connected blobs in that area, otherwise, it returns 0. This project was a foundational exercise in understanding recursion and basic grid traversal algorithms in C++.",
-      image: "/pictures/ProjectsSection/blob/blobPic.jpg",
-      githubUrl: "https://github.com/Can1Cyp2/BlobChecker-Recursion",
+        "WordGuesser is a game inspired by the popular Wordle game. The player must guess a 5-letter word, with feedback provided for each guess. The game tracks the player's remaining guesses and highlights correct and incorrect letters. The game was built using HTML, CSS, and JavaScript, with a focus on creating a simple and fun user interface. This project helped me understand the fundamentals of web development and game logic.",
+      image: "/pictures/ProjectsSection/wordGuesser/wordGuessPic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/Word-Guesser",
     },
     {
       id: "project12",
@@ -290,6 +296,36 @@ const ProjectsSection: React.FC = () => {
       image:
         "/pictures/ProjectsSection/universityCompilation/gitScreenshot.png",
       githubUrl: "https://github.com/Can1Cyp2/UniversityJavaProjects",
+    },
+    {
+      id: "project2",
+      title: "JUMP!",
+      description:
+        "A game inspired by classic games such as Mario and Doodle Jump.",
+      longDescription:
+        "JUMP! is a platformer game I created in Grade 11 (2020). In this game, you guide your character through levels, jumping from platform to platform, avoiding enemies, and aiming to reach the star at the top to win. Developed as a school project, JUMP! was my first experience in game development using Python and Pygame. The project taught me a lot about coding and game design. If I were to remake it now, I would improve the code to be cleaner, more precise, and reduce glitches.",
+      image: "/pictures/ProjectsSection/jump/jumpPic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/JUMP-game-",
+    },
+    {
+      id: "project9",
+      title: "Artist Website",
+      description:
+        "A band website built entirely in HTML, showcasing Shinedown's albums, history, and official links.",
+      longDescription:
+        "This project represents the first website I created in grade 10 using only HTML. It features a comprehensive navigation menu that links to various sections of the site, including band members, show schedules, and a history section. The website also includes album details with cover images and descriptions. Through this project, I learned the basics of HTML, including layout structuring, linking, and basic CSS for styling. It served as a foundational experience in my journey into web development.",
+      image: "/pictures/ProjectsSection/fanpage/fanPagePic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/BandWebsite-Shinedown",
+    },
+    {
+      id: "project10",
+      title: "Blob Counting (recursion)",
+      description:
+        "A C++ program that utilizes recursion to count connected blobs on a grid.",
+      longDescription:
+        "This C++ program, created during my early high school years while learning recursion, asks the user for the number of rows and columns to generate a grid filled with 'blobs' (*). The user is then prompted to select a position on the grid, and the program checks that position for a blob. If a blob is found, it recursively counts all connected blobs in that area, otherwise, it returns 0. This project was a foundational exercise in understanding recursion and basic grid traversal algorithms in C++.",
+      image: "/pictures/ProjectsSection/blob/blobPic.jpg",
+      githubUrl: "https://github.com/Can1Cyp2/BlobChecker-Recursion",
     },
   ];
 
@@ -333,54 +369,109 @@ const ProjectsSection: React.FC = () => {
         </span>
       </h2>
 
-      <div className="project-gallery" ref={galleryRef}>
-        {projects.map((project) => (
-          <Project
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            onClick={() =>
-              setSelectedProject({
-                title: project.title,
-                description: project.longDescription || project.description,
-                image: project.image,
-                githubUrl: project.githubUrl,
-                learnMoreLink: project.learnMoreLink,
-              })
-            }
-          />
-        ))}
+      {/* Featured Projects Section */}
+      <div className="featured-projects">
+        <h3 className="featured-title">Featured</h3>
+        <div className="featured-grid">
+          {featuredProjects.map((project) => (
+            <div 
+              key={project.id} 
+              className="featured-project-card"
+              onClick={() =>
+                setSelectedProject({
+                  title: project.title,
+                  description: project.longDescription || project.description,
+                  image: project.image,
+                  githubUrl: project.githubUrl,
+                  learnMoreLink: project.learnMoreLink,
+                })
+              }
+            >
+              <div className="featured-project-image-container">
+                <img
+                  src={VITE_BASE_URL + project.image}
+                  alt={project.title}
+                  className="featured-project-image"
+                />
+              </div>
+              <div className="featured-project-content">
+                <h4 className="featured-project-title">{project.title}</h4>
+                <p className="featured-project-description">
+                  {project.description}
+                </p>
+                <button
+                  className="featured-project-button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedProject({
+                      title: project.title,
+                      description: project.longDescription || project.description,
+                      image: project.image,
+                      githubUrl: project.githubUrl,
+                      learnMoreLink: project.learnMoreLink,
+                    });
+                  }}
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Arrow Buttons for Scrolling */}
-      <div
-        className="arrow-container arrow-left"
-        onMouseDown={() => startScrolling("left")}
-        onMouseUp={stopScrolling}
-        onMouseLeave={stopScrolling}
-      >
-        <svg
-          className="arrow"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+      {/* Other Projects Section */}
+      <div className="other-projects-section">
+        <h3 className="other-projects-title">Other Projects</h3>
+        <div className="project-gallery" ref={galleryRef}>
+          {otherProjects.map((project) => (
+            <Project
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              onClick={() =>
+                setSelectedProject({
+                  title: project.title,
+                  description: project.longDescription || project.description,
+                  image: project.image,
+                  githubUrl: project.githubUrl,
+                  learnMoreLink: project.learnMoreLink,
+                })
+              }
+            />
+          ))}
+        </div>
+
+        {/* Arrow Buttons for Scrolling */}
+        <div
+          className="arrow-container arrow-left"
+          onMouseDown={() => startScrolling("left")}
+          onMouseUp={stopScrolling}
+          onMouseLeave={stopScrolling}
         >
-          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-        </svg>
-      </div>
-      <div
-        className="arrow-container arrow-right"
-        onMouseDown={() => startScrolling("right")}
-        onMouseUp={stopScrolling}
-        onMouseLeave={stopScrolling}
-      >
-        <svg
-          className="arrow"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+          <svg
+            className="arrow"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+          </svg>
+        </div>
+        <div
+          className="arrow-container arrow-right"
+          onMouseDown={() => startScrolling("right")}
+          onMouseUp={stopScrolling}
+          onMouseLeave={stopScrolling}
         >
-          <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
-        </svg>
+          <svg
+            className="arrow"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+          </svg>
+        </div>
       </div>
 
       <Modal open={!!selectedProject} onClose={() => setSelectedProject(null)}>
@@ -393,7 +484,7 @@ const ProjectsSection: React.FC = () => {
               justifyContent: "space-between",
               gap: "40px",
               flexWrap: "wrap",
-              position: "relative", // Ensure relative positioning for correct placement
+              position: "relative",
             }}
           >
             {/* Image Container */}
@@ -412,7 +503,7 @@ const ProjectsSection: React.FC = () => {
               {/* GitHub link icon positioned at the top-right of the image */}
               {selectedProject.githubUrl && (
                 <a
-                  href={selectedProject.githubUrl} // Use correct GitHub URL for each project, but for now it only takes you to page
+                  href={selectedProject.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -421,12 +512,12 @@ const ProjectsSection: React.FC = () => {
                     right: "-10px",
                     fontSize: "1.5rem",
                     color: "#007bff",
-                    backgroundColor: "rgba(255, 255, 255, 0.9)", // Slightly opaque background
+                    backgroundColor: "rgba(255, 255, 255, 0.9)",
                     borderRadius: "50%",
                     padding: "10px",
-                    cursor: "pointer", // Pointer cursor to indicate clickable link
+                    cursor: "pointer",
                     zIndex: 10,
-                    textDecoration: "none", // Remove the blue underline
+                    textDecoration: "none",
                   }}
                 >
                   🔗
@@ -442,7 +533,7 @@ const ProjectsSection: React.FC = () => {
                 textAlign: "left",
                 position: "relative",
                 padding: "20px",
-                paddingTop: "60px", // Push the description text lower
+                paddingTop: "60px",
               }}
             >
               <h2
@@ -467,12 +558,12 @@ const ProjectsSection: React.FC = () => {
                   onMouseEnter={(e: {
                     currentTarget: { style: { color: string } };
                   }) => {
-                    e.currentTarget.style.color = "#007bff"; // Change color on hover
+                    e.currentTarget.style.color = "#007bff";
                   }}
                   onMouseLeave={(e: {
                     currentTarget: { style: { color: string } };
                   }) => {
-                    e.currentTarget.style.color = "black"; // Revert color on mouse leave
+                    e.currentTarget.style.color = "black";
                   }}
                 >
                   {selectedProject.title}
@@ -510,7 +601,6 @@ const ProjectsSection: React.FC = () => {
                       color: "rgb(0, 155, 10)",
                     }}
                   >
-                    {/* Conditional link text based on project title: */}
                     {selectedProject.title === "VoiceVault"
                       ? "Visit VoiceVault Landing Page"
                       : selectedProject.title === "Vocal Coach Site"

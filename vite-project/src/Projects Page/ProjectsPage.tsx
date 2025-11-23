@@ -18,6 +18,7 @@ import PoetryBackend from "./PoetryBackend";
 import VoiceVault from "./VoiceVault";
 import GuitarScaleVisualizer from "./GuitarScaleVisualizer";
 import VocalSite from "./VocalSite";
+import OwnItSooner from "./OwnItSooner";
 
 const ProjectsPage: React.FC = () => {
   const location = useLocation();
@@ -42,6 +43,7 @@ const ProjectsPage: React.FC = () => {
       {/* Projects Header */}
       <div className="projects-header">
         <h1 className="projects-title">My Projects</h1>
+        <h3 className="projects-page-subtitle" style={{ fontWeight: 400, fontSize: '1.1em', margin: 0 }}>(In no particular order)</h3>
         <h2 className="projects-page-subtitle">
           All Projects Listed Here Can be found at:
         </h2>
@@ -72,6 +74,14 @@ const ProjectsPage: React.FC = () => {
           <VoiceVault />
         </section>
 
+        <section id="jump-game">
+          <JumpGame />
+        </section>
+
+        <section id="ownitsooner">
+          <OwnItSooner />
+        </section>
+
         <section id="vocalsite">
           <VocalSite />
         </section>
@@ -84,16 +94,16 @@ const ProjectsPage: React.FC = () => {
           <PoetryBackend />
         </section>
 
-        <section id="fan-page">
-          <FanPage />
+        <section id="word-guesser">
+          <WordGuesser />
         </section>
 
         <section id="BuyEase">
           <BuyEase />
         </section>
 
-        <section id="word-guesser">
-          <WordGuesser />
+        <section id="fan-page">
+          <FanPage />
         </section>
 
         <section id="sudoku-game">
@@ -108,13 +118,11 @@ const ProjectsPage: React.FC = () => {
           <BlobCounting />
         </section>
 
-        <section id="jump-game">
-          <JumpGame />
-        </section>
-
         <section id="university-projects-compilation">
           <UniversityProjectsCompilation />
         </section>
+
+        
       </div>
     </>
   );
