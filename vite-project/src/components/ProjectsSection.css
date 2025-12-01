@@ -23,7 +23,7 @@
   font-size: 3rem;
   color: #ffffff;
   text-align: left;
-  margin-bottom: 2rem;
+  margin-bottom: 8px; /* reduce spacing so button has room */
   margin-left: 5%;
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@
 }
 
 .featured-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 80px;
   height: 4px;
@@ -133,7 +133,16 @@
   color: #666;
   line-height: 1.7;
   margin-bottom: 25px;
-  flex-grow: 1;
+  flex: 1 1 auto;
+  margin-bottom: 12px; /* reduce spacing so button has room */
+  overflow: hidden; /* prevent overflow from overlapping button */
+  display: -webkit-box; /* enable multiline truncation */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* allow more lines on large screens */
+  line-clamp: 5;
+  text-overflow: ellipsis; /* show "..." when text is truncated */
+  white-space: normal; /* allow wrapping for multiline clamp */
+  max-height: calc(1.7em * 5); /* keep consistent with 5 lines and line-height */
 }
 
 .featured-project-button {
@@ -148,6 +157,7 @@
   transition: all 0.3s ease;
   text-align: center;
   align-self: flex-start;
+  margin-top: 8px; /* bring the button closer to the description */
 }
 
 .featured-project-button:hover {
@@ -330,6 +340,91 @@ body {
   }
 }
 
+/* Reduce heights for smaller laptops and similar screens */
+@media (max-width: 1440px) {
+  .projects-section {
+    padding: 5rem 1.5rem;
+    min-height: 80vh;
+  }
+
+  .featured-project-card {
+    min-height: 420px; /* reduce card height for smaller laptops */
+  }
+
+  .featured-project-content {
+    padding: 22px; /* reduce text padding */
+  }
+
+  .featured-project-title {
+    font-size: 1.6rem; /* slightly smaller title */
+  }
+
+  .featured-project-description {
+    font-size: 1rem; /* reduce description size */
+    -webkit-line-clamp: 4; /* show fewer lines on mid-size screens */
+    line-clamp: 4;
+    max-height: calc(1.7em * 4);
+  }
+
+  .featured-project-button {
+    padding: 10px 18px;
+  }
+
+  .featured-project-image-container {
+    height: 250px;
+  }
+
+  .project-item {
+    height: 500px;
+  }
+
+  .project-image {
+    height: 55%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .projects-section {
+    padding: 4.5rem 1.25rem;
+    min-height: 75vh;
+  }
+
+  .featured-project-card {
+    min-height: 380px; /* further reduce for smaller screens */
+  }
+
+  .featured-project-image-container {
+    height: 220px;
+  }
+
+  .project-item {
+    height: 460px;
+  }
+
+  .project-image {
+    height: 50%;
+  }
+
+  .featured-project-content {
+    padding: 18px;
+  }
+
+  .featured-project-title {
+    font-size: 1.5rem;
+  }
+
+  .featured-project-description {
+    font-size: 0.92rem;
+    -webkit-line-clamp: 3; /* tighter clamp for smaller screens */
+    line-clamp: 3;
+    max-height: calc(1.6em * 3);
+  }
+
+  .featured-project-button {
+    padding: 9px 16px;
+  }
+}
+
 /* For screens between 1024px and 768px (tablets) */
 @media (max-width: 1024px) {
   .featured-grid {
@@ -341,6 +436,34 @@ body {
     flex: 0 0 45%; /* Make project items take up 45% width */
     max-width: 45%; /* Adjust max width to avoid them getting too large */
     height: auto; /* Remove fixed height for responsive behavior */
+  }
+
+  .featured-project-card {
+    min-height: 360px; /* reduce height on tablets */
+  }
+
+  .featured-project-image-container {
+    height: 200px;
+  }
+
+  .featured-project-content {
+    padding: 16px;
+  }
+
+  .featured-project-title {
+    font-size: 1.4rem;
+  }
+
+  .featured-project-description {
+    font-size: 0.88rem;
+    -webkit-line-clamp: 2; /* show only 2 lines on tablet-sized screens */
+    line-clamp: 2;
+    max-height: calc(1.5em * 2);
+  }
+
+  .featured-project-button {
+    padding: 8px 14px;
+    font-size: 0.95rem;
   }
 }
 
@@ -382,6 +505,33 @@ body {
 
   .other-projects-title {
     font-size: 1.8rem;
+  }
+}
+
+/* Additional small-screen tweaks: reduce featured card text area and allow cards to size naturally */
+@media (max-width: 768px) {
+  .featured-project-card {
+    min-height: auto;
+  }
+
+  .featured-project-content {
+    padding: 14px;
+  }
+
+  .featured-project-title {
+    font-size: 1.25rem;
+  }
+
+  .featured-project-description {
+    font-size: 0.92rem;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    max-height: calc(1.5em * 3);
+  }
+
+  .featured-project-button {
+    padding: 8px 12px;
+    font-size: 0.95rem;
   }
 }
 

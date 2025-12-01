@@ -49,7 +49,7 @@ const ExperiencePage: React.FC = () => {
 
         {/* Current Resume PDF */}
         <div className="resume-container">
-          <h3>My Latest Resume</h3>
+          <h3>My Styled Resume</h3>
           {!isSmallScreen ? (
             // Show embedded PDF for larger screens
             <div className="resume-embed-wrapper">
