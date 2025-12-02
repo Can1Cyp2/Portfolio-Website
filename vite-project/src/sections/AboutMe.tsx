@@ -9,9 +9,9 @@ const AboutMe: React.FC = () => {
         <p>
           I am a 22-year-old graduate of the Computer Science program at York
           University's Lassonde School of Engineering. I completed my studies at
-          the end of 2024 with a GPA over 3.3. I completed high school in June
-          2021 with greater than a 90% grade average at Monarch Park Collegiate
-          Institute.
+          the end of 2024 with a GPA over 3.3. I am currently pursuing Honours
+          studies. I completed high school in June 2021 with greater than a 90%
+          grade average at Monarch Park Collegiate Institute.
         </p>
         <p>
           I am passionate about technology and music, with extensive knowledge
@@ -27,8 +27,7 @@ const AboutMe: React.FC = () => {
           <h3>Skills</h3>
           <ul>
             <li>
-              Proficient in C++, Python, JavaScript, TypeScript, HTML, CSS,
-              ReactJS and more.
+              Proficient in languages and frameworks such as C++, Python, JavaScript, TypeScript, HTML, CSS, React, and React Native.
             </li>
             <li>
               Professional experience in Full-Stack Development with a focus on front-end, TypeScript, and Generative

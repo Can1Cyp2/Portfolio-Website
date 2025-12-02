@@ -137,7 +137,7 @@ const ProjectsSection: React.FC = () => {
       id: "project14",
       title: "Vocal Coach Site",
       description:
-        "* STILL UNDER CONSTRUCTION * | A full-stack vocal coaching platform with booking, authentication, and recurring sessions.",
+        "* UNDER CONSTRUCTION * | A full-stack vocal coaching platform with booking, authentication, and recurring sessions.",
       longDescription: `
         <div style="background: linear-gradient(135deg, #ff6b6b, #ffa500); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; font-size: 1.2em; margin: 20px 0; border: 2px solid #ff4757; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
           🚧 UNDER CONSTRUCTION 🚧<br>
@@ -309,7 +309,7 @@ const ProjectsSection: React.FC = () => {
     },
     {
       id: "project9",
-      title: "Artist Website",
+      title: "HTML Artist Website",
       description:
         "A band website built entirely in HTML, showcasing Shinedown's albums, history, and official links.",
       longDescription:

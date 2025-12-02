@@ -61,7 +61,7 @@ const FanPage: React.FC = () => {
           rel="noopener noreferrer"
           className="fanpage-title-link"
         >
-          <h1>Artist Website</h1>
+          <h1>HTML Artist Website</h1>
         </a>
         <p>
           This project represents the first website I created in grade 10 using
