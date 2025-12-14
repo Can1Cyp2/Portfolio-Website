@@ -102,7 +102,7 @@ Error generating stack: `+l.message+`
         - All calculations performed on-device<br>
         - No data collection or network requests<br>
         - Your financial information never leaves your device<br>
-      `,image:"/pictures/ProjectsSection/ownItSooner/ownItSoonerPic.png",githubUrl:"https://github.com/Can1Cyp2/mortgage-saver-app"},{id:"project3",title:"Poetry Website for Paulos Ioannou",description:"A poetry website showcasing poems with a fully implemented backend, including admin controls for adding, editing, or deleting poems.",longDescription:`
+      `,image:"/pictures/ProjectsSection/ownItSooner/OwnItSoonerPic.png",githubUrl:"https://github.com/Can1Cyp2/mortgage-saver-app"},{id:"project3",title:"Poetry Website for Paulos Ioannou",description:"A poetry website showcasing poems with a fully implemented backend, including admin controls for adding, editing, or deleting poems.",longDescription:`
         The Poetry Website is designed for poet Paulos L. Ioannou, providing a platform for presenting his works. Users can explore, read, and engage with poetry, while an admin dashboard allows authorized users to manage content.<br>
 
         *Frontend:<br>
