@@ -103,7 +103,7 @@ const ProjectsSection: React.FC = () => {
         - No data collection or network requests<br>
         - Your financial information never leaves your device<br>
       `,
-      image: "/pictures/ProjectsSection/ownItSooner/ownItSoonerPic.png",
+      image: "/pictures/ProjectsSection/ownItSooner/OwnItSoonerPic.png",
       githubUrl: "https://github.com/Can1Cyp2/mortgage-saver-app",
     },
     {
