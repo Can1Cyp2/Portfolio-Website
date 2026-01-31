@@ -1,12 +1,20 @@
 .project-item {
   z-index: 500;
   position: relative;
-  flex: 1 1 30%; /* Flex-grow: 1, Flex-shrink: 1, and Flex-basis: 30% */
-  max-width: 30%; /* For large screens, max width of each project */
-  padding: 1.2rem;
-  border-radius: 12px;
-  background-color: #fff;
-  min-width: 300px; /* Ensure the project items don’t get too narrow */
+  flex: 1 1 30%;
+  max-width: 30%;
+  padding: 1.4rem;
+  border-radius: 10px;
+  background-color: #222222;
+  border: 1px solid #333333;
+  min-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .project-image {
@@ -19,81 +27,44 @@
 }
 
 .project-title {
-  font-size: 1.5rem;
-  margin: 10px 0;
-  color: #333;
+  font-size: 1.4rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  margin: 14px 0 10px 0;
+  color: #ffffff;
 }
 
 .project-description {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 1.15rem;
+  color: #d0d0d0;
+  line-height: 1.7;
 }
 
 .project-container .project-item {
   z-index: 500;
   flex: 1 1 30%;
   max-width: 30%;
-  padding: 1.2rem;
-  border-radius: 12px;
-  background-color: #fff;
+  padding: 1.4rem;
+  border-radius: 10px;
+  background-color: #222222;
   min-width: 300px;
 }
 
-/* For screens smaller than 1024px */
 @media (max-width: 1024px) {
-  .project-item {
-    flex: 1 1 50%;
-    max-width: 50%;
-    min-width: 300px;
-    padding: 1rem;
-  }
-
-  .project-title {
-    font-size: 1.3rem;
-  }
-
-  .project-description {
-    font-size: 1rem;
-  }
+  .project-item { flex: 1 1 50%; max-width: 50%; min-width: 280px; padding: 1rem; }
+  .project-title { font-size: 1.1rem; }
+  .project-description { font-size: 0.95rem; }
 }
 
-/* For screens smaller than 768px */
 @media (max-width: 768px) {
-  .project-item {
-    flex: 1 1 90%; /* Each item takes up 90% of the width */
-    max-width: 90%; /* Ensure the width fills most of the screen */
-    min-width: 300px; /* Prevent shrinking below 300px */
-    padding: 1rem;
-  }
-
-  .project-title {
-    font-size: 1.2rem;
-  }
-
-  .project-description {
-    font-size: 1rem;
-  }
+  .project-item { flex: 1 1 90%; max-width: 90%; min-width: 280px; padding: 1rem; }
+  .project-title { font-size: 1.05rem; }
+  .project-description { font-size: 0.9rem; }
 }
 
-/* For screens smaller than 480px */
 @media (max-width: 480px) {
-  .project-item {
-    flex: 1 1 100%; /* Full width for each item */
-    max-width: 100%; /* Ensure full width on smaller screens */
-    min-width: 300px; /* Keep the minimum width at 300px */
-    padding: 0.8rem;
-  }
-
-  .project-title {
-    font-size: 1.1rem;
-  }
-
-  .project-description {
-    font-size: 0.9rem;
-  }
-
-  .project-image {
-    height: auto; /* Adjust height to fit naturally */
-    width: 100%;
-  }
+  .project-item { flex: 1 1 100%; max-width: 100%; min-width: 280px; padding: 0.875rem; }
+  .project-title { font-size: 1rem; }
+  .project-description { font-size: 0.85rem; }
+  .project-image { height: auto; width: 100%; }
 }

@@ -1,15 +1,34 @@
 .modal {
   width: 80%;
-  max-width: 95vw;
-  max-height: 90vh; /* Ensure it doesn’t overflow the screen height */
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #f0f0f0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; /* Allow vertical scrolling when content overflows */
+  max-width: 1200px;
+  max-height: 90vh;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: #1e1e1e;
+  border: 1px solid #333333;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  color: #e8e8e8;
+}
+
+.modal h2, .modal h3, .modal h4 {
+  color: #ffffff;
+}
+
+.modal p, .modal span, .modal div {
+  color: #d0d0d0;
+}
+
+.modal a {
+  color: #60a5fa;
+  transition: color 0.2s ease;
+}
+
+.modal a:hover {
+  color: #93c5fd;
 }
 
 @media (max-width: 768px) {

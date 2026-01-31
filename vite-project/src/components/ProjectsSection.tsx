@@ -112,17 +112,17 @@ const ProjectsSection: React.FC = () => {
       description:
         "A poetry website showcasing poems with a fully implemented backend, including admin controls for adding, editing, or deleting poems.",
       longDescription: `
-        The Poetry Website is designed for poet Paulos L. Ioannou, providing a platform for presenting his works. Users can explore, read, and engage with poetry, while an admin dashboard allows authorized users to manage content.<br>
+        The Poetry Website is designed for poet Paulos L. Ioannou, providing a platform for presenting his works. Users can explore, read, and engage with poetry, while an admin dashboard allows authorized users to manage content.<br><br>
 
-        *Frontend:<br>
+        Frontend:<br>
         - Built with React for a dynamic and interactive user interface.<br>
-        - Key features include a homepage, poetry list, detailed poem view with English and Greek versions, and an admin dashboard for content management.<br>
+        - Key features include a homepage, poetry list, detailed poem view with English and Greek versions, and an admin dashboard for content management.<br><br>
 
-        *Backend:<br>
+        Backend:<br>
         - Powered by Node.js and Express, the backend handles API requests for poem data and user management.<br>
-        - RESTful API for CRUD operations on poems and user data.<br>
+        - RESTful API for CRUD operations on poems and user data.<br><br>
 
-        *Deployment:<br>
+        Deployment:<br>
         - Front-end is hosted on GitHub Pages with a custom domain (paulospoetry.com).<br>
         - Secure user authentication ensures admin-level access for content updates.<br>
       `,
@@ -134,46 +134,17 @@ const ProjectsSection: React.FC = () => {
   // All other projects
   const otherProjects = [
     {
-      id: "project14",
-      title: "Vocal Coach Site",
-      description:
-        "* UNDER CONSTRUCTION * | A full-stack vocal coaching platform with booking, authentication, and recurring sessions.",
-      longDescription: `
-        <div style="background: linear-gradient(135deg, #ff6b6b, #ffa500); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; font-size: 1.2em; margin: 20px 0; border: 2px solid #ff4757; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-          🚧 UNDER CONSTRUCTION 🚧<br>
-          <span style="font-size: 0.9em; font-weight: normal;">This site is currently being developed and enhanced</span>
-        </div>
-
-        VocalCoach is a modern full-stack website application built to simplify vocal lesson scheduling for singers and vocal coaches.<br><br>
-        
-        Key Features:<br>
-        - Weekly calendar with time-slot booking<br>
-        - Recurring session support for ongoing lessons<br>
-        - Email integration and account management<br>
-        - Secure authentication using Supabase<br><br>
-
-        Technologies Used:<br>
-        - React (TypeScript), Supabase, styled-components, EmailJS<br><br>
-
-        Deployment:<br>
-        - Hosted on GitHub Pages<br>
-      `,
-      image: "/pictures/ProjectsSection/vocalSite/micLogo.png",
-      githubUrl: "https://github.com/Can1Cyp2/vocal-coach-site",
-      learnMoreLink: "https://can1cyp2.github.io/vocal-coach-site/",
-    },
-    {
       id: "project6",
       title: "BuyEase",
       description:
         "A marketplace platform for university students to buy and sell goods and services within their campus community.",
       longDescription: `
-        BuyEase is designed to create a secure, student-centered marketplace that allows university students to buy and sell goods and services. It addresses the challenges of connecting local buyers and sellers and fosters a community-based environment. Key features include a secure marketplace for goods and services, user-friendly UI, and tools for student entrepreneurs to sell their products or services. Built using MongoDB for data storage, Node.js for the back-end, and React for the front-end.<br>
+        BuyEase is designed to create a secure, student-centered marketplace that allows university students to buy and sell goods and services. It addresses the challenges of connecting local buyers and sellers and fosters a community-based environment. Key features include a secure marketplace for goods and services, user-friendly UI, and tools for student entrepreneurs to sell their products or services. Built using MongoDB for data storage, Node.js for the back-end, and React for the front-end.<br><br>
         
-        # Motivation:<br>
-        The platform helps students save money by purchasing second-hand goods or affordable services. It's a safe and convenient marketplace within the campus, providing a space for student entrepreneurs to thrive.<br>
+        Motivation:<br>
+        The platform helps students save money by purchasing second-hand goods or affordable services. It's a safe and convenient marketplace within the campus, providing a space for student entrepreneurs to thrive.<br><br>
         
-        # Contribution:<br>
+        Contribution:<br>
         We follow Git Flow branching strategy for code contributions, and track issues and features via Trello. New contributions are always welcome!`,
       image: "/pictures/ProjectsSection/buyEase/BuyEaseLogo.jpg",
       githubUrl: "https://github.com/Can1Cyp2/BuyEase_Project",
@@ -208,22 +179,72 @@ const ProjectsSection: React.FC = () => {
       description:
         "A robust backend system developed to support a full-stack poetry platform.",
       longDescription: `
-        The Poetry Site Backend serves as the foundation of a full-stack poetry platform, providing seamless integration with the frontend for a rich user experience.<br>
+        The Poetry Site Backend serves as the foundation of a full-stack poetry platform, providing seamless integration with the frontend for a rich user experience.<br><br>
     
-        *Core Features:*<br>
-        - **CRUD API Endpoints:** Fully functional endpoints to manage poems and user data.<br>
-        - **Authentication:** Secure user login and admin-level access for managing poetry content.<br>
-        - **Database Management:** Uses MongoDB to store and retrieve poems and user information.<br>
+        Core Features:<br>
+        - CRUD API Endpoints: Fully functional endpoints to manage poems and user data.<br>
+        - Authentication: Secure user login and admin-level access for managing poetry content.<br>
+        - Database Management: Uses MongoDB to store and retrieve poems and user information.<br><br>
     
-        *Technologies Used:*<br>
-        - **Node.js and Express:** Build robust and scalable APIs.<br>
-        - **MongoDB:** Efficiently handle data storage and retrieval.<br>
+        Technologies Used:<br>
+        - Node.js and Express: Build robust and scalable APIs.<br>
+        - MongoDB: Efficiently handle data storage and retrieval.<br><br>
     
-        *Deployment:*<br>
+        Deployment:<br>
         - The backend APIs are hosted on a secure server, ensuring reliability and performance.<br>
       `,
       image: "/pictures/ProjectsSection/poetryBackend/poetryBackendPic.jpg",
       githubUrl: "https://github.com/Can1Cyp2/poetry-backend",
+    },
+    {
+      id: "project16",
+      title: "Family Tree Site",
+      description:
+        "A web application for creating and visualizing family trees with interactive relationship mapping.",
+      longDescription: `
+        Family Tree Site is a web application designed to help users create, manage, and visualize their family histories through interactive family trees.<br><br>
+        
+        Key Features:<br>
+        - Interactive family tree visualization<br>
+        - Add and manage family members with detailed profiles<br>
+        - Relationship mapping between family members<br>
+        - User-friendly interface for easy navigation<br><br>
+        
+        Technologies Used:<br>
+        - Modern web technologies for a responsive experience<br>
+        - Clean, intuitive UI design<br>
+      `,
+      image: "/pictures/ProjectsSection/familyTree/Family-Tree-Site-Image.png",
+      githubUrl: "https://github.com/Can1Cyp2/Family-Tree-Site",
+    },
+    {
+      id: "project14",
+      title: "Vocal Coach Site",
+      description:
+        "🚧 IN PROGRESS | A full-stack vocal coaching platform with booking, authentication, and recurring sessions.",
+      longDescription: `
+        <div style="background: linear-gradient(135deg, #ff6b6b, #ffa500); color: white; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; font-size: 1.2em; margin: 20px 0; border: 2px solid #ff4757; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          🚧 UNDER CONSTRUCTION 🚧<br>
+          <span style="font-size: 0.9em; font-weight: normal;">This site is currently being developed and enhanced</span>
+        </div>
+
+        VocalCoach is a modern full-stack website application built to simplify vocal lesson scheduling for singers and vocal coaches.<br><br>
+        
+        Key Features:<br>
+        - Weekly calendar with time-slot booking<br>
+        - Recurring session support for ongoing lessons<br>
+        - Email integration and account management<br>
+        - Secure authentication using Supabase<br><br>
+
+        Technologies Used:<br>
+        - React (TypeScript), Supabase, styled-components, EmailJS<br><br>
+
+        Deployment:<br>
+        - Hosted on GitHub Pages<br>
+      `,
+      image: "/pictures/ProjectsSection/vocalSite/micLogo.png",
+      githubUrl: "https://github.com/Can1Cyp2/vocal-coach-site",
+      learnMoreLink: "https://can1cyp2.github.io/vocal-coach-site/",
     },
     {
       id: "project1",
@@ -508,16 +529,30 @@ const ProjectsSection: React.FC = () => {
                   rel="noopener noreferrer"
                   style={{
                     position: "absolute",
-                    top: "-10px",
-                    right: "-10px",
-                    fontSize: "1.5rem",
-                    color: "#007bff",
-                    backgroundColor: "rgba(255, 255, 255, 0.9)",
+                    top: "-8px",
+                    right: "-8px",
+                    fontSize: "1.2rem",
+                    color: "#ffffff",
+                    backgroundColor: "#60a5fa",
                     borderRadius: "50%",
                     padding: "10px",
                     cursor: "pointer",
                     zIndex: 10,
                     textDecoration: "none",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "40px",
+                    height: "40px",
+                    transition: "all 0.2s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#3b82f6";
+                    e.currentTarget.style.transform = "scale(1.1)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "#60a5fa";
+                    e.currentTarget.style.transform = "scale(1)";
                   }}
                 >
                   🔗
@@ -533,37 +568,36 @@ const ProjectsSection: React.FC = () => {
                 textAlign: "left",
                 position: "relative",
                 padding: "20px",
-                paddingTop: "60px",
+                paddingTop: "40px",
               }}
             >
               <h2
                 style={{
-                  fontSize: "2.8rem",
-                  marginBottom: "40px",
+                  fontSize: "2.2rem",
+                  marginBottom: "30px",
                   textAlign: "center",
-                  color: "black",
-                  textDecoration: "underline",
-                  fontWeight: "bold",
+                  color: "#ffffff",
+                  fontWeight: "600",
                 }}
               >
                 <Link
                   to={VITE_BASE_URL + "projects"}
                   className="modal-link"
                   style={{
-                    color: "black",
-                    textDecoration: "underline",
+                    color: "#ffffff",
+                    textDecoration: "none",
                     cursor: "pointer",
                     transition: "color 0.3s ease",
                   }}
                   onMouseEnter={(e: {
                     currentTarget: { style: { color: string } };
                   }) => {
-                    e.currentTarget.style.color = "#007bff";
+                    e.currentTarget.style.color = "#60a5fa";
                   }}
                   onMouseLeave={(e: {
                     currentTarget: { style: { color: string } };
                   }) => {
-                    e.currentTarget.style.color = "black";
+                    e.currentTarget.style.color = "#ffffff";
                   }}
                 >
                   {selectedProject.title}
@@ -574,31 +608,31 @@ const ProjectsSection: React.FC = () => {
                 dangerouslySetInnerHTML={{
                   __html: selectedProject.description.replace(
                     `<span class="voicevault-link">Visit VoiceVault Landing Page</span>`,
-                    `<a href="${VITE_BASE_URL}voicevault-users" style="color: rgb(0, 155, 10); text-decoration: underline;" target="_blank">Visit VoiceVault Landing Page</a>`
+                    `<a href="${VITE_BASE_URL}voicevault-users" style="color: #60a5fa; text-decoration: underline;" target="_blank">Visit VoiceVault Landing Page</a>`
                   ),
                 }}
                 style={{
-                  fontSize: "1.5rem",
-                  color: "#666",
-                  lineHeight: "1.8",
-                  marginTop: "40px",
+                  fontSize: "1.1rem",
+                  color: "#d0d0d0",
+                  lineHeight: "1.75",
+                  marginTop: "20px",
                 }}
               />
               {selectedProject?.learnMoreLink && (
                 <div
                   style={{
-                    marginTop: "2rem",
-                    fontSize: "1.5rem",
-                    color: "rgb(0, 155, 10)",
+                    marginTop: "1.5rem",
+                    fontSize: "1.1rem",
+                    color: "#60a5fa",
                   }}
                 >
                   <Link
                     to={selectedProject.learnMoreLink}
                     style={{
                       textDecoration: "underline",
-                      fontWeight: "bold",
+                      fontWeight: "500",
                       cursor: "pointer",
-                      color: "rgb(0, 155, 10)",
+                      color: "#60a5fa",
                     }}
                   >
                     {selectedProject.title === "VoiceVault"

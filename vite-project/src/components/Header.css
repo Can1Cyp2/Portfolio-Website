@@ -4,9 +4,10 @@
 /* Initial header positioning (placed below TitlePage) */
 .header {
   width: 100%;
-  background-color: #333;
-  color: white;
-  padding: 35px 0;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333333;
+  color: #f5f5f5;
+  padding: 28px 0;
   z-index: 1000;
 }
 
@@ -24,17 +25,19 @@
 
 /* Logo styling for script font */
 .script-logo {
-  font-family: "Segoe Script", cursive;
-  font-size: 1.8rem;
-  color: white;
+  font-family: "JetBrains Mono", "Segoe Script", monospace;
+  font-size: 1.6rem;
+  color: #60a5fa;
   cursor: pointer;
   position: relative;
   left: -50px;
+  transition: all 0.3s ease;
 }
 
 /* Add hover effects for the script logo */
 .script-logo:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #93c5fd;
 }
 
 .nav-links {
@@ -44,28 +47,35 @@
 }
 
 .nav-links a {
-  color: white;
-  margin: 0 15px;
+  color: #e0e0e0;
+  margin: 0 14px;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .nav-links span {
-  color: white;
+  color: #333;
   margin: 0 10px;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #60a5fa;
 }
 
 .logo a {
   color: white;
   text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 .logo a:hover {
   text-decoration: underline;
+  opacity: 0.85;
 }
 
 /* Responsive adjustments */
