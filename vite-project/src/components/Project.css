@@ -6,8 +6,13 @@
   padding: 1.2rem;
   border-radius: 12px;
   background-color: #fff;
-  min-width: 300px; /* Ensure the project items don’t get too narrow */
+  min-width: 300px; /* Ensure the project items don’t get too narrow */  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.project-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);}
 
 .project-image {
   width: 100%;

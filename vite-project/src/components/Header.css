@@ -48,6 +48,7 @@
   margin: 0 15px;
   text-decoration: none;
   font-size: 1.5rem;
+  transition: opacity 0.2s ease;
 }
 
 .nav-links span {
@@ -57,15 +58,18 @@
 
 .nav-links a:hover {
   text-decoration: underline;
+  opacity: 0.85;
 }
 
 .logo a {
   color: white;
   text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 .logo a:hover {
   text-decoration: underline;
+  opacity: 0.85;
 }
 
 /* Responsive adjustments */

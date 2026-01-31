@@ -12,4 +12,11 @@ html {
 
 body {
   scroll-behavior: smooth; /* Ensures smooth scrolling in all contexts */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(97, 218, 251, 0.3);
+  color: inherit;
 }

@@ -50,6 +50,12 @@
   font-size: 1.2rem;
   cursor: pointer;
   margin-bottom: 2rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.toggle-resume-button:hover {
+  background-color: #555;
+  transform: translateY(-2px);
 }
 
 .experience-images {
@@ -93,6 +99,12 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .certification-item h4 {
