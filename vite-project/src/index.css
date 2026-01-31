@@ -1,22 +1,43 @@
-/* Global Styles */
+/* Global Styles - Retro Tech Theme */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Rubik", Arial, sans-serif;
+  font-family: "Inter", "Rubik", Arial, sans-serif;
 }
 
 html {
-  scroll-behavior: smooth; /* Enables smooth scrolling */
+  scroll-behavior: smooth;
+  font-size: 15px;
 }
 
 body {
-  scroll-behavior: smooth; /* Ensures smooth scrolling in all contexts */
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #181818;
 }
 
 ::selection {
-  background: rgba(97, 218, 251, 0.3);
-  color: inherit;
+  background: rgba(96, 165, 250, 0.3);
+  color: #fff;
+}
+
+/* Screen size support */
+@media (min-width: 1200px) {
+  html { font-size: 15px; }
+}
+
+@media (min-width: 1440px) {
+  html { font-size: 16px; }
+}
+
+@media (min-width: 1920px) {
+  html { font-size: 17px; }
+}
+
+@media (min-width: 2560px) {
+  html { font-size: 18px; }
 }
